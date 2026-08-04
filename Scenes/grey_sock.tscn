@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cu0wi4jm68v3"]
+
+[ext_resource type="Script" uid="uid://425jefwtg4j3" path="res://grey_sock.gd" id="1_8tchc"]
+[ext_resource type="Texture2D" uid="uid://u2r40p46l4ml" path="res://Asset/grey_sock.png" id="2_02lef"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s644b"]
+radius = 36.769554
+
+[node name="GreySock" type="CharacterBody2D" unique_id=806343613]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_8tchc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1852016042]
+texture_filter = 1
+shape = SubResource("CircleShape2D_s644b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=716238094]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1369506575]
+texture = ExtResource("2_02lef")

@@ -1,7 +1,10 @@
 extends CharacterBody2D
 
 
-const SPEED = 500.0
+@export var inventory: Inventory
+
+
+const SPEED = 400.0
 
 var last_direction: Vector2 = Vector2.RIGHT
 
@@ -41,3 +44,7 @@ func play_animation(prefix: String, dir: Vector2) -> void:
 		sprite_2d.play(prefix + "_up")
 	elif dir.y > 0:
 		sprite_2d.play(prefix + "_down")
+		
+
+	
+		

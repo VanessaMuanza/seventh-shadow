@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://yiom4qvyhct"]
+
+[ext_resource type="Script" uid="uid://dfvpx2ql58vqr" path="res://scene_change.gd" id="1_7krcl"]
+[ext_resource type="PackedScene" uid="uid://5rkwnqyh2v6r" path="res://Scenes/main.tscn" id="2_n4rl6"]
+
+[sub_resource type="Animation" id="Animation_mio38"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ivybd"]
+resource_name = "fade_in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ncpmm"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j4ofh"]
+_data = {
+&"RESET": SubResource("Animation_mio38"),
+&"fade_in": SubResource("Animation_ivybd"),
+&"fade_out": SubResource("Animation_ncpmm")
+}
+
+[node name="scene_change" type="Node" unique_id=1960256989]
+script = ExtResource("1_7krcl")
+
+[node name="main" parent="." unique_id=869799803 instance=ExtResource("2_n4rl6")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=137543848]
+root_node = NodePath("../main")
+libraries/ = SubResource("AnimationLibrary_j4ofh")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2123668606]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1547.0
+offset_top = -734.0
+offset_right = 2386.0
+offset_bottom = 1634.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

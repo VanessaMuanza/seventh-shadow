@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dvknsn0abmuce"]
+
+[ext_resource type="Script" uid="uid://c1jaafi5gjj31" path="res://Scripts/soda.gd" id="1_17dge"]
+[ext_resource type="Texture2D" uid="uid://bw6w7nrex330c" path="res://Asset/Soda.png" id="2_q3f8r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4vf8y"]
+radius = 42.0
+
+[node name="Soda" type="CharacterBody2D" unique_id=1160448301]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_17dge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1560868463]
+shape = SubResource("CircleShape2D_4vf8y")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1518732450]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=321723316]
+texture_filter = 1
+texture = ExtResource("2_q3f8r")
