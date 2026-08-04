@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-
+@export var itemRes: InventoryItem
 
 @onready var player = get_tree().get_first_node_in_group("player")
 
@@ -23,4 +23,5 @@ func _physics_process(delta: float) -> void:
 
 
 func _handle_picked_up():
-		queue_free()
+	player.inventory.insert(itemRes)
+	queue_free()

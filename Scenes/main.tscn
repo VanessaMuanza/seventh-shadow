@@ -16,6 +16,10 @@
 [ext_resource type="PackedScene" uid="uid://dahwancxf87tb" path="res://Scenes/character_body_2d.tscn" id="13_fdnlq"]
 [ext_resource type="Script" uid="uid://k8xoprkl0oir" path="res://Scripts/canvas_layer.gd" id="15_k12tt"]
 [ext_resource type="PackedScene" uid="uid://c6muxk8b2af4c" path="res://Scenes/inventory_gui.tscn" id="16_h1bgf"]
+[ext_resource type="PackedScene" uid="uid://cu0wi4jm68v3" path="res://Scenes/grey_sock.tscn" id="17_hibaj"]
+[ext_resource type="PackedScene" uid="uid://j83nrv5gj6ql" path="res://Scenes/blue_magazine.tscn" id="18_pdsj5"]
+[ext_resource type="PackedScene" uid="uid://boiflryfvvcwo" path="res://Scenes/pizza.tscn" id="19_ee4r6"]
+[ext_resource type="PackedScene" uid="uid://dvknsn0abmuce" path="res://Scenes/soda.tscn" id="20_gt3je"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_h2yge"]
 tile_data = PackedInt32Array(0, 327680, 0, 65536, 327680, 0, 1, 327680, 0, 65537, 327680, 0)
@@ -3204,6 +3208,7 @@ layer_0/tile_data = PackedInt32Array(786451, 0, 12, 458780, 0, 12, 3473468, 0, 1
 [node name="CharacterBody2D" parent="world1" unique_id=636343155 instance=ExtResource("13_fdnlq")]
 position = Vector2(367, 529)
 scale = Vector2(0.8, 0.8)
+collision_layer = 10
 
 [node name="Area2D" type="Area2D" parent="world1" unique_id=1085358236]
 script = ExtResource("1_jkdf5")
@@ -3230,6 +3235,18 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(4, 4)
 metadata/_edit_use_anchors_ = true
+
+[node name="GreySock" parent="." unique_id=806343613 instance=ExtResource("17_hibaj")]
+position = Vector2(111, 783)
+
+[node name="BlueMagazine" parent="." unique_id=830678052 instance=ExtResource("18_pdsj5")]
+position = Vector2(353, 795)
+
+[node name="Pizza" parent="." unique_id=1842465201 instance=ExtResource("19_ee4r6")]
+position = Vector2(-139, 795)
+
+[node name="Soda" parent="." unique_id=1160448301 instance=ExtResource("20_gt3je")]
+position = Vector2(48, 847)
 
 [connection signal="body_entered" from="world1/Area2D" to="world1/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="world1/Area2D" to="world1/Area2D" method="_on_body_exited"]

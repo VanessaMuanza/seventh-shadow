@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b56a0p6ytd44v" path="res://Scripts/pizza.gd" id="1_je5pd"]
 [ext_resource type="Texture2D" uid="uid://gdkeidx1ykyj" path="res://Asset/pizza.png" id="1_nkrds"]
+[ext_resource type="Resource" uid="uid://b5qnu82rs08i6" path="res://inventory/Items/pizza.tres" id="2_7s6re"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_je5pd"]
 radius = 36.345562
@@ -11,6 +12,7 @@ collision_layer = 8
 collision_mask = 2
 input_pickable = true
 script = ExtResource("1_je5pd")
+itemRes = ExtResource("2_7s6re")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=975079857]
 texture_filter = 1

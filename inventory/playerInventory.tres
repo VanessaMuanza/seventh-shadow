@@ -9,5 +9,5 @@
 
 [resource]
 script = ExtResource("6_ptqd4")
-items = Array[ExtResource("1_md04o")]([ExtResource("2_md04o"), ExtResource("2_ht7j0"), ExtResource("4_1d220"), ExtResource("5_5gkfj"), ExtResource("2_ht7j0"), null, ExtResource("2_md04o"), ExtResource("5_5gkfj"), null, null, null])
+items = Array[ExtResource("1_md04o")]([ExtResource("5_5gkfj"), ExtResource("2_ht7j0"), null, ExtResource("2_md04o"), null, null, ExtResource("4_1d220"), null, null, ExtResource("5_5gkfj"), null, null, null, null, null])
 metadata/_custom_type_script = "uid://bqld5ke4ibjap"

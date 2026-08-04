@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://425jefwtg4j3" path="res://grey_sock.gd" id="1_8tchc"]
 [ext_resource type="Texture2D" uid="uid://u2r40p46l4ml" path="res://Asset/grey_sock.png" id="2_02lef"]
+[ext_resource type="Resource" uid="uid://ctha4kafrtjsj" path="res://inventory/Items/grey_sock.tres" id="2_s644b"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s644b"]
 radius = 36.769554
@@ -10,6 +11,7 @@ radius = 36.769554
 collision_layer = 8
 collision_mask = 2
 script = ExtResource("1_8tchc")
+itemRes = ExtResource("2_s644b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1852016042]
 texture_filter = 1

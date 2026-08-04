@@ -23,4 +23,5 @@ func _physics_process(delta: float) -> void:
 
 
 func _handle_picked_up():
-		queue_free()
+	player.inventory.insert(itemRes)
+	queue_free()
