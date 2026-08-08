@@ -24,6 +24,7 @@ patch_margin_right = 6
 patch_margin_bottom = 6
 
 [node name="GridContainer" type="GridContainer" parent="NinePatchRect" unique_id=1696410119]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

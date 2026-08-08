@@ -2747,7 +2747,7 @@ tile_set = SubResource("TileSet_0l885")
 [node name="CharacterBody2D" parent="." unique_id=636343155 instance=ExtResource("4_2jioq")]
 position = Vector2(177, 1065)
 scale = Vector2(0.9, 0.9)
-collision_layer = 10
+collision_layer = 11
 
 [node name="Area2D" type="Area2D" parent="." unique_id=199335897]
 script = ExtResource("6_0l885")

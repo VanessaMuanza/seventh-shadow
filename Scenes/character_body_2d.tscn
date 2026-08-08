@@ -191,7 +191,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pbq55"]
-size = Vector2(54, 79)
+size = Vector2(61, 82.5)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=636343155 groups=["player"]]
 script = ExtResource("1_gbyq6")
@@ -211,5 +211,5 @@ zoom = Vector2(0.9, 0.9)
 position_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1313626427]
-position = Vector2(15, 46)
+position = Vector2(7.5, 48.75)
 shape = SubResource("RectangleShape2D_pbq55")
