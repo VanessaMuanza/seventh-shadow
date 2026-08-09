@@ -15,6 +15,10 @@ run/main_scene="uid://5rkwnqyh2v6r"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameState="*uid://c3umrk36c7cuj"
+
 [input]
 
 left={

@@ -17,6 +17,7 @@
 [ext_resource type="Script" uid="uid://k8xoprkl0oir" path="res://Scripts/canvas_layer.gd" id="15_k12tt"]
 [ext_resource type="PackedScene" uid="uid://c6muxk8b2af4c" path="res://Scenes/inventory_gui.tscn" id="16_h1bgf"]
 [ext_resource type="PackedScene" uid="uid://cu0wi4jm68v3" path="res://Scenes/grey_sock.tscn" id="17_hibaj"]
+[ext_resource type="PackedScene" uid="uid://bcasiy12fkww8" path="res://inventory/hot_bar.tscn" id="17_pdsj5"]
 [ext_resource type="PackedScene" uid="uid://j83nrv5gj6ql" path="res://Scenes/blue_magazine.tscn" id="18_pdsj5"]
 [ext_resource type="PackedScene" uid="uid://boiflryfvvcwo" path="res://Scenes/pizza.tscn" id="19_ee4r6"]
 [ext_resource type="PackedScene" uid="uid://dvknsn0abmuce" path="res://Scenes/soda.tscn" id="20_gt3je"]
@@ -3235,6 +3236,20 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(4, 4)
 metadata/_edit_use_anchors_ = true
+
+[node name="HotBar" parent="world1/Area2D/CanvasLayer" unique_id=1786642432 instance=ExtResource("17_pdsj5")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -237.0
+offset_top = -99.0
+offset_right = -121.0
+offset_bottom = -79.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(4, 4)
 
 [node name="BlueMagazine" parent="world1" unique_id=830678052 instance=ExtResource("18_pdsj5")]
 position = Vector2(497, 722)

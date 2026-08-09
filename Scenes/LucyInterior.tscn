@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://dxpsj4gwfdd0t" path="res://Scripts/area_2d2.gd" id="6_0l885"]
 [ext_resource type="Script" uid="uid://k8xoprkl0oir" path="res://Scripts/canvas_layer.gd" id="8_v4ktt"]
 [ext_resource type="PackedScene" uid="uid://c6muxk8b2af4c" path="res://Scenes/inventory_gui.tscn" id="9_q3sb1"]
+[ext_resource type="PackedScene" uid="uid://bcasiy12fkww8" path="res://inventory/hot_bar.tscn" id="10_q3sb1"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_2jioq"]
 tile_data = PackedInt32Array(0, 983040, 12, 65536, 983040, 13, 131072, 983040, 12, 196608, 983040, 13, 1, 1048576, 12, 65537, 1048576, 13, 131073, 1048576, 12, 196609, 1048576, 13, 2, 983040, 12, 65538, 983040, 13, 131074, 983040, 12, 196610, 983040, 13, 3, 1048576, 12, 65539, 1048576, 13, 131075, 1048576, 12, 196611, 1048576, 13, 4, 983040, 12, 65540, 983040, 13, 131076, 983040, 12, 196612, 983040, 13, 5, 1048576, 12, 65541, 1048576, 13, 131077, 1048576, 12, 196613, 1048576, 13)
@@ -2774,6 +2775,20 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(4, 4)
 metadata/_edit_use_anchors_ = true
+
+[node name="HotBar" parent="CanvasLayer" unique_id=1786642432 instance=ExtResource("10_q3sb1")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -237.0
+offset_top = -99.0
+offset_right = -121.0
+offset_bottom = -79.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(4, 4)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

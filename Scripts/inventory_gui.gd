@@ -7,7 +7,8 @@ var isOpen: bool = false
 
 @onready var inventory = preload("res://inventory/playerInventory.tres")
 @onready var ItemStackGuiClass = preload("res://Scenes/itemsStackGui.tscn")
-@onready var slots: Array = $NinePatchRect/GridContainer.get_children()
+@onready var hotbar_slots: Array = $NinePatchRect/HBoxContainer.get_children()
+@onready var slots: Array =hotbar_slots + $NinePatchRect/GridContainer.get_children()
 
 var itemInHand: ItemStackGui
 
@@ -28,7 +29,9 @@ func connectSlots():
 func update():
 	for i in range(min(inventory.slots.size(), slots.size())):
 		var inventorySlot: InventorySlot = inventory.slots[i]
+		if !inventorySlot: continue
 		if !inventorySlot.item: continue
+		
 		
 		var itemStackGui: ItemStackGui = slots[i].itemStackGui
 		if !itemStackGui:
@@ -49,11 +52,16 @@ func close():
 	closed.emit()
 	
 func onSlotClicked(slot):
-	if slot.isEmpty() && itemInHand:
+	if slot.isEmpty():
+		if !itemInHand: return
+		
 		insertItemInSlot(slot)
 		return
 	if !itemInHand:
 		takeItemFromSlot(slot)
+		return
+	
+		swapItems(slot)
 
 
 
@@ -69,7 +77,14 @@ func insertItemInSlot(slot):
 	itemInHand = null
 	
 	slot.insert(item)
-
+	
+	
+func swapItems(slot):
+	var tempItem = slot.takeItem()
+	slot.insert(itemInHand)
+	itemInHand = tempItem
+	add_child(itemInHand)
+	updateitemInHand()
 func updateitemInHand():
 	if !itemInHand: return
 	itemInHand.global_position = get_global_mouse_position() - itemInHand.size / 2

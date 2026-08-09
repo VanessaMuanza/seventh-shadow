@@ -20,9 +20,10 @@ func insert(item: InventoryItem):
 
 func removeItemAtIndex(index: int):
 	slots[index] = InventorySlot.new()
-	
+
 func insertSlot(index: int, inventorySlot: InventorySlot):
 	var oldIndex: int = slots.find(inventorySlot)
-	removeItemAtIndex(oldIndex)
-	
+	if oldIndex >= 0:
+		removeItemAtIndex(oldIndex)
 	slots[index] = inventorySlot
+	updated.emit()

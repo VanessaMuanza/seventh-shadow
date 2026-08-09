@@ -21,7 +21,12 @@ func _physics_process(delta: float) -> void:
 	if collision:
 		_handle_picked_up()
 
+func _ready():
+	if GameState.is_collected(name):
+		queue_free()
+		return
 
 func _handle_picked_up():
 	player.inventory.insert(itemRes)
+	GameState.mark_collected(name)
 	queue_free()

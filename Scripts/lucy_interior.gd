@@ -9,9 +9,9 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("ui_accept"):
 			emit_signal("world_changed", world_name)
 
-func _on_area_2d_body_entered(body: CharacterBody2D) -> void:
+func _on_area_2d_body_entered(body):
 	entered = true
-func _on_area_2d_body_exited(body:  CharacterBody2D) -> void:
+func _on_area_2d_body_exited(body):
 	entered = false
 
 
