@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3voqvr4aq81e"
-path="res://.godot/imported/doorswindowsstairs_LRK redo.png-72c0ae6cec80f8b32e34ce1269d97ba1.ctex"
+uid="uid://dqujd2lxkq7f3"
+path="res://.godot/imported/retro_bathroom_set_withshadow redo.png-80733459eec84b01af2683a342684a6f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://LucyHouseAsset/doorswindowsstairs_LRK redo.png"
-dest_files=["res://.godot/imported/doorswindowsstairs_LRK redo.png-72c0ae6cec80f8b32e34ce1269d97ba1.ctex"]
+source_file="res://House assets/LucyHouseAsset/retro_bathroom_set_withshadow redo.png"
+dest_files=["res://.godot/imported/retro_bathroom_set_withshadow redo.png-80733459eec84b01af2683a342684a6f.ctex"]
 
 [params]
 

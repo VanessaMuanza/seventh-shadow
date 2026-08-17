@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://svr5y6hbim1l"]
+
+[ext_resource type="Script" uid="uid://clseinfgm5c88" path="res://Scripts/npc_behavior_patrol.gd" id="1_h1bth"]
+[ext_resource type="PackedScene" uid="uid://ccfv1bhvvxd0b" path="res://Scenes/patrol_location.tscn" id="2_4q0vu"]
+
+[node name="NpcBehaviorPatrol" type="Node2D" unique_id=1057265896]
+script = ExtResource("1_h1bth")
+walk_speed = 100.0
+
+[node name="PatrolLocation" parent="." unique_id=2049667534 instance=ExtResource("2_4q0vu")]
+modulate = Color(1, 0, 0, 1)

@@ -46,5 +46,8 @@ func play_animation(prefix: String, dir: Vector2) -> void:
 		sprite_2d.play(prefix + "_down")
 		
 
-	
+func _ready():
+	if GameState.next_spawn_point != "":
+		var spawn_node = get_tree().current_scene.find_child(GameState.next_spawn_point)
+		position = spawn_node.position
 		

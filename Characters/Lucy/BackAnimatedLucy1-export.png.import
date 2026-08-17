@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cx6tn2kjx7v2a"
-path="res://.godot/imported/TopDownHouse_FurnitureState1.png-592fbfec2b098ecb9d91cd67801129f7.ctex"
+uid="uid://ocg87ky8o3sd"
+path="res://.godot/imported/BackAnimatedLucy1-export.png-4a79dde14a2cf43b927017b53cb759e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Lucy/TopDownHouse_FurnitureState1.png"
-dest_files=["res://.godot/imported/TopDownHouse_FurnitureState1.png-592fbfec2b098ecb9d91cd67801129f7.ctex"]
+source_file="res://Characters/Lucy/BackAnimatedLucy1-export.png"
+dest_files=["res://.godot/imported/BackAnimatedLucy1-export.png-4a79dde14a2cf43b927017b53cb759e9.ctex"]
 
 [params]
 

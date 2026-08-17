@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://b88wispyjxrt2"]
 
-[ext_resource type="Texture2D" uid="uid://c1lx0amgkypn3" path="res://LucyHouseAsset/Messy_Walls redo.png" id="1_i3fot"]
+[ext_resource type="Texture2D" uid="uid://c1lx0amgkypn3" path="res://House assets/LucyHouseAsset/Messy_Walls redo.png" id="1_i3fot"]
 [ext_resource type="Script" uid="uid://uxc6udv1kpyy" path="res://Scripts/lucy_interior.gd" id="1_jbjli"]
-[ext_resource type="Texture2D" uid="uid://dqujd2lxkq7f3" path="res://LucyHouseAsset/retro_bathroom_set_withshadow redo.png" id="2_c88sv"]
-[ext_resource type="Texture2D" uid="uid://ctvcddirbeak2" path="res://LucyHouseAsset/Messy_Furniture redo-export.png" id="2_vwjho"]
-[ext_resource type="Texture2D" uid="uid://b3voqvr4aq81e" path="res://LucyHouseAsset/doorswindowsstairs_LRK redo.png" id="3_vwjho"]
+[ext_resource type="Texture2D" uid="uid://dqujd2lxkq7f3" path="res://House assets/LucyHouseAsset/retro_bathroom_set_withshadow redo.png" id="2_c88sv"]
+[ext_resource type="Texture2D" uid="uid://ctvcddirbeak2" path="res://House assets/LucyHouseAsset/Messy_Furniture redo-export.png" id="2_vwjho"]
+[ext_resource type="Texture2D" uid="uid://b3voqvr4aq81e" path="res://House assets/LucyHouseAsset/doorswindowsstairs_LRK redo.png" id="3_vwjho"]
 [ext_resource type="PackedScene" uid="uid://dahwancxf87tb" path="res://Scenes/character_body_2d.tscn" id="4_2jioq"]
 [ext_resource type="Script" uid="uid://dxpsj4gwfdd0t" path="res://Scripts/area_2d2.gd" id="6_0l885"]
 [ext_resource type="Script" uid="uid://k8xoprkl0oir" path="res://Scripts/canvas_layer.gd" id="8_v4ktt"]
@@ -2757,7 +2757,7 @@ script = ExtResource("6_0l885")
 position = Vector2(181, 1084)
 shape = SubResource("CircleShape2D_jbjli")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1719249847]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1862802382]
 process_mode = 3
 script = ExtResource("8_v4ktt")
 
@@ -2767,10 +2767,10 @@ texture_filter = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 302.0
-offset_top = 179.0
-offset_right = 302.0
-offset_bottom = 179.0
+offset_left = 313.0
+offset_top = 134.0
+offset_right = 313.0
+offset_bottom = 134.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(4, 4)
@@ -2794,5 +2794,5 @@ scale = Vector2(4, 4)
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
-[connection signal="closed" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_closed"]
-[connection signal="opened" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_opened"]
+[connection signal="closed" from="CanvasLayer/InventoryGui" to="CanvasLayer/InventoryGui" method="_on_closed"]
+[connection signal="opened" from="CanvasLayer/InventoryGui" to="CanvasLayer/InventoryGui" method="_on_opened"]

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dahwancxf87tb"]
 
-[ext_resource type="Texture2D" uid="uid://ot4yvqajvmws" path="res://Lucy/animatedlucyShadow-export.png" id="1_88kja"]
+[ext_resource type="Texture2D" uid="uid://ot4yvqajvmws" path="res://Characters/Lucy/animatedlucyShadow-export.png" id="1_88kja"]
 [ext_resource type="Script" uid="uid://cfl40mmmrptvu" path="res://Scripts/character_body_2d.gd" id="1_gbyq6"]
 [ext_resource type="Texture2D" uid="uid://dwfw2gyxvt2mb" path="res://Scenes/LucyrightAnimated1-export.png" id="2_it8n0"]
 [ext_resource type="Resource" uid="uid://c43alucbfrvp1" path="res://inventory/playerInventory.tres" id="2_t38ji"]
-[ext_resource type="Texture2D" uid="uid://ocg87ky8o3sd" path="res://Lucy/BackAnimatedLucy1-export.png" id="3_gbyq6"]
+[ext_resource type="Texture2D" uid="uid://ocg87ky8o3sd" path="res://Characters/Lucy/BackAnimatedLucy1-export.png" id="3_gbyq6"]
 [ext_resource type="Texture2D" uid="uid://d16n0prp533fv" path="res://Scenes/LucyLeftAnimated1-export.png" id="3_pbq55"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pbq55"]
@@ -191,9 +191,9 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pbq55"]
-size = Vector2(61, 82.5)
+size = Vector2(62, 94)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=636343155 groups=["player"]]
+[node name="Lucy" type="CharacterBody2D" unique_id=636343155 groups=["player"]]
 script = ExtResource("1_gbyq6")
 inventory = ExtResource("2_t38ji")
 
@@ -202,8 +202,9 @@ texture_filter = 1
 position = Vector2(160, 44)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_fxof2")
-animation = &"idle_down"
+animation = &"run_down"
 autoplay = "idle_down"
+frame_progress = 0.91918635
 offset = Vector2(19, 17)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1387987516]
@@ -211,5 +212,5 @@ zoom = Vector2(0.9, 0.9)
 position_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1313626427]
-position = Vector2(7.5, 48.75)
+position = Vector2(8, 43)
 shape = SubResource("RectangleShape2D_pbq55")

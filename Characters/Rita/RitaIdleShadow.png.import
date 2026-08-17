@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctvcddirbeak2"
-path="res://.godot/imported/Messy_Furniture redo-export.png-523fd937167676a30ec0e5bd8dd1b5cc.ctex"
+uid="uid://g8dexkqg6n25"
+path="res://.godot/imported/RitaIdleShadow.png-732ef9c4071b648392b69580f7ff35bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://LucyHouseAsset/Messy_Furniture redo-export.png"
-dest_files=["res://.godot/imported/Messy_Furniture redo-export.png-523fd937167676a30ec0e5bd8dd1b5cc.ctex"]
+source_file="res://Characters/Rita/RitaIdleShadow.png"
+dest_files=["res://.godot/imported/RitaIdleShadow.png-732ef9c4071b648392b69580f7ff35bc.ctex"]
 
 [params]
 

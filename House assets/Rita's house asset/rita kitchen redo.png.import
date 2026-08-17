@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ocg87ky8o3sd"
-path="res://.godot/imported/BackAnimatedLucy1-export.png-e4840aaeaf9068cab42f157f08b0982a.ctex"
+uid="uid://ds1gs6j1k7et7"
+path="res://.godot/imported/rita kitchen redo.png-7b3fdbcd872f16eb1a2e47bcd9709ed8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Lucy/BackAnimatedLucy1-export.png"
-dest_files=["res://.godot/imported/BackAnimatedLucy1-export.png-e4840aaeaf9068cab42f157f08b0982a.ctex"]
+source_file="res://House assets/Rita's house asset/rita kitchen redo.png"
+dest_files=["res://.godot/imported/rita kitchen redo.png-7b3fdbcd872f16eb1a2e47bcd9709ed8.ctex"]
 
 [params]
 

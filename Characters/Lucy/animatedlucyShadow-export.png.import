@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqujd2lxkq7f3"
-path="res://.godot/imported/retro_bathroom_set_withshadow redo.png-1a3032c2c92f2dfa9cb53a1dd7a9e061.ctex"
+uid="uid://ot4yvqajvmws"
+path="res://.godot/imported/animatedlucyShadow-export.png-cbd5569affe1f55bbf69b892fdb7e037.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://LucyHouseAsset/retro_bathroom_set_withshadow redo.png"
-dest_files=["res://.godot/imported/retro_bathroom_set_withshadow redo.png-1a3032c2c92f2dfa9cb53a1dd7a9e061.ctex"]
+source_file="res://Characters/Lucy/animatedlucyShadow-export.png"
+dest_files=["res://.godot/imported/animatedlucyShadow-export.png-cbd5569affe1f55bbf69b892fdb7e037.ctex"]
 
 [params]
 

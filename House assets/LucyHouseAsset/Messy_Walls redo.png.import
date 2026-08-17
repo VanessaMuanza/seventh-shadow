@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://biyhmjybnjayu"
-path="res://.godot/imported/BackAnimatedLucyShadow-export.png-83a61c23789c543c29593fc9201fdb47.ctex"
+uid="uid://c1lx0amgkypn3"
+path="res://.godot/imported/Messy_Walls redo.png-ec136985da3195462a720e96f1dfe948.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Lucy/BackAnimatedLucyShadow-export.png"
-dest_files=["res://.godot/imported/BackAnimatedLucyShadow-export.png-83a61c23789c543c29593fc9201fdb47.ctex"]
+source_file="res://House assets/LucyHouseAsset/Messy_Walls redo.png"
+dest_files=["res://.godot/imported/Messy_Walls redo.png-ec136985da3195462a720e96f1dfe948.ctex"]
 
 [params]
 

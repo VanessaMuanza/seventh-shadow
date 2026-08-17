@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do12aeutgo4vu"
-path="res://.godot/imported/BackAnimatedLucy-Sheet.png-fc77d2bc45dbbb72c6eb231a1c4b1050.ctex"
+uid="uid://74af1vnldi5a"
+path="res://.godot/imported/TopDownHouse_FloorsAndWalls.png-75d664fbd2dfea5fcc025b2de73cbfa5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Lucy/BackAnimatedLucy-Sheet.png"
-dest_files=["res://.godot/imported/BackAnimatedLucy-Sheet.png-fc77d2bc45dbbb72c6eb231a1c4b1050.ctex"]
+source_file="res://Characters/Lucy/TopDownHouse_FloorsAndWalls.png"
+dest_files=["res://.godot/imported/TopDownHouse_FloorsAndWalls.png-75d664fbd2dfea5fcc025b2de73cbfa5.ctex"]
 
 [params]
 

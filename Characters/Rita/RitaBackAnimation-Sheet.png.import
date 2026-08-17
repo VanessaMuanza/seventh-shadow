@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1lx0amgkypn3"
-path="res://.godot/imported/Messy_Walls redo.png-8f0a93eaf67e826e7245dce3d5054e78.ctex"
+uid="uid://deu4kt4kx158w"
+path="res://.godot/imported/RitaBackAnimation-Sheet.png-a8f2d24f8804f4fd1f33de608db2eca5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://LucyHouseAsset/Messy_Walls redo.png"
-dest_files=["res://.godot/imported/Messy_Walls redo.png-8f0a93eaf67e826e7245dce3d5054e78.ctex"]
+source_file="res://Characters/Rita/RitaBackAnimation-Sheet.png"
+dest_files=["res://.godot/imported/RitaBackAnimation-Sheet.png-a8f2d24f8804f4fd1f33de608db2eca5.ctex"]
 
 [params]
 

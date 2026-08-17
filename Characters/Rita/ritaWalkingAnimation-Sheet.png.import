@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ot4yvqajvmws"
-path="res://.godot/imported/animatedlucyShadow-export.png-8feeb0849be77eb79967213e178b47cd.ctex"
+uid="uid://dfhjvp5nyipi"
+path="res://.godot/imported/ritaWalkingAnimation-Sheet.png-afd4b3d940a83551e6d3bf20134756c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Lucy/animatedlucyShadow-export.png"
-dest_files=["res://.godot/imported/animatedlucyShadow-export.png-8feeb0849be77eb79967213e178b47cd.ctex"]
+source_file="res://Characters/Rita/ritaWalkingAnimation-Sheet.png"
+dest_files=["res://.godot/imported/ritaWalkingAnimation-Sheet.png-afd4b3d940a83551e6d3bf20134756c4.ctex"]
 
 [params]
 

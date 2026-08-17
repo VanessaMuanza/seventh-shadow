@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://74af1vnldi5a"
-path="res://.godot/imported/TopDownHouse_FloorsAndWalls.png-9a6a27b19b36beb064aa04d691044f95.ctex"
+uid="uid://5poittlrek6t"
+path="res://.godot/imported/midcentury_modern_furnitureset redo.png-d471eba731713cc5b717e1e4a0a9bccf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Lucy/TopDownHouse_FloorsAndWalls.png"
-dest_files=["res://.godot/imported/TopDownHouse_FloorsAndWalls.png-9a6a27b19b36beb064aa04d691044f95.ctex"]
+source_file="res://House assets/Rita's house asset/midcentury_modern_furnitureset redo.png"
+dest_files=["res://.godot/imported/midcentury_modern_furnitureset redo.png-d471eba731713cc5b717e1e4a0a9bccf.ctex"]
 
 [params]
 
