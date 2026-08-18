@@ -22,9 +22,11 @@
 [ext_resource type="PackedScene" uid="uid://boiflryfvvcwo" path="res://Scenes/pizza.tscn" id="19_ee4r6"]
 [ext_resource type="Script" uid="uid://c2l438vdwubp4" path="res://Scenes/rita_house.gd" id="20_ee4r6"]
 [ext_resource type="PackedScene" uid="uid://dvknsn0abmuce" path="res://Scenes/soda.tscn" id="20_gt3je"]
+[ext_resource type="PackedScene" uid="uid://dj4lqmbssmmi2" path="res://QuestItem.tscn" id="21_cbgmd"]
+[ext_resource type="Texture2D" uid="uid://cx2do01me7n7g" path="res://dialogue/quest/QuestAsset/diamant.png" id="22_1w6v2"]
 [ext_resource type="PackedScene" uid="uid://b5al73d3mk60" path="res://Characters/Rita/Rita.tscn" id="23_gt3je"]
 [ext_resource type="PackedScene" uid="uid://svr5y6hbim1l" path="res://Scenes/npc_behavior_patrol.tscn" id="24_u50mg"]
-[ext_resource type="PackedScene" uid="uid://ccfv1bhvvxd0b" path="res://Scenes/patrol_location.tscn" id="25_cbgmd"]
+[ext_resource type="Script" uid="uid://c7w48512jdstb" path="res://Characters/Rita/interaction_area.gd" id="25_u50mg"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_h2yge"]
 tile_data = PackedInt32Array(0, 327680, 0, 65536, 327680, 0, 1, 327680, 0, 65537, 327680, 0)
@@ -3104,6 +3106,9 @@ radius = 95.42536
 [sub_resource type="CircleShape2D" id="CircleShape2D_gt3je"]
 radius = 84.05355
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_cbgmd"]
+radius = 215.2324
+
 [node name="Node" type="Node" unique_id=869799803]
 
 [node name="world1" type="Node2D" parent="." unique_id=1234241271]
@@ -3215,7 +3220,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(786451, 0, 12, 458780, 0, 12, 3473468, 0, 12, 3342407, 0, 12, 2687025, 0, 12, 4784189, 327680, 12, 4194368, 327680, 12, 4390973, 327680, 12, 4587595, 327680, 12, 4194378, 327680, 12, 4849760, 327680, 12, 4849759, 327680, 12, 4653152, 327680, 12, 4653150, 327680, 12, 4390991, 327680, 12, 4587597, 327680, 12, 4325455, 327680, 12, 4259919, 327680, 12, 4063312, 327680, 12, 3997778, 327680, 12, 4128849, 327680, 12, 4128850, 327680, 12, 4063329, 327680, 12, 4128865, 327680, 12, 4587614, 327680, 12, 3538995, 327680, 12, 3211320, 327680, 12, 3145784, 327680, 12, 2818098, 327680, 12, 5439576, 327680, 12, 5439571, 327680, 12, 5439567, 327680, 12, 5308487, 327680, 12, 5308474, 327680, 12, 5308471, 327680, 12, 1441876, 327680, 12, 1638492, 327680, 12, -917421, 327680, 12, -851881, 327680, 12, -851877, 327680, 12, -851869, 327680, 12, 589902, 327680, 12, -327719, 327680, 12, -524312, 327680, 12, -65547, 327680, 12, 1900504, 393216, 12, 1900505, 393216, 12, 1900506, 393216, 12, 1900507, 393216, 12, 1900508, 393216, 12, 1900509, 393216, 12, 1900510, 393216, 12, 1900503, 393216, 12, 1834975, 393216, 12, 1769439, 393216, 12, 1703903, 393216, 12, 1638367, 393216, 12, 1572831, 393216, 12, 1769430, 393216, 12, 1834966, 393216, 12, 1703894, 393216, 12, 1572822, 393216, 12, 1638358, 393216, 12, 1507286, 393216, 12, 1441750, 393216, 12, 1507295, 393216, 12, 1441759, 393216, 12, 1376223, 393216, 12, 1376214, 393216, 12, 1310679, 393216, 12, 1310680, 393216, 12, 1310681, 393216, 12, 1310682, 393216, 12, 1310683, 393216, 12, 1310685, 393216, 12, 1310684, 393216, 12, 1310686, 393216, 12, 1834967, 65536, 12, 1834969, 65536, 12, 1834970, 65536, 12, 1834971, 65536, 12, 1834972, 65536, 12, 1834973, 65536, 12, 1834974, 65536, 12, 1769431, 0, 12, 1769433, 0, 12, 1769434, 0, 12, 1769435, 0, 12, 1769436, 0, 12, 1769437, 0, 12, 1769438, 0, 12, 1703895, 131072, 12, 1703896, 131072, 12, 1703898, 131072, 12, 1703899, 131072, 12, 1703900, 131072, 12, 1703901, 131072, 12, 1703902, 131072, 12, 1638359, 196608, 12, 1638360, 196608, 12, 1638362, 196608, 12, 1638363, 196608, 12, 1638364, 196608, 12, 1638365, 196608, 12, 1638366, 196608, 12, 1376252, 196608, 12, 1507319, 196608, 12, 1441796, 196608, 12, 1507326, 196608, 12, 1769472, 196608, 12, 1769478, 196608, 12, 1900532, 196608, 12, 1310702, 196608, 12, 1572830, 65536, 12, 1572829, 65536, 12, 1572828, 65536, 12, 1572827, 65536, 12, 1572826, 65536, 12, 1572825, 65536, 12, 1572824, 65536, 12, 1572823, 65536, 12, 1834968, 65536, 12, 1769432, 0, 12, 1703897, 131072, 12, 1638361, 196608, 12, 1507287, 0, 12, 1507288, 0, 12, 1507289, 0, 12, 1507290, 0, 12, 1507291, 0, 12, 1507292, 0, 12, 1507293, 0, 12, 1507294, 0, 12, 1441751, 131072, 12, 1441752, 131072, 12, 1441753, 131072, 12, 1441754, 131072, 12, 1441755, 131072, 12, 1441756, 131072, 12, 1441757, 131072, 12, 1441758, 131072, 12, 1376215, 196608, 12, 1376216, 196608, 12, 1376217, 196608, 12, 1376218, 196608, 12, 1376219, 196608, 12, 1376220, 196608, 12, 1376221, 196608, 12, 1376222, 196608, 12, 393178, 458752, 12, 1376241, 458752, 12, -327664, 458752, 12, 393242, 458752, 12, 3211233, 458752, 12, 3211252, 458752, 12, 3473432, 458752, 12, 3407972, 458752, 12, 1638488, 458752, 12)
 
 [node name="CharacterBody2D" parent="world1" unique_id=636343155 instance=ExtResource("13_fdnlq")]
-position = Vector2(367, 529)
+position = Vector2(1038, 947)
 scale = Vector2(0.8, 0.8)
 collision_layer = 11
 collision_mask = 17
@@ -3224,7 +3229,7 @@ collision_mask = 17
 script = ExtResource("1_jkdf5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="world1/Area2D" unique_id=1052844754]
-position = Vector2(376, 454)
+position = Vector2(369, 460)
 shape = SubResource("CircleShape2D_fdnlq")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="world1/Area2D" unique_id=1621068660]
@@ -3232,15 +3237,16 @@ process_mode = 3
 script = ExtResource("15_k12tt")
 
 [node name="InventoryGui" parent="world1/Area2D/CanvasLayer" unique_id=1302783099 instance=ExtResource("16_h1bgf")]
+visible = false
 z_index = 1
 texture_filter = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 201.0
-offset_top = 130.0
-offset_right = 201.0
-offset_bottom = 130.0
+offset_left = 306.0
+offset_top = 147.0
+offset_right = 306.0
+offset_bottom = 147.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(4, 4)
@@ -3278,8 +3284,21 @@ position = Vector2(1811, 454)
 script = ExtResource("20_ee4r6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="world1/RitaHouse" unique_id=727859913]
-position = Vector2(0, 3)
+position = Vector2(12, -5)
 shape = SubResource("CircleShape2D_gt3je")
+
+[node name="QuestItem" parent="world1" unique_id=1480070890 instance=ExtResource("21_cbgmd")]
+position = Vector2(1281, 1042)
+scale = Vector2(0.5, 0.5)
+item_icon = ExtResource("22_1w6v2")
+
+[node name="InteractionArea" type="Area2D" parent="world1" unique_id=1697589035]
+position = Vector2(-344.99997, -17.499998)
+script = ExtResource("25_u50mg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world1/InteractionArea" unique_id=995218763]
+position = Vector2(358.99997, 14.499998)
+shape = SubResource("CircleShape2D_cbgmd")
 
 [node name="GreySock" parent="." unique_id=806343613 instance=ExtResource("17_hibaj")]
 position = Vector2(111, 783)
@@ -3294,21 +3313,13 @@ position = Vector2(-139, 795)
 position = Vector2(48, 847)
 
 [node name="CharacterBody2D" parent="." unique_id=1292378668 instance=ExtResource("23_gt3je")]
-position = Vector2(885, 662)
+position = Vector2(1260, 941)
 collision_layer = 15
 collision_mask = 17
 
 [node name="NpcBehaviorPatrol2" parent="CharacterBody2D" unique_id=1057265896 instance=ExtResource("24_u50mg")]
-position = Vector2(-330.00006, 74.99994)
+position = Vector2(-230.00006, 19.999939)
 scale = Vector2(5, 5)
-
-[node name="PatrolLocation2" parent="CharacterBody2D/NpcBehaviorPatrol2" unique_id=2049667534 instance=ExtResource("25_cbgmd")]
-modulate = Color(1, 1, 0, 1)
-position = Vector2(39, 33.5)
-
-[node name="PatrolLocation3" parent="CharacterBody2D/NpcBehaviorPatrol2" unique_id=1168932369 instance=ExtResource("25_cbgmd")]
-modulate = Color(0, 1, 1, 1)
-position = Vector2(88, 17.5)
 
 [connection signal="body_entered" from="world1/Area2D" to="world1/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="world1/Area2D" to="world1/Area2D" method="_on_body_exited"]
@@ -3316,3 +3327,4 @@ position = Vector2(88, 17.5)
 [connection signal="opened" from="world1/Area2D/CanvasLayer/InventoryGui" to="world1/Area2D/CanvasLayer/InventoryGui" method="_on_opened"]
 [connection signal="body_entered" from="world1/RitaHouse" to="world1/RitaHouse" method="_on_body_entered"]
 [connection signal="body_exited" from="world1/RitaHouse" to="world1/RitaHouse" method="_on_body_exited"]
+[connection signal="body_entered" from="world1/InteractionArea" to="world1/InteractionArea" method="_on_body_entered"]

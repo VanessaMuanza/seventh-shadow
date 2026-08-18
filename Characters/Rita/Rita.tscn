@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://m66cub6mxkge" path="res://Characters/Rita/RitaRightAnimated-Sheet.png" id="3_7o44b"]
 [ext_resource type="Texture2D" uid="uid://deu4kt4kx158w" path="res://Characters/Rita/RitaBackAnimation-Sheet.png" id="4_t503k"]
 [ext_resource type="PackedScene" uid="uid://svr5y6hbim1l" path="res://Scenes/npc_behavior_patrol.tscn" id="5_fdo55"]
+[ext_resource type="Texture2D" uid="uid://ba11otuva373o" path="res://dialogue/quest/QuestAsset/questUI.png" id="7_t503k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_crfs5"]
 atlas = ExtResource("1_orpj1")
@@ -193,9 +194,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xd8kf"]
 size = Vector2(119.49991, 186.00002)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1292378668]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1292378668 groups=["NPC"]]
 scale = Vector2(0.4, 0.4)
 script = ExtResource("1_7o44b")
+group_name = "Rita"
+npc_name = "Rita"
+npc_id = "npc_1"
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1612297641]
 sprite_frames = SubResource("SpriteFrames_uu63o")
@@ -215,3 +219,12 @@ shape = SubResource("RectangleShape2D_xd8kf")
 
 [node name="NpcBehaviorPatrol" parent="." unique_id=1057265896 instance=ExtResource("5_fdo55")]
 position = Vector2(-332.49997, -7.499999)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2104214780]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer" unique_id=796714385]
+offset_left = -149.0
+offset_top = -148.0
+offset_right = -109.0
+offset_bottom = -108.0
+texture = ExtResource("7_t503k")

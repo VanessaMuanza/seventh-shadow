@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dvnu4v4mr3bl5"]
+
+[ext_resource type="Texture2D" uid="uid://cm1esl5hvs15y" path="res://dialogue/textbox/textbox ui.png" id="1_7ychv"]
+
+[node name="TextBox" type="CanvasLayer" unique_id=1763476496]
+
+[node name="Control" type="Control" parent="." unique_id=1784002089]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=2087644285]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_7ychv")
+
+[node name="Label" type="Label" parent="Control" unique_id=947867137]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "name"

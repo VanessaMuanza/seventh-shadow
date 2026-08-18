@@ -29,12 +29,16 @@ func _ready() -> void:
 		
 
 func update_label( _s : String) -> void:
-	$Sprite2D/Label.text = _s
-	
-func update_line(next_location: Vector2) -> void:
-	var line : Line2D = $Sprite2D/Line2D
-	line.points[ 1 ] = next_location - position
+	if is_instance_valid(get_node_or_null("Sprite2D/Label")):
+		$Sprite2D/Label.text = _s
 
+
+	
+
+func update_line(next_location: Vector2) -> void:
+	var line : Line2D = get_node_or_null("Sprite2D/Line2D")
+	if is_instance_valid(line):
+		line.points[1] = next_location - position
 
 func _update_wait_time_label() -> void:
 	if Engine.is_editor_hint():

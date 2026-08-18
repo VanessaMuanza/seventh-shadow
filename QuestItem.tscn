@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dj4lqmbssmmi2"]
+
+[ext_resource type="Script" uid="uid://pfxudm3eiuwj" path="res://quest_item.gd" id="1_eeksw"]
+[ext_resource type="Texture2D" uid="uid://cx2do01me7n7g" path="res://dialogue/quest/QuestAsset/diamant.png" id="2_514pf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lg1kc"]
+radius = 75.059975
+
+[node name="QuestItem" type="Area2D" unique_id=1480070890 groups=["Item"]]
+script = ExtResource("1_eeksw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=179354929]
+shape = SubResource("CircleShape2D_lg1kc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1657255815 groups=["Item"]]
+texture_filter = 1
+texture = ExtResource("2_514pf")

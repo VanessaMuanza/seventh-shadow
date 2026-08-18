@@ -214,3 +214,8 @@ position_smoothing_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1313626427]
 position = Vector2(8, 43)
 shape = SubResource("RectangleShape2D_pbq55")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=27762685]
+scale = Vector2(2, 2)
+target_position = Vector2(0, 175)
+collide_with_areas = true

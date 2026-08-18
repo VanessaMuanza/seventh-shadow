@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://c3a35w76fj020"]
+
+[ext_resource type="Script" uid="uid://cg5atb7u6equ4" path="res://Scripts/dialogue/DialogUI.gd" id="1_0ejin"]
+[ext_resource type="Texture2D" uid="uid://c13iegwtmyr0" path="res://dialogue/textebox.png" id="2_0r1mm"]
+[ext_resource type="FontFile" uid="uid://c2l4pqf3sir0h" path="res://Asset/StardewValley.otf" id="3_fm0sy"]
+
+[node name="DialogUI" type="Control" unique_id=1143857990]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0ejin")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=175966581]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer" unique_id=1781671822]
+texture_filter = 1
+custom_minimum_size = Vector2(1120, 270)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -566.0
+offset_top = -679.0
+offset_right = 591.0
+offset_bottom = 279.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_0r1mm")
+
+[node name="DialogueBox" type="VBoxContainer" parent="CanvasLayer/NinePatchRect" unique_id=73987273]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 138.0
+offset_top = 383.0
+offset_right = -123.0
+offset_bottom = -342.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="DialogueSpekaer" type="Label" parent="CanvasLayer/NinePatchRect/DialogueBox" unique_id=1829306498]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("3_fm0sy")
+theme_override_font_sizes/font_size = 50
+text = "NPC Name
+"
+
+[node name="DialogueText" type="Label" parent="CanvasLayer/NinePatchRect/DialogueBox" unique_id=1393893684]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_fm0sy")
+theme_override_font_sizes/font_size = 50
+text = "Dialogue text"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DialogueOptions" type="HBoxContainer" parent="CanvasLayer/NinePatchRect/DialogueBox" unique_id=1127448445]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/NinePatchRect" unique_id=99884958]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.897
+anchor_top = 0.36800003
+anchor_right = 0.897
+anchor_bottom = 0.36800003
+offset_left = -78.82898
+offset_top = 0.45596313
+offset_right = 0.17102051
+offset_bottom = 73.45596
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_fonts/font = ExtResource("3_fm0sy")
+theme_override_font_sizes/font_size = 50
+text = "X"
+flat = true

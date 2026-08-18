@@ -2,6 +2,8 @@ class_name NPC extends CharacterBody2D
 
 @export var group_name: String
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
+@export var npc_name : String
+@export var npc_id : String
 
 var do_behavior: bool = true
 var state: String = "idle"
@@ -36,3 +38,6 @@ func play_animation(prefix: String, dir: Vector2) -> void:
 			sprite_2d.play(prefix + "_up")
 		else:
 			sprite_2d.play(prefix + "_down")
+			
+func start_dialog():
+	print("Hello")

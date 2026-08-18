@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://d0tw65w3yuw6t"]
+
+[ext_resource type="Script" uid="uid://b0lu5fv7wdr72" path="res://Scripts/quest/QuestUI.gd" id="1_gmet5"]
+[ext_resource type="Texture2D" uid="uid://xpxknj2m67xc" path="res://Asset/UI_TravelBook_BookPageRight01a.png" id="1_if6cb"]
+[ext_resource type="Texture2D" uid="uid://biofukfhj0b28" path="res://Asset/UI_TravelBook_BookPageLeft01a.png" id="2_gmet5"]
+[ext_resource type="FontFile" uid="uid://c2l4pqf3sir0h" path="res://Asset/StardewValley.otf" id="3_nxwj7"]
+
+[node name="QuestUi" type="Control" unique_id=1473339626]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_gmet5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=343441380]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer" unique_id=1046349089]
+texture_filter = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -545.0
+offset_top = -343.0
+offset_right = -79.0
+offset_bottom = 339.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("1_if6cb")
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/NinePatchRect" unique_id=2051549228]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -58.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = 63.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_fonts/font = ExtResource("3_nxwj7")
+theme_override_font_sizes/font_size = 30
+text = "X"
+flat = true
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="CanvasLayer" unique_id=1291260205]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 141.0
+offset_top = -664.0
+offset_right = 607.0
+offset_bottom = 18.0
+grow_vertical = 0
+texture = ExtResource("2_gmet5")
+
+[node name="Contents" type="VBoxContainer" parent="CanvasLayer" unique_id=210329304]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 121.0
+offset_right = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="Headings" type="HBoxContainer" parent="CanvasLayer/Contents" unique_id=1938505231]
+layout_mode = 2
+
+[node name="List" type="Label" parent="CanvasLayer/Contents/Headings" unique_id=1266268100]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_nxwj7")
+theme_override_font_sizes/font_size = 30
+text = "Available Quests"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Details" type="Label" parent="CanvasLayer/Contents/Headings" unique_id=1689521659]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_nxwj7")
+theme_override_font_sizes/font_size = 30
+text = "Quests Details"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Details" type="HBoxContainer" parent="CanvasLayer/Contents" unique_id=1651941939]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="QuestList" type="VBoxContainer" parent="CanvasLayer/Contents/Details" unique_id=134275437]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="QuestDetails" type="VBoxContainer" parent="CanvasLayer/Contents/Details" unique_id=1724754054]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="QuesTitle" type="Label" parent="CanvasLayer/Contents/Details/QuestDetails" unique_id=408432428]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_nxwj7")
+theme_override_font_sizes/font_size = 25
+text = "Title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuestDecription" type="Label" parent="CanvasLayer/Contents/Details/QuestDetails" unique_id=1432264131]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_nxwj7")
+theme_override_font_sizes/font_size = 25
+text = "Description"
+
+[node name="QuestObjectives" type="VBoxContainer" parent="CanvasLayer/Contents/Details/QuestDetails" unique_id=1519946622]
+layout_mode = 2
+
+[node name="QuestRewards" type="VBoxContainer" parent="CanvasLayer/Contents/Details/QuestDetails" unique_id=503262864]
+layout_mode = 2

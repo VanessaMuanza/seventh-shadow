@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://gx6yb7bj31hc"]
+
+[ext_resource type="PackedScene" uid="uid://73jm5qjy52vq" path="res://addons/dialogue_manager/example_balloon/example_balloon.tscn" id="1_aanc3"]
+
+[node name="ExampleBalloon" unique_id=1434168376 instance=ExtResource("1_aanc3")]
+
+[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" parent_id_path=PackedInt32Array(1624289611) index="1" unique_id=1225160028]
+text = "salut
+"
