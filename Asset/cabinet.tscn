@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://iw2ufp1mtbsf"]
+
+[ext_resource type="Texture2D" uid="uid://duknsji8fovnq" path="res://Asset/workshop cabinet.png" id="1_rl1ho"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqyo7"]
+size = Vector2(84, 157)
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=928299980]
+collision_mask = 3
+gravity_scale = 0.0
+linear_damp = 5.0
+angular_damp = 5.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=518211584]
+position = Vector2(0, 2)
+scale = Vector2(3, 3)
+texture = ExtResource("1_rl1ho")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1305767557]
+position = Vector2(-1, -5.5)
+shape = SubResource("RectangleShape2D_rqyo7")

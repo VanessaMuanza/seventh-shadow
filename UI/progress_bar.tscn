@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bf12l0rtf6gmq"]
+
+[ext_resource type="Texture2D" uid="uid://chkfq3docukmw" path="res://UI/progressbar empty.png" id="1_s4sbf"]
+[ext_resource type="Texture2D" uid="uid://jxqtskuflsse" path="res://UI/Progressbar full.png" id="2_2l02c"]
+[ext_resource type="Texture2D" uid="uid://c4lhpkxeuvkrj" path="res://UI/heart healthbar.png" id="3_2l02c"]
+
+[node name="ProgressBar" type="Control" unique_id=110269027]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 4.0
+offset_bottom = 27.0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=172327660]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -41.0
+offset_right = 125.0
+offset_bottom = 123.0
+max_value = 20.0
+value = 20.0
+texture_under = ExtResource("1_s4sbf")
+texture_progress = ExtResource("2_2l02c")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1107309800]
+layout_mode = 0
+offset_left = -11.0
+offset_top = -58.0
+offset_right = 113.0
+offset_bottom = 106.0
+texture = ExtResource("3_2l02c")

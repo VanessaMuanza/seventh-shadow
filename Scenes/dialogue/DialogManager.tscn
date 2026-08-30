@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ff5n5om2gwu1"]
+
+[ext_resource type="Script" uid="uid://b0o6q53q7shyc" path="res://Scripts/dialogue/DialogManager.gd" id="1_mubyj"]
+[ext_resource type="PackedScene" uid="uid://c3a35w76fj020" path="res://Scenes/dialogue/DialogUI.tscn" id="2_645is"]
+
+[node name="DialogManager" type="Node2D" unique_id=385422567]
+script = ExtResource("1_mubyj")
+
+[node name="DialogUI" parent="." unique_id=1143857990 instance=ExtResource("2_645is")]

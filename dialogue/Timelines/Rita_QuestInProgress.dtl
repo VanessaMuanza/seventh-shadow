@@ -1,0 +1,9 @@
+join Rita left
+Rita: did you find the crystal
+	- give her the crystal
+		do QuestManager.give_crystal()
+	- keep the crystal for now
+		Rita: I need that crystal.
+
+- no i didn't find it yet
+	Rita: Then go find it !

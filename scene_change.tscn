@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://yiom4qvyhct"]
 
-[ext_resource type="Script" uid="uid://dfvpx2ql58vqr" path="res://scene_change.gd" id="1_7krcl"]
+[ext_resource type="Script" uid="uid://dfvpx2ql58vqr" path="res://Scripts/scene_change.gd" id="1_7krcl"]
 [ext_resource type="PackedScene" uid="uid://5rkwnqyh2v6r" path="res://Scenes/main.tscn" id="2_n4rl6"]
 
 [sub_resource type="Animation" id="Animation_mio38"]

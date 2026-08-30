@@ -1,0 +1,33 @@
+join Rita left
+Rita: Hello...what do you want
+- hello, my name is lucy, i'm new here
+Rita: Oh...you're new that's weird
+- why?
+	Rita: Because this place is cursed
+	- cursed..?
+		Rita: oh..nevermind, i'm talking nonsense
+		- (Cursed..maybe thats why my brother isn't here )
+			- do you know my brother? Alex
+				Rita: oh yeah, he was nice i guess, we didn't talk much
+				- He went missing for a couples of weeks, do you know where he is?
+					Rita: Well, maybe i can help you, but you have to help me first
+					- sure what is is?
+						do QuestManager.start_quest("rita_crystal")
+						Rita: There's a dungeon nearby,i need a rare cystal from there
+						
+						- okay, how do i get it?
+							Rita: I can't tell you that, just go and talk to the wizard.
+							join map right
+							Rita: Here is a map, it can help you
+							leave map
+							- Thank you!
+					- No, i'm good
+						Rita: Ugh stop wasting my time
+				- My parent are worried
+
+
+
+- oh..
+	Rita: this place is cursed.. leave
+- bye
+	Rita: Ugh, stop wasting my time

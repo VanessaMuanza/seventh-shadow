@@ -2,11 +2,34 @@
 
 [ext_resource type="Script" uid="uid://737v6bxknt7a" path="res://Scripts/npc.gd" id="1_7o44b"]
 [ext_resource type="Texture2D" uid="uid://dfhjvp5nyipi" path="res://Characters/Rita/ritaWalkingAnimation-Sheet.png" id="1_orpj1"]
+[ext_resource type="Script" uid="uid://c65pry744eglc" path="res://Resources/dialog/dialog.gd" id="2_crfs5"]
 [ext_resource type="Texture2D" uid="uid://cft54qlejogik" path="res://Characters/Rita/ritaleftanimation-Sheet.png" id="2_fdo55"]
+[ext_resource type="Script" uid="uid://d2k0m62b8ahs0" path="res://Resources/Quest/Objectives.gd" id="3_6muld"]
 [ext_resource type="Texture2D" uid="uid://m66cub6mxkge" path="res://Characters/Rita/RitaRightAnimated-Sheet.png" id="3_7o44b"]
+[ext_resource type="Script" uid="uid://b0fmuiesttk2t" path="res://Resources/Quest/Rewards.gd" id="4_a1cs8"]
 [ext_resource type="Texture2D" uid="uid://deu4kt4kx158w" path="res://Characters/Rita/RitaBackAnimation-Sheet.png" id="4_t503k"]
-[ext_resource type="PackedScene" uid="uid://svr5y6hbim1l" path="res://Scenes/npc_behavior_patrol.tscn" id="5_fdo55"]
+[ext_resource type="Script" uid="uid://cnw106eyrliqf" path="res://Resources/Quest/Quests.gd" id="5_stjtj"]
 [ext_resource type="Texture2D" uid="uid://ba11otuva373o" path="res://dialogue/quest/QuestAsset/questUI.png" id="7_t503k"]
+
+[sub_resource type="Resource" id="Resource_7mrqn"]
+script = ExtResource("2_crfs5")
+metadata/_custom_type_script = "uid://c65pry744eglc"
+
+[sub_resource type="Resource" id="Resource_6muld"]
+script = ExtResource("3_6muld")
+id = "Crystal"
+description = "Find the rare crystal"
+target_id = "crysal"
+target_type = "collection"
+required_quantity = 1
+metadata/_custom_type_script = "uid://d2k0m62b8ahs0"
+
+[sub_resource type="Resource" id="Resource_w78ku"]
+script = ExtResource("5_stjtj")
+quest_id = "rita_crystal"
+quest_name = "The Crystal"
+objectives = Array[ExtResource("3_6muld")]([SubResource("Resource_6muld"), null])
+metadata/_custom_type_script = "uid://cnw106eyrliqf"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_crfs5"]
 atlas = ExtResource("1_orpj1")
@@ -194,31 +217,34 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xd8kf"]
 size = Vector2(119.49991, 186.00002)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1292378668 groups=["NPC"]]
+[sub_resource type="CircleShape2D" id="CircleShape2D_crfs5"]
+radius = 205.94292
+
+[node name="Rita" type="CharacterBody2D" unique_id=1292378668 groups=["NPC"]]
 scale = Vector2(0.4, 0.4)
 script = ExtResource("1_7o44b")
 group_name = "Rita"
 npc_name = "Rita"
 npc_id = "npc_1"
+dialog_resource = SubResource("Resource_7mrqn")
+quest_to_give = SubResource("Resource_w78ku")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1612297641]
+position = Vector2(355, 55)
 sprite_frames = SubResource("SpriteFrames_uu63o")
 animation = &"run_down"
 autoplay = "idle_down"
 frame_progress = 0.5771546
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=425689778]
-position = Vector2(-327.49997, -4.9999995)
+position = Vector2(14.9999695, 12.499998)
 zoom = Vector2(0.9, 0.9)
 position_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=560721331]
-position = Vector2(-327.24988, -16.999996)
+position = Vector2(5, 2.500002)
 scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_xd8kf")
-
-[node name="NpcBehaviorPatrol" parent="." unique_id=1057265896 instance=ExtResource("5_fdo55")]
-position = Vector2(-332.49997, -7.499999)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2104214780]
 
@@ -228,3 +254,13 @@ offset_top = -148.0
 offset_right = -109.0
 offset_bottom = -108.0
 texture = ExtResource("7_t503k")
+
+[node name="ChatDetectio" type="Area2D" parent="." unique_id=1750734636]
+position = Vector2(22.5, 17.500004)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChatDetectio" unique_id=1322263875]
+position = Vector2(-2.5000305, -45.000008)
+shape = SubResource("CircleShape2D_crfs5")
+
+[connection signal="body_entered" from="ChatDetectio" to="." method="_on_chat_detectio_body_entered"]
+[connection signal="body_exited" from="ChatDetectio" to="." method="_on_chat_detectio_body_exited"]

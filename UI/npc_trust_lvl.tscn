@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dh3yg71n24cvv"]
+
+[ext_resource type="Texture2D" uid="uid://dvf3vyc81gqqb" path="res://UI/UI_TravelBook_FrameSelect01b.png" id="1_jc4r3"]
+[ext_resource type="Texture2D" uid="uid://bfc7sjco0jgh4" path="res://Characters/Rita/portrait/RitaPixel_Portrait.png" id="2_1n13c"]
+[ext_resource type="FontFile" uid="uid://c2l4pqf3sir0h" path="res://Asset/StardewValley.otf" id="3_ci0ou"]
+[ext_resource type="PackedScene" uid="uid://bf12l0rtf6gmq" path="res://UI/progress_bar.tscn" id="4_1n13c"]
+
+[node name="NpcTrustLvl" type="CanvasLayer" unique_id=1132394707]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=262650577]
+offset_left = 3.0
+offset_top = -5.0
+offset_right = 738.0
+offset_bottom = 249.0
+texture = ExtResource("1_jc4r3")
+
+[node name="RitaPixelPortrait" type="Sprite2D" parent="." unique_id=716656409]
+position = Vector2(104, 130)
+scale = Vector2(0.15, 0.153)
+texture = ExtResource("2_1n13c")
+
+[node name="Label" type="Label" parent="RitaPixelPortrait" unique_id=162084455]
+offset_left = 213.33327
+offset_top = -542.48364
+offset_right = 3179.9998
+offset_bottom = 460.51636
+theme_override_colors/font_color = Color(0.2627451, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ci0ou")
+theme_override_font_sizes/font_size = 500
+text = "Rita
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" parent="." unique_id=184712926 instance=ExtResource("4_1n13c")]
+texture_filter = 1
+offset_left = 203.0
+offset_top = 10.0
+offset_right = 203.0
+offset_bottom = 10.0
+scale = Vector2(3, 3)

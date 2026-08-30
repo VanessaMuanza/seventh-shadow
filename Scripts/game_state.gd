@@ -1,5 +1,6 @@
 extends Node
 
+var player: Node = null
 var collected_items: Array[String] = []
 
 func is_collected(id: String) -> bool:
@@ -10,3 +11,8 @@ func mark_collected(id: String) -> void:
 		collected_items.append(id)
 
 var next_spawn_point: String = ""
+
+var npc_locations: Dictionary = {}
+
+
+	

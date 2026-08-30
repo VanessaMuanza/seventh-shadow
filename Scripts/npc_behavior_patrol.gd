@@ -29,6 +29,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		return
+	if not npc.do_behavior:
+		return
 	if npc.global_position.distance_to(target.target_position) < 1:
 		start()
 
@@ -62,12 +64,12 @@ func gather_patrol_locations( _n : Node = null) -> void:
 func start() -> void:
 	print("start called, do_behavior: ", npc.do_behavior, " size: ", patrol_locations.size())
 	if npc.do_behavior == false or patrol_locations.size() < 2:
+		npc.velocity = Vector2.ZERO
 		return
 		
 #idle phase
 	npc.global_position = target.target_position
 	npc.state = "idle"
-	npc.velocity = Vector2.ZERO
 	npc.update_animation()
 	
 	var wait_time: float = target.wait_time
@@ -82,6 +84,7 @@ func start() -> void:
 	
 	
 	if npc.do_behavior == false:
+		npc.velocity = Vector2.ZERO
 		return
 	
 	npc.state = "run"

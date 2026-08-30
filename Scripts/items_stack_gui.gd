@@ -12,6 +12,8 @@ func update():
 	
 	itemSprite.visible = true
 	itemSprite.texture = inventorySlot.item.texture
+	itemSprite.scale = Vector2.ONE * inventorySlot.item.display_scale
+
 		
 	if inventorySlot.amount > 1:
 		amountLabel.visible = true

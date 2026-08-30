@@ -5,11 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://dqujd2lxkq7f3" path="res://House assets/LucyHouseAsset/retro_bathroom_set_withshadow redo.png" id="2_c88sv"]
 [ext_resource type="Texture2D" uid="uid://ctvcddirbeak2" path="res://House assets/LucyHouseAsset/Messy_Furniture redo-export.png" id="2_vwjho"]
 [ext_resource type="Texture2D" uid="uid://b3voqvr4aq81e" path="res://House assets/LucyHouseAsset/doorswindowsstairs_LRK redo.png" id="3_vwjho"]
-[ext_resource type="PackedScene" uid="uid://dahwancxf87tb" path="res://Scenes/character_body_2d.tscn" id="4_2jioq"]
+[ext_resource type="PackedScene" uid="uid://dahwancxf87tb" path="res://Characters/Lucy/Lucy.tscn" id="4_2jioq"]
 [ext_resource type="Script" uid="uid://dxpsj4gwfdd0t" path="res://Scripts/area_2d2.gd" id="6_0l885"]
 [ext_resource type="Script" uid="uid://k8xoprkl0oir" path="res://Scripts/canvas_layer.gd" id="8_v4ktt"]
 [ext_resource type="PackedScene" uid="uid://c6muxk8b2af4c" path="res://Scenes/inventory_gui.tscn" id="9_q3sb1"]
-[ext_resource type="PackedScene" uid="uid://bcasiy12fkww8" path="res://inventory/hot_bar.tscn" id="10_q3sb1"]
+[ext_resource type="PackedScene" uid="uid://c5y6rlv75ob57" path="res://inventory/hot_bar.tscn" id="10_q3sb1"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_2jioq"]
 tile_data = PackedInt32Array(0, 983040, 12, 65536, 983040, 13, 131072, 983040, 12, 196608, 983040, 13, 1, 1048576, 12, 65537, 1048576, 13, 131073, 1048576, 12, 196609, 1048576, 13, 2, 983040, 12, 65538, 983040, 13, 131074, 983040, 12, 196610, 983040, 13, 3, 1048576, 12, 65539, 1048576, 13, 131075, 1048576, 12, 196611, 1048576, 13, 4, 983040, 12, 65540, 983040, 13, 131076, 983040, 12, 196612, 983040, 13, 5, 1048576, 12, 65541, 1048576, 13, 131077, 1048576, 12, 196613, 1048576, 13)
@@ -2790,9 +2790,7 @@ grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(4, 4)
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
 [connection signal="closed" from="CanvasLayer/InventoryGui" to="CanvasLayer/InventoryGui" method="_on_closed"]
 [connection signal="opened" from="CanvasLayer/InventoryGui" to="CanvasLayer/InventoryGui" method="_on_opened"]

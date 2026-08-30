@@ -1,0 +1,4 @@
+join Wizard left
+Wizard: I already gave you the crystal, what more do you want?
+	- nothing, sorry
+		Wizard: Then leave !

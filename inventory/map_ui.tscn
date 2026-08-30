@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bd42y7jgumqmb"]
+
+[ext_resource type="Texture2D" uid="uid://ehnxj45jjwqf" path="res://Characters/map-export.png" id="1_1ex23"]
+[ext_resource type="Script" uid="uid://dbxq4ncsbgjdv" path="res://inventory/map_ui.gd" id="1_ajkn2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ajkn2"]
+radius = 103.75452
+
+[node name="MapUI" type="CharacterBody2D" unique_id=1864086868]
+script = ExtResource("1_ajkn2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=16478163]
+texture = ExtResource("1_1ex23")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2051131478]
+shape = SubResource("CircleShape2D_ajkn2")

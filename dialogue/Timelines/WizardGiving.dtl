@@ -1,0 +1,14 @@
+join Wizard left
+Wizard: What do you want
+- give me the crystal
+	join Crystal right
+	Wizard: you want this crystal?
+	- yes
+		do QuestManager.receive_crystal()
+		do print("TEST WIZARD")
+		leave Crystal
+		Wizard: Fine take it
+	
+	- no
+		leave Crystal
+		Wizard: Then why are you here

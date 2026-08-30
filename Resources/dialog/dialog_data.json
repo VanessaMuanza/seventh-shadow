@@ -1,0 +1,55 @@
+{
+	"npc_1"  : {
+		"tree" : [
+			{
+				"branch_id" : "npc_1_1",
+				"dialogs": [
+					{
+						"state": "start",
+						"text": "Hi..what do you want?",
+						"options": {
+							"Ask About Your Lost Brother": "in_progress",
+							"Recieve Quests": "give_quesst",
+							"Say Goodbye" : "exit",
+						}
+					},
+					{
+						"state": "in_progress",
+						"text": "He was nice i guess, we didn't talk much..",
+						"options": {
+							"Go Back": "start",
+							"Recieve Quests": "give_quests",
+							"Say Goodbye" : "exit",
+						}
+					},
+					{
+						"state": "give_quests",
+						"text": "Sure! If you need anything, you can find it in your quest log?",
+						"options": {
+							"Go Back" : "start",
+							"say goodbye" : "exit",
+						}
+					},
+					{
+						"state": "end",
+						"text": "Bye..",
+						"options": {}
+					},
+					{
+						"state": "exit",
+						"text": "stop bothering me",
+						"options": {}
+					}
+				]
+			},
+			{
+				"branch_id" : "npc_1_2",
+				"dialogs": []
+			},
+			{
+				"branch_id" : "npc_1_default",
+				"dialogs" : []
+			},
+		],
+	},
+}

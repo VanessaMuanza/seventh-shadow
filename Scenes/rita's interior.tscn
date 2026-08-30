@@ -3,11 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://b761xhxeklcim" path="res://House assets/Rita's house asset/midcentury_modern_room_door_tiles redo.png" id="1_mvwna"]
 [ext_resource type="Texture2D" uid="uid://ds1gs6j1k7et7" path="res://House assets/Rita's house asset/rita kitchen redo.png" id="2_pe0rg"]
 [ext_resource type="Texture2D" uid="uid://5poittlrek6t" path="res://House assets/Rita's house asset/midcentury_modern_furnitureset redo.png" id="3_5illj"]
-[ext_resource type="PackedScene" uid="uid://dahwancxf87tb" path="res://Scenes/character_body_2d.tscn" id="4_8ejag"]
-[ext_resource type="Script" uid="uid://c352tutqeu1t4" path="res://Scenes/rita_interior.gd" id="5_5illj"]
+[ext_resource type="PackedScene" uid="uid://dahwancxf87tb" path="res://Characters/Lucy/Lucy.tscn" id="4_8ejag"]
+[ext_resource type="Script" uid="uid://c352tutqeu1t4" path="res://Scripts/rita_interior.gd" id="5_5illj"]
 [ext_resource type="Script" uid="uid://k8xoprkl0oir" path="res://Scripts/canvas_layer.gd" id="6_xddrd"]
 [ext_resource type="PackedScene" uid="uid://c6muxk8b2af4c" path="res://Scenes/inventory_gui.tscn" id="7_6vmsj"]
-[ext_resource type="PackedScene" uid="uid://bcasiy12fkww8" path="res://inventory/hot_bar.tscn" id="8_7a4j2"]
+[ext_resource type="PackedScene" uid="uid://c5y6rlv75ob57" path="res://inventory/hot_bar.tscn" id="8_7a4j2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_32lci"]
 texture = ExtResource("1_mvwna")
