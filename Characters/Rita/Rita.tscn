@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://deu4kt4kx158w" path="res://Characters/Rita/RitaBackAnimation-Sheet.png" id="4_t503k"]
 [ext_resource type="Script" uid="uid://cnw106eyrliqf" path="res://Resources/Quest/Quests.gd" id="5_stjtj"]
 [ext_resource type="Texture2D" uid="uid://ba11otuva373o" path="res://dialogue/quest/QuestAsset/questUI.png" id="7_t503k"]
+[ext_resource type="PackedScene" uid="uid://svr5y6hbim1l" path="res://Scenes/npc_behavior_patrol.tscn" id="11_6muld"]
 
 [sub_resource type="Resource" id="Resource_7mrqn"]
 script = ExtResource("2_crfs5")
@@ -222,6 +223,7 @@ radius = 205.94292
 
 [node name="Rita" type="CharacterBody2D" unique_id=1292378668 groups=["NPC"]]
 scale = Vector2(0.4, 0.4)
+motion_mode = 1
 script = ExtResource("1_7o44b")
 group_name = "Rita"
 npc_name = "Rita"
@@ -261,6 +263,12 @@ position = Vector2(22.5, 17.500004)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChatDetectio" unique_id=1322263875]
 position = Vector2(-2.5000305, -45.000008)
 shape = SubResource("CircleShape2D_crfs5")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=404807885]
+
+[node name="IdleTimer" type="Timer" parent="." unique_id=1048097656]
+
+[node name="NpcBehaviorPatrol" parent="." unique_id=1057265896 instance=ExtResource("11_6muld")]
 
 [connection signal="body_entered" from="ChatDetectio" to="." method="_on_chat_detectio_body_entered"]
 [connection signal="body_exited" from="ChatDetectio" to="." method="_on_chat_detectio_body_exited"]

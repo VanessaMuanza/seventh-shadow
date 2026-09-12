@@ -222,4 +222,3 @@ target_position = Vector2(0, 175)
 collide_with_areas = true
 
 [node name="QuestUi" parent="." unique_id=1473339626 instance=ExtResource("7_pbj7x")]
-scale = Vector2(0.5, 0.5)

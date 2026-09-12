@@ -13,6 +13,6 @@ func mark_collected(id: String) -> void:
 var next_spawn_point: String = ""
 
 var npc_locations: Dictionary = {}
-
+var next_scene_path: String = ""
 
 	

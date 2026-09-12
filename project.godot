@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="The seventh shadow"
-run/main_scene="uid://5rkwnqyh2v6r"
+run/main_scene="uid://cs1k0rio83qgl"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
@@ -22,6 +22,8 @@ DialogueManager="*uid://c3rodes2l3gxb"
 Dialogic="*uid://ds2q0uclmolvu"
 GameManager="*uid://dhs5m7dx6b6jd"
 QuestManager="*uid://bere8qugkceq8"
+QuitButton="*uid://c84wkg6f7mwuh"
+FadeTransition="*uid://bdw4g4j1o2gt0"
 
 [dialogic]
 
@@ -82,8 +84,7 @@ runtime/balloon_path="res://addons/dialogue_manager/example_balloon/balloon.tscn
 
 [display]
 
-window/stretch/mode="viewport"
-window/stretch/aspect="expand"
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
@@ -162,3 +163,4 @@ locale/translations_pot_files=PackedStringArray("res://dialogue/dialogue_manager
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)

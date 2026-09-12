@@ -14,7 +14,7 @@ func _on_body_exited(body):
 	if body is NPC:
 		return
 	if body is CharacterBody2D:
-		entered = true
+		entered = false
 	
 func _physics_process (_delta):
 	if entered == true:

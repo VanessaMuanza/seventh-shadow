@@ -9,3 +9,6 @@ walk_speed = 100.0
 
 [node name="PatrolLocation" parent="." unique_id=2049667534 instance=ExtResource("2_4q0vu")]
 modulate = Color(1, 0, 0, 1)
+
+[node name="PatrolLocation2" parent="." unique_id=617754772 instance=ExtResource("2_4q0vu")]
+modulate = Color(1, 1, 0, 1)

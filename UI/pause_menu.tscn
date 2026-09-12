@@ -1,0 +1,268 @@
+[gd_scene format=3 uid="uid://bh214m3pb0kcu"]
+
+[ext_resource type="Texture2D" uid="uid://xpxknj2m67xc" path="res://UI/UI_TravelBook_BookPageRight01a.png" id="1_k6dah"]
+[ext_resource type="Script" uid="uid://x5h8ofjykh1f" path="res://UI/pause_menu.gd" id="1_mexjk"]
+[ext_resource type="FontFile" uid="uid://c2l4pqf3sir0h" path="res://Asset/StardewValley.otf" id="2_mexjk"]
+[ext_resource type="Texture2D" uid="uid://biofukfhj0b28" path="res://UI/UI_TravelBook_BookPageLeft01a.png" id="3_fu28r"]
+[ext_resource type="Texture2D" uid="uid://dlymygxxj2vp7" path="res://UI/UI_TravelBook_BookCover01a.png" id="4_pwekk"]
+[ext_resource type="Texture2D" uid="uid://cw0jddkspkbn3" path="res://UI/selected frame.png" id="5_onkq6"]
+[ext_resource type="Texture2D" uid="uid://csf3v406l2phv" path="res://UI/UI_TravelBook_Marker01a.png" id="6_6b54m"]
+[ext_resource type="Texture2D" uid="uid://1v57po2so3wa" path="res://UI/bar fill brown.png" id="7_ljfgm"]
+[ext_resource type="Texture2D" uid="uid://byhfm2qth10x3" path="res://UI/quest icon.png" id="8_dwxn8"]
+[ext_resource type="Texture2D" uid="uid://bmd46e2x0cphg" path="res://UI/trust level icon.png" id="9_7suen"]
+
+[node name="PauseMenu" type="Control" unique_id=2052728525]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_mexjk")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1290642651]
+scale = Vector2(0.6, 0.6)
+transform = Transform2D(0.6, 0, 0, 0.6, 0, 0)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer" unique_id=329457560]
+texture_filter = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -194.33337
+offset_top = -168.0
+offset_right = 271.66663
+offset_bottom = 514.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("1_k6dah")
+metadata/_edit_use_anchors_ = true
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/NinePatchRect" unique_id=1447316192]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -58.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = 63.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_fonts/font = ExtResource("2_mexjk")
+theme_override_font_sizes/font_size = 30
+text = "X"
+flat = true
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="CanvasLayer" unique_id=564604801]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 491.66663
+offset_top = -489.0
+offset_right = 957.6666
+offset_bottom = 193.0
+grow_vertical = 0
+texture = ExtResource("3_fu28r")
+
+[node name="BookCover" type="NinePatchRect" parent="CanvasLayer" unique_id=883125707]
+z_index = -1
+offset_left = 431.66663
+offset_top = 135.0
+offset_right = 1485.6666
+offset_bottom = 863.0
+texture = ExtResource("4_pwekk")
+
+[node name="selected2" type="TextureRect" parent="CanvasLayer" unique_id=1834564538]
+offset_left = 531.6666
+offset_top = 74.99999
+offset_right = 934.6666
+offset_bottom = 379.0
+texture = ExtResource("5_onkq6")
+
+[node name="Contents" type="VBoxContainer" parent="CanvasLayer" unique_id=1333841472]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 489.99997
+offset_top = 206.66666
+offset_right = 319.66663
+offset_bottom = 175.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="Headings" type="HBoxContainer" parent="CanvasLayer/Contents" unique_id=157723244]
+layout_mode = 2
+
+[node name="List" type="Label" parent="CanvasLayer/Contents/Headings" unique_id=1277215458]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.2627451, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_mexjk")
+theme_override_font_sizes/font_size = 39
+text = "Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="vide" type="Label" parent="CanvasLayer/Contents/Headings" unique_id=630675351]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.2627451, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_mexjk")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="QuestLog" type="Button" parent="CanvasLayer" unique_id=1373468435]
+offset_left = 476.66663
+offset_top = 116.666664
+offset_right = 577.6666
+offset_bottom = 162.66667
+scale = Vector2(1.5, 1.5)
+icon = ExtResource("6_6b54m")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="marker2" type="Button" parent="CanvasLayer" unique_id=1252253559]
+offset_left = 563.3333
+offset_top = 116.66668
+offset_right = 664.3333
+offset_bottom = 162.66669
+scale = Vector2(1.5, 1.5)
+icon = ExtResource("6_6b54m")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="PauseButton" type="Button" parent="CanvasLayer" unique_id=1708975036]
+offset_left = 649.99994
+offset_top = 104.99999
+offset_right = 750.99994
+offset_bottom = 151.0
+scale = Vector2(1.5, 1.5)
+icon = ExtResource("6_6b54m")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="BrownBar1" type="TextureRect" parent="CanvasLayer" unique_id=1845986750]
+offset_left = 538.6666
+offset_top = 278.0
+offset_right = 926.6666
+offset_bottom = 409.0
+texture = ExtResource("7_ljfgm")
+
+[node name="BrownBar2" type="TextureRect" parent="CanvasLayer" unique_id=1669212555]
+offset_left = 543.3333
+offset_top = 441.66666
+offset_right = 931.3333
+offset_bottom = 572.6666
+texture = ExtResource("7_ljfgm")
+
+[node name="BrownBar4" type="TextureRect" parent="CanvasLayer" unique_id=776988470]
+offset_left = 976.6666
+offset_top = 278.3333
+offset_right = 1364.6666
+offset_bottom = 409.3333
+texture = ExtResource("7_ljfgm")
+
+[node name="BrownBar3" type="TextureRect" parent="CanvasLayer" unique_id=1067569594]
+offset_left = 545.0
+offset_top = 598.3333
+offset_right = 933.0
+offset_bottom = 729.3333
+texture = ExtResource("7_ljfgm")
+
+[node name="BrownBar5" type="TextureRect" parent="CanvasLayer" unique_id=362938034]
+offset_left = 988.3333
+offset_top = 591.6667
+offset_right = 1376.3333
+offset_bottom = 722.6666
+texture = ExtResource("7_ljfgm")
+
+[node name="QuestIcon" type="TextureRect" parent="CanvasLayer" unique_id=434394117]
+offset_left = 516.6666
+offset_top = 123.33332
+offset_right = 595.6666
+offset_bottom = 196.33333
+texture = ExtResource("8_dwxn8")
+
+[node name="TLIcon" type="Button" parent="CanvasLayer" unique_id=911755670]
+offset_left = 594.99994
+offset_top = 108.33333
+offset_right = 684.99994
+offset_bottom = 201.33334
+theme_override_font_sizes/font_size = 30
+icon = ExtResource("9_7suen")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Resume" type="Button" parent="CanvasLayer" unique_id=1452719054]
+offset_left = 636.6666
+offset_top = 273.33334
+offset_right = 799.6666
+offset_bottom = 336.33334
+theme_override_colors/font_color = Color(0.2627451, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_mexjk")
+theme_override_font_sizes/font_size = 60
+text = "Resume"
+flat = true
+
+[node name="Options" type="Button" parent="CanvasLayer" unique_id=1062389330]
+offset_left = 649.99994
+offset_top = 416.66666
+offset_right = 812.99994
+offset_bottom = 484.66666
+theme_override_colors/font_color = Color(0.2627451, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_mexjk")
+theme_override_font_sizes/font_size = 60
+text = "Options"
+flat = true
+
+[node name="Save" type="Button" parent="CanvasLayer" unique_id=1215367662]
+offset_left = 649.99994
+offset_top = 581.6667
+offset_right = 812.99994
+offset_bottom = 649.6667
+theme_override_colors/font_color = Color(0.2627451, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_mexjk")
+theme_override_font_sizes/font_size = 60
+text = "Save
+"
+flat = true
+
+[node name="Quit" type="Button" parent="CanvasLayer" unique_id=276964145]
+offset_left = 984.99994
+offset_top = 259.99997
+offset_right = 1376.0
+offset_bottom = 327.99997
+theme_override_colors/font_color = Color(0.2627451, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_mexjk")
+theme_override_font_sizes/font_size = 60
+text = "Quit to main menu
+
+"
+flat = true
+
+[node name="Quit2" type="Button" parent="CanvasLayer" unique_id=370026927]
+offset_left = 989.99994
+offset_top = 576.6667
+offset_right = 1381.0
+offset_bottom = 644.6667
+theme_override_colors/font_color = Color(0.2627451, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_mexjk")
+theme_override_font_sizes/font_size = 60
+text = "Quit to desktop
+
+
+"
+flat = true
+
+[connection signal="pressed" from="CanvasLayer/QuestLog" to="." method="_on_quest_log_pressed"]

@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bdw4g4j1o2gt0"]
+
+[ext_resource type="Script" uid="uid://dayrlqm8vqor1" path="res://Scripts/fade_transition.gd" id="1_gjqor"]
+
+[node name="FadeTransition" type="CanvasLayer" unique_id=197873791]
+script = ExtResource("1_gjqor")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1207561119]
+offset_right = 1151.0
+offset_bottom = 645.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)

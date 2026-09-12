@@ -6,6 +6,9 @@ class_name NPC extends CharacterBody2D
 @export var npc_id : String
 
 
+var target_position: Vector2
+var has_target: bool = false
+
 #dialog vars. not useful
 
 
@@ -25,6 +28,7 @@ var last_direction: Vector2 = Vector2.DOWN
 func _physics_process(delta: float) -> void:
 	move_and_slide()
 	process_animation()
+
 
 func update_direction(target_position: Vector2) -> void:
 	direction = global_position.direction_to(target_position)

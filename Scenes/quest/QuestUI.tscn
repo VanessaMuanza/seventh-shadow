@@ -8,10 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://cw0jddkspkbn3" path="res://UI/selected frame.png" id="6_gmlxl"]
 [ext_resource type="Texture2D" uid="uid://csf3v406l2phv" path="res://UI/UI_TravelBook_Marker01a.png" id="6_xikol"]
 [ext_resource type="Texture2D" uid="uid://1v57po2so3wa" path="res://UI/bar fill brown.png" id="8_qpn27"]
+[ext_resource type="Script" uid="uid://1dqveqdqoqxe" path="res://UI/pause_button.gd" id="8_vl36v"]
 [ext_resource type="Texture2D" uid="uid://byhfm2qth10x3" path="res://UI/quest icon.png" id="10_vl36v"]
 [ext_resource type="Texture2D" uid="uid://bmd46e2x0cphg" path="res://UI/trust level icon.png" id="11_22mx2"]
 
 [node name="QuestUi" type="Control" unique_id=1473339626]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 0
 offset_left = 259.0
@@ -39,6 +41,7 @@ offset_bottom = 514.0
 grow_horizontal = 0
 grow_vertical = 2
 texture = ExtResource("1_if6cb")
+metadata/_edit_use_anchors_ = true
 
 [node name="CloseButton" type="Button" parent="CanvasLayer/NinePatchRect" unique_id=2051549228]
 self_modulate = Color(0, 0, 0, 1)
@@ -148,7 +151,7 @@ vertical_alignment = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.2627451, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_nxwj7")
-theme_override_font_sizes/font_size = 35
+theme_override_font_sizes/font_size = 50
 text = "Description"
 
 [node name="QuestObjectives" type="VBoxContainer" parent="CanvasLayer/Contents/Details/QuestDetails" unique_id=1519946622]
@@ -157,19 +160,40 @@ layout_mode = 2
 [node name="QuestRewards" type="VBoxContainer" parent="CanvasLayer/Contents/Details/QuestDetails" unique_id=503262864]
 layout_mode = 2
 
-[node name="marker" type="NinePatchRect" parent="CanvasLayer" unique_id=647931602]
-offset_left = 511.66663
-offset_top = 121.99999
-offset_right = 612.6666
-offset_bottom = 168.0
-texture = ExtResource("6_xikol")
+[node name="QuestLog" type="Button" parent="CanvasLayer" unique_id=432696388]
+offset_left = 476.66663
+offset_top = 104.99999
+offset_right = 577.6666
+offset_bottom = 151.0
+scale = Vector2(1.5, 1.5)
+icon = ExtResource("6_xikol")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="marker2" type="NinePatchRect" parent="CanvasLayer" unique_id=1888730755]
-offset_left = 607.6666
-offset_top = 121.99999
-offset_right = 708.6666
-offset_bottom = 168.0
-texture = ExtResource("6_xikol")
+[node name="marker2" type="Button" parent="CanvasLayer" unique_id=124539267]
+offset_left = 563.3333
+offset_top = 116.66668
+offset_right = 664.3333
+offset_bottom = 162.66669
+scale = Vector2(1.5, 1.5)
+mouse_filter = 2
+icon = ExtResource("6_xikol")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="PauseMenu" type="Button" parent="CanvasLayer" unique_id=844774910]
+offset_left = 651.6666
+offset_top = 118.333336
+offset_right = 752.6666
+offset_bottom = 164.33334
+scale = Vector2(1.5, 1.5)
+icon = ExtResource("6_xikol")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_vl36v")
 
 [node name="BrownBar1" type="TextureRect" parent="CanvasLayer" unique_id=1408674490]
 offset_left = 538.6666
@@ -199,16 +223,26 @@ offset_right = 927.6666
 offset_bottom = 601.0
 texture = ExtResource("8_qpn27")
 
-[node name="QuestIcon" type="TextureRect" parent="CanvasLayer" unique_id=1389258387]
-offset_left = 530.6666
-offset_top = 117.99999
-offset_right = 609.6666
-offset_bottom = 191.0
-texture = ExtResource("10_vl36v")
+[node name="QuestIcon" type="Button" parent="CanvasLayer" unique_id=1687213686]
+offset_left = 513.3333
+offset_top = 110.0
+offset_right = 592.3333
+offset_bottom = 183.0
+icon = ExtResource("10_vl36v")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="TLIcon" type="TextureRect" parent="CanvasLayer" unique_id=2037733720]
-offset_left = 616.6666
-offset_top = 99.99999
-offset_right = 706.6666
-offset_bottom = 193.0
-texture = ExtResource("11_22mx2")
+[node name="TLIcon" type="Button" parent="CanvasLayer" unique_id=290571345]
+offset_left = 594.99994
+offset_top = 108.33333
+offset_right = 684.99994
+offset_bottom = 201.33334
+theme_override_font_sizes/font_size = 30
+icon = ExtResource("11_22mx2")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="CanvasLayer/QuestLog" to="." method="_on_quest_log_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenu" to="." method="_on_pause_menu_pressed"]
