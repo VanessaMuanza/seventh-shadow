@@ -17,6 +17,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+focus_mode = 2
 script = ExtResource("1_mexjk")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1290642651]
@@ -186,12 +187,15 @@ offset_right = 1376.3333
 offset_bottom = 722.6666
 texture = ExtResource("7_ljfgm")
 
-[node name="QuestIcon" type="TextureRect" parent="CanvasLayer" unique_id=434394117]
+[node name="QuestIcon" type="Button" parent="CanvasLayer" unique_id=580714125]
 offset_left = 516.6666
 offset_top = 123.33332
 offset_right = 595.6666
 offset_bottom = 196.33333
-texture = ExtResource("8_dwxn8")
+icon = ExtResource("8_dwxn8")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="TLIcon" type="Button" parent="CanvasLayer" unique_id=911755670]
 offset_left = 594.99994

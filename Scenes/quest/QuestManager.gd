@@ -4,6 +4,8 @@ extends Node2D
 @export var quest_name: String #nom de la quête
 @export var quest_description: String
 @export var reached_goal_text : String #texte donner au joueur a la fin 
+var trust_level: int = 0
+signal trust_updated(trust_level: int)
 
 signal quest_updated(quest_id: String)
 signal objective_updated(quest_id: String,objective_id: String)
@@ -85,7 +87,7 @@ func give_crystal() -> bool:
 			inventory.updated.emit()
 
 			QuestManager.complete_objective("rita_crystal", "crystal")
-
+			QuestManager.add_trust()
 			Dialogic.start("Rita_QuestFinished")
 			return true 
 	return false
@@ -102,3 +104,10 @@ func receive_crystal()-> bool:
 		return true
 
 	return false
+
+
+#trust level augumente
+func add_trust(amount: int = 2) -> void:
+	trust_level += amount
+	print("TRUST LEVEL AUGMENTÉ:", trust_level)
+	trust_updated.emit(trust_level)

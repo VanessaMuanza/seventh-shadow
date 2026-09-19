@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="The seventh shadow"
-run/main_scene="uid://cs1k0rio83qgl"
+run/main_scene="uid://5rkwnqyh2v6r"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
