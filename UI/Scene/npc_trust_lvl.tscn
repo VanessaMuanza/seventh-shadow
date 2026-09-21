@@ -1,25 +1,26 @@
 [gd_scene format=3 uid="uid://dh3yg71n24cvv"]
 
-[ext_resource type="Texture2D" uid="uid://xpxknj2m67xc" path="res://UI/UI_TravelBook_BookPageRight01a.png" id="1_106f1"]
-[ext_resource type="Texture2D" uid="uid://dvf3vyc81gqqb" path="res://UI/UI_TravelBook_FrameSelect01b.png" id="1_jc4r3"]
-[ext_resource type="Script" uid="uid://2jgx5shbf358" path="res://UI/npc_trust_lvl.gd" id="1_ssblf"]
-[ext_resource type="Texture2D" uid="uid://bfc7sjco0jgh4" path="res://Characters/Rita/portrait/RitaPixel_Portrait.png" id="2_1n13c"]
-[ext_resource type="FontFile" uid="uid://c2l4pqf3sir0h" path="res://Asset/StardewValley.otf" id="3_ci0ou"]
-[ext_resource type="Texture2D" uid="uid://biofukfhj0b28" path="res://UI/UI_TravelBook_BookPageLeft01a.png" id="3_fmceb"]
-[ext_resource type="PackedScene" uid="uid://bf12l0rtf6gmq" path="res://UI/progress_bar.tscn" id="4_1n13c"]
-[ext_resource type="Texture2D" uid="uid://dlymygxxj2vp7" path="res://UI/UI_TravelBook_BookCover01a.png" id="4_ssblf"]
-[ext_resource type="Texture2D" uid="uid://cw0jddkspkbn3" path="res://UI/selected frame.png" id="5_2e8bh"]
-[ext_resource type="Texture2D" uid="uid://csf3v406l2phv" path="res://UI/UI_TravelBook_Marker01a.png" id="6_x22pe"]
-[ext_resource type="Script" uid="uid://1dqveqdqoqxe" path="res://UI/pause_button.gd" id="7_cgfqu"]
-[ext_resource type="Texture2D" uid="uid://1v57po2so3wa" path="res://UI/bar fill brown.png" id="8_47nj4"]
-[ext_resource type="Texture2D" uid="uid://byhfm2qth10x3" path="res://UI/quest icon.png" id="9_s80b8"]
-[ext_resource type="Texture2D" uid="uid://bmd46e2x0cphg" path="res://UI/trust level icon.png" id="10_ob7oy"]
-[ext_resource type="Script" uid="uid://bvandbwj31jya" path="res://UI/progress_bar.gd" id="12_fmceb"]
+[ext_resource type="Script" uid="uid://2jgx5shbf358" path="res://UI/Script/npc_trust_lvl.gd" id="1_27ol3"]
+[ext_resource type="Texture2D" uid="uid://xpxknj2m67xc" path="res://UI/UI_TravelBook_BookPageRight01a.png" id="2_86nbv"]
+[ext_resource type="FontFile" uid="uid://c2l4pqf3sir0h" path="res://Asset/StardewValley.otf" id="3_36f3r"]
+[ext_resource type="Texture2D" uid="uid://biofukfhj0b28" path="res://UI/UI_TravelBook_BookPageLeft01a.png" id="4_c8klq"]
+[ext_resource type="Texture2D" uid="uid://dlymygxxj2vp7" path="res://UI/UI_TravelBook_BookCover01a.png" id="5_2poh6"]
+[ext_resource type="Texture2D" uid="uid://chkfq3docukmw" path="res://UI/progressbar empty.png" id="6_s35c6"]
+[ext_resource type="Texture2D" uid="uid://jxqtskuflsse" path="res://UI/Progressbar full.png" id="7_fvi0w"]
+[ext_resource type="Texture2D" uid="uid://c4lhpkxeuvkrj" path="res://UI/heart healthbar.png" id="8_vxm1y"]
+[ext_resource type="Texture2D" uid="uid://cw0jddkspkbn3" path="res://UI/selected frame.png" id="9_i7vmt"]
+[ext_resource type="Texture2D" uid="uid://csf3v406l2phv" path="res://UI/UI_TravelBook_Marker01a.png" id="10_8maf0"]
+[ext_resource type="Script" uid="uid://1dqveqdqoqxe" path="res://UI/Script/pause_button.gd" id="11_qkmhj"]
+[ext_resource type="Texture2D" uid="uid://1v57po2so3wa" path="res://UI/bar fill brown.png" id="12_a7dv2"]
+[ext_resource type="Texture2D" uid="uid://byhfm2qth10x3" path="res://UI/quest icon.png" id="13_vm8xd"]
+[ext_resource type="Texture2D" uid="uid://bmd46e2x0cphg" path="res://UI/trust level icon.png" id="14_ugcqf"]
+[ext_resource type="Texture2D" uid="uid://bfc7sjco0jgh4" path="res://Characters/Rita/portrait/RitaPixel_Portrait.png" id="15_ls6cd"]
+[ext_resource type="Texture2D" uid="uid://dvf3vyc81gqqb" path="res://UI/UI_TravelBook_FrameSelect01b.png" id="16_8u60a"]
 
 [node name="NpcTrustLvl" type="Control" unique_id=1796935553]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_ssblf")
+script = ExtResource("1_27ol3")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1983891454]
 scale = Vector2(0.6, 0.6)
@@ -38,7 +39,7 @@ offset_right = 271.66663
 offset_bottom = 514.0
 grow_horizontal = 0
 grow_vertical = 2
-texture = ExtResource("1_106f1")
+texture = ExtResource("2_86nbv")
 
 [node name="CloseButton" type="Button" parent="CanvasLayer/NinePatchRect" unique_id=805309872]
 self_modulate = Color(0, 0, 0, 1)
@@ -52,7 +53,7 @@ offset_right = -5.0
 offset_bottom = 63.0
 grow_horizontal = 0
 theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
-theme_override_fonts/font = ExtResource("3_ci0ou")
+theme_override_fonts/font = ExtResource("3_36f3r")
 theme_override_font_sizes/font_size = 30
 text = "X"
 flat = true
@@ -66,7 +67,7 @@ offset_top = -489.0
 offset_right = 957.6666
 offset_bottom = 193.0
 grow_vertical = 0
-texture = ExtResource("3_fmceb")
+texture = ExtResource("4_c8klq")
 
 [node name="BookCover" type="NinePatchRect" parent="CanvasLayer" unique_id=1456471427]
 z_index = -1
@@ -74,14 +75,30 @@ offset_left = 431.66663
 offset_top = 135.0
 offset_right = 1485.6666
 offset_bottom = 863.0
-texture = ExtResource("4_ssblf")
+texture = ExtResource("5_2poh6")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=1812577752]
+offset_left = 662.0
+offset_top = 223.66666
+offset_right = 786.0
+offset_bottom = 387.66666
+max_value = 10.0
+texture_under = ExtResource("6_s35c6")
+texture_progress = ExtResource("7_fvi0w")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=516536040]
+offset_left = 650.0
+offset_top = 206.66666
+offset_right = 774.0
+offset_bottom = 370.66666
+texture = ExtResource("8_vxm1y")
 
 [node name="selected2" type="TextureRect" parent="CanvasLayer" unique_id=586826470]
 offset_left = 531.6666
 offset_top = 74.99999
 offset_right = 934.6666
 offset_bottom = 379.0
-texture = ExtResource("5_2e8bh")
+texture = ExtResource("9_i7vmt")
 
 [node name="Contents" type="VBoxContainer" parent="CanvasLayer" unique_id=2105993064]
 anchors_preset = 15
@@ -102,7 +119,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.2627451, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_ci0ou")
+theme_override_fonts/font = ExtResource("3_36f3r")
 theme_override_font_sizes/font_size = 39
 text = "Trust level
 "
@@ -114,7 +131,7 @@ uppercase = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.2627451, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_ci0ou")
+theme_override_fonts/font = ExtResource("3_36f3r")
 theme_override_font_sizes/font_size = 40
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -138,7 +155,7 @@ theme_override_constants/separation = 10
 [node name="QuestTitle" type="Label" parent="CanvasLayer/Contents/Details/QuestDetails" unique_id=932885284]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.2627451, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_ci0ou")
+theme_override_fonts/font = ExtResource("3_36f3r")
 theme_override_font_sizes/font_size = 35
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -146,7 +163,7 @@ vertical_alignment = 1
 [node name="QuestDecription" type="Label" parent="CanvasLayer/Contents/Details/QuestDetails" unique_id=524833827]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.2627451, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_ci0ou")
+theme_override_fonts/font = ExtResource("3_36f3r")
 theme_override_font_sizes/font_size = 50
 
 [node name="QuestObjectives" type="VBoxContainer" parent="CanvasLayer/Contents/Details/QuestDetails" unique_id=388093417]
@@ -161,7 +178,7 @@ offset_top = 118.33334
 offset_right = 574.33325
 offset_bottom = 164.33334
 scale = Vector2(1.5, 1.5)
-icon = ExtResource("6_x22pe")
+icon = ExtResource("10_8maf0")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -173,7 +190,7 @@ offset_right = 661.0
 offset_bottom = 149.33334
 scale = Vector2(1.5, 1.5)
 mouse_filter = 2
-icon = ExtResource("6_x22pe")
+icon = ExtResource("10_8maf0")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -184,46 +201,46 @@ offset_top = 118.333336
 offset_right = 752.6666
 offset_bottom = 164.33334
 scale = Vector2(1.5, 1.5)
-icon = ExtResource("6_x22pe")
+icon = ExtResource("10_8maf0")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("7_cgfqu")
+script = ExtResource("11_qkmhj")
 
 [node name="BrownBar1" type="TextureRect" parent="CanvasLayer" unique_id=1383656673]
 offset_left = 538.6666
 offset_top = 278.0
 offset_right = 926.6666
 offset_bottom = 409.0
-texture = ExtResource("8_47nj4")
+texture = ExtResource("12_a7dv2")
 
 [node name="BrownBar2" type="TextureRect" parent="CanvasLayer" unique_id=919871570]
 offset_left = 539.6666
 offset_top = 378.0
 offset_right = 927.6666
 offset_bottom = 509.0
-texture = ExtResource("8_47nj4")
+texture = ExtResource("12_a7dv2")
 
 [node name="BrownBar4" type="TextureRect" parent="CanvasLayer" unique_id=149859312]
 offset_left = 539.6666
 offset_top = 564.0
 offset_right = 927.6666
 offset_bottom = 695.0
-texture = ExtResource("8_47nj4")
+texture = ExtResource("12_a7dv2")
 
 [node name="BrownBar3" type="TextureRect" parent="CanvasLayer" unique_id=331127939]
 offset_left = 539.6666
 offset_top = 470.0
 offset_right = 927.6666
 offset_bottom = 601.0
-texture = ExtResource("8_47nj4")
+texture = ExtResource("12_a7dv2")
 
 [node name="QuestIcon" type="Button" parent="CanvasLayer" unique_id=575159530]
 offset_left = 508.3333
 offset_top = 121.666664
 offset_right = 587.3333
 offset_bottom = 194.66666
-icon = ExtResource("9_s80b8")
+icon = ExtResource("13_vm8xd")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -234,24 +251,15 @@ offset_top = 94.99999
 offset_right = 681.6666
 offset_bottom = 188.0
 theme_override_font_sizes/font_size = 30
-icon = ExtResource("10_ob7oy")
+icon = ExtResource("14_ugcqf")
 flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="ProgressBar" parent="CanvasLayer" unique_id=184712926 instance=ExtResource("4_1n13c")]
-texture_filter = 1
-offset_left = 641.6666
-offset_top = 241.66666
-offset_right = 641.6666
-offset_bottom = 241.66666
-scale = Vector2(1.5, 1.5)
-script = ExtResource("12_fmceb")
-
 [node name="RitaPixelPortrait" type="Sprite2D" parent="CanvasLayer" unique_id=716656409]
 position = Vector2(580, 294.99997)
 scale = Vector2(0.0823179, 0.083009124)
-texture = ExtResource("2_1n13c")
+texture = ExtResource("15_ls6cd")
 
 [node name="Label" type="Label" parent="CanvasLayer/RitaPixelPortrait" unique_id=162084455]
 offset_left = 101.2327
@@ -259,7 +267,7 @@ offset_top = -461.7964
 offset_right = 3067.8992
 offset_bottom = 541.2036
 theme_override_colors/font_color = Color(0.2627451, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_ci0ou")
+theme_override_fonts/font = ExtResource("3_36f3r")
 theme_override_font_sizes/font_size = 500
 text = "Rita
 "
@@ -275,7 +283,7 @@ offset_left = 540.0
 offset_top = 389.99997
 offset_right = 788.0
 offset_bottom = 451.99997
-texture = ExtResource("1_jc4r3")
+texture = ExtResource("16_8u60a")
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="CanvasLayer/TrustLevel" to="." method="_on_trust_level_pressed"]

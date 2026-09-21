@@ -1,5 +1,8 @@
 extends Node
 
-var coins= 100
-func _process(delta: float) -> void:
-	$CanvasLayer/Coins/CoinText.text =  str(coins)
+signal coins_changed(new_amount: int)
+
+var coins := 100:
+	set(value):
+		coins = value
+		coins_changed.emit(coins)

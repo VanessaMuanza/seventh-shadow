@@ -20,10 +20,10 @@ config/icon="res://icon.svg"
 GameState="*uid://c3umrk36c7cuj"
 DialogueManager="*uid://c3rodes2l3gxb"
 Dialogic="*uid://ds2q0uclmolvu"
-GameManager="*uid://dhs5m7dx6b6jd"
 QuestManager="*uid://bere8qugkceq8"
 QuitButton="*uid://c84wkg6f7mwuh"
 FadeTransition="*uid://bdw4g4j1o2gt0"
+GameManager="*uid://c8bt6u1vnltba"
 
 [dialogic]
 

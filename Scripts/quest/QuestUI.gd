@@ -15,11 +15,11 @@ extends Control
 @onready var tl_icon: Button = $CanvasLayer/TLIcon
 
 #pause menu
-const PauseMenuScene := preload("res://UI/pause_menu.tscn")
+const PauseMenuScene := preload("res://UI/Scene/pause_menu.tscn")
 var pause_menu_instance: Control = null
 
 # Trust Level
-const TrustLevelScene := preload("res://UI/npc_trust_lvl.tscn")
+const TrustLevelScene := preload("res://UI/Scene/npc_trust_lvl.tscn")
 var trust_level_instance: Control = null
 
 func _ready() -> void:

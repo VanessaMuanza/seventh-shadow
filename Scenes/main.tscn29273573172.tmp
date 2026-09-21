@@ -3335,12 +3335,11 @@ position = Vector2(0, 98)
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -389.0
-offset_top = 10.0
-offset_right = 181.0
-offset_bottom = 330.0
+offset_left = -316.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 128.0
 grow_horizontal = 0
-scale = Vector2(0.7, 0.7)
 
 [connection signal="body_entered" from="world1/Area2D" to="world1/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="world1/Area2D" to="world1/Area2D" method="_on_body_exited"]

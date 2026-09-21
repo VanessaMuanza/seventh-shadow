@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cw0jddkspkbn3" path="res://UI/selected frame.png" id="6_gmlxl"]
 [ext_resource type="Texture2D" uid="uid://csf3v406l2phv" path="res://UI/UI_TravelBook_Marker01a.png" id="6_xikol"]
 [ext_resource type="Texture2D" uid="uid://1v57po2so3wa" path="res://UI/bar fill brown.png" id="8_qpn27"]
-[ext_resource type="Script" uid="uid://1dqveqdqoqxe" path="res://UI/pause_button.gd" id="8_vl36v"]
+[ext_resource type="Script" uid="uid://1dqveqdqoqxe" path="res://UI/Script/pause_button.gd" id="8_vl36v"]
 [ext_resource type="Texture2D" uid="uid://byhfm2qth10x3" path="res://UI/quest icon.png" id="10_vl36v"]
 [ext_resource type="Texture2D" uid="uid://bmd46e2x0cphg" path="res://UI/trust level icon.png" id="11_22mx2"]
 

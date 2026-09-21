@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://clf3mdnpu4rlt"]
+
+[ext_resource type="Texture2D" uid="uid://0f088g8puu6t" path="res://UI/time ui.png" id="1_ujhhr"]
+[ext_resource type="FontFile" uid="uid://c2l4pqf3sir0h" path="res://Asset/StardewValley.otf" id="2_whkia"]
+[ext_resource type="Texture2D" uid="uid://oxa0le5cim4x" path="res://Asset/Coin2.png" id="3_8emqs"]
+[ext_resource type="Script" uid="uid://02q0f85o7000" path="res://UI/Scene/coin_text.gd" id="4_exens"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_17qln"]
+font = ExtResource("2_whkia")
+font_size = 50
+font_color = Color(0.2627451, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ie1y7"]
+font = ExtResource("2_whkia")
+font_size = 50
+font_color = Color(0.2627451, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_82d86"]
+font = ExtResource("2_whkia")
+font_size = 50
+font_color = Color(0.2627451, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_s37r8"]
+font = ExtResource("2_whkia")
+font_size = 50
+font_color = Color(0.2627451, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_exens"]
+font = ExtResource("2_whkia")
+font_size = 40
+
+[node name="TimeGui" type="Control" unique_id=139165749]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 23.0
+offset_top = 11.0
+offset_right = 339.0
+offset_bottom = 139.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=145418376]
+layout_mode = 0
+offset_right = 394.66666
+offset_bottom = 292.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_ujhhr")
+
+[node name="DayControl" type="Control" parent="." unique_id=886338336]
+anchors_preset = 0
+offset_left = 276.0
+offset_top = 60.0
+offset_right = 449.0
+offset_bottom = 102.0
+
+[node name="Days" type="Label" parent="DayControl" unique_id=629094535]
+layout_mode = 0
+offset_left = 9.0
+offset_top = -4.0
+offset_right = 135.0
+offset_bottom = 46.0
+text = "Mon."
+label_settings = SubResource("LabelSettings_17qln")
+
+[node name="Date" type="Label" parent="DayControl" unique_id=1193835987]
+layout_mode = 0
+offset_left = 86.0
+offset_top = -1.0
+offset_right = 139.0
+offset_bottom = 49.0
+text = "999"
+label_settings = SubResource("LabelSettings_17qln")
+
+[node name="ClockControl" type="Control" parent="." unique_id=403601949]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Hours" type="Label" parent="ClockControl" unique_id=1645073590]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 137.0
+offset_right = 347.0
+offset_bottom = 187.0
+text = "23"
+label_settings = SubResource("LabelSettings_ie1y7")
+
+[node name="Space" type="Label" parent="ClockControl" unique_id=1381126528]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 134.0
+offset_right = 390.0
+offset_bottom = 184.0
+text = ":"
+label_settings = SubResource("LabelSettings_82d86")
+
+[node name="Minutes" type="Label" parent="ClockControl" unique_id=506099917]
+layout_mode = 0
+offset_left = 372.0
+offset_top = 137.0
+offset_right = 415.0
+offset_bottom = 187.0
+text = "59"
+label_settings = SubResource("LabelSettings_s37r8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=526269938]
+
+[node name="Coins" type="Sprite2D" parent="CanvasLayer" unique_id=2092914143]
+texture_filter = 1
+position = Vector2(339.00003, 276)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_8emqs")
+
+[node name="CoinText" type="Label" parent="CanvasLayer/Coins" unique_id=247517513]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 2.0
+offset_top = -6.800016
+offset_right = 25.0
+offset_bottom = 43.199993
+grow_horizontal = 0
+scale = Vector2(0.4, 0.4)
+theme_override_fonts/font = ExtResource("2_whkia")
+theme_override_font_sizes/font_size = 50
+text = "0"
+label_settings = SubResource("LabelSettings_exens")
+script = ExtResource("4_exens")
+
+[node name="Control" type="Control" parent="." unique_id=1023326166]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

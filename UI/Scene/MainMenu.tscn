@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cs1k0rio83qgl"]
 
-[ext_resource type="Script" uid="uid://v2cw6e0hlfsi" path="res://UI/main_menu.gd" id="1_t6syg"]
-[ext_resource type="Texture2D" uid="uid://cq684fuj0x4hd" path="res://UI/TSS main menu 320x180.png" id="1_uahxu"]
-[ext_resource type="FontFile" uid="uid://c2l4pqf3sir0h" path="res://Asset/StardewValley.otf" id="2_b37jj"]
-[ext_resource type="Script" uid="uid://pyocgtbvxlce" path="res://UI/animated_button.gd" id="3_8aown"]
+[ext_resource type="Script" uid="uid://v2cw6e0hlfsi" path="res://UI/Script/main_menu.gd" id="1_bwfkh"]
+[ext_resource type="Texture2D" uid="uid://cq684fuj0x4hd" path="res://UI/TSS main menu 320x180.png" id="2_5dr0w"]
+[ext_resource type="FontFile" uid="uid://c2l4pqf3sir0h" path="res://Asset/StardewValley.otf" id="3_ia55v"]
+[ext_resource type="Script" uid="uid://pyocgtbvxlce" path="res://UI/Script/animated_button.gd" id="4_ait10"]
 
 [node name="MainMenu" type="Control" unique_id=2128132347]
 layout_mode = 3
@@ -14,7 +14,7 @@ offset_right = 3.0
 offset_bottom = 78.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_t6syg")
+script = ExtResource("1_bwfkh")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=181616464]
 
@@ -26,7 +26,7 @@ offset_right = -3.0
 offset_bottom = 81.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_uahxu")
+texture = ExtResource("2_5dr0w")
 
 [node name="Title" type="Label" parent="CanvasLayer/TextureRect" unique_id=1350650623]
 layout_mode = 0
@@ -35,7 +35,7 @@ offset_top = 361.0
 offset_right = 891.0
 offset_bottom = 504.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.827451)
-theme_override_fonts/font = ExtResource("2_b37jj")
+theme_override_fonts/font = ExtResource("3_ia55v")
 theme_override_font_sizes/font_size = 70
 text = "The Seventh Shadow
 "
@@ -48,7 +48,7 @@ offset_right = 785.0
 offset_bottom = 573.0
 theme_override_colors/font_color = Color(1, 0.85490197, 0, 0.52156866)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.62352943)
-theme_override_fonts/font = ExtResource("2_b37jj")
+theme_override_fonts/font = ExtResource("3_ia55v")
 theme_override_font_sizes/font_size = 50
 text = "someone is missing 
 
@@ -63,29 +63,29 @@ offset_bottom = 550.0
 [node name="Play" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=311441227]
 layout_mode = 2
 theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0.5019608)
-theme_override_fonts/font = ExtResource("2_b37jj")
+theme_override_fonts/font = ExtResource("3_ia55v")
 theme_override_font_sizes/font_size = 40
 text = "Play"
 flat = true
-script = ExtResource("3_8aown")
+script = ExtResource("4_ait10")
 
 [node name="Settings" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=433695589]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_b37jj")
+theme_override_fonts/font = ExtResource("3_ia55v")
 theme_override_font_sizes/font_size = 40
 text = "Settings
 "
 flat = true
-script = ExtResource("3_8aown")
+script = ExtResource("4_ait10")
 
 [node name="Exit" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=8395753]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_b37jj")
+theme_override_fonts/font = ExtResource("3_ia55v")
 theme_override_font_sizes/font_size = 40
 text = "Exit
 
 "
 flat = true
-script = ExtResource("3_8aown")
+script = ExtResource("4_ait10")
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Play" to="." method="_on_play_pressed"]
