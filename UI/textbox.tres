@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="DialogicStyle" format=3 uid="uid://dpbiqwhsxn33v"]
+
+[ext_resource type="PackedScene" uid="uid://c8f041ublftfu" path="res://UI/CustomTextbox/custom_textbox.tscn" id="1_ka5iy"]
+[ext_resource type="Script" uid="uid://bwg6yncmh2cml" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_yyngj"]
+[ext_resource type="Script" uid="uid://dv08k6ljua6fm" path="res://addons/dialogic/Resources/dialogic_style.gd" id="2_ka5iy"]
+
+[sub_resource type="Resource" id="Resource_ka5iy"]
+script = ExtResource("1_yyngj")
+scene = ExtResource("1_ka5iy")
+
+[resource]
+script = ExtResource("2_ka5iy")
+name = "textbox"
+layer_info = {
+"": SubResource("Resource_ka5iy")
+}
+metadata/_latest_layer = ""

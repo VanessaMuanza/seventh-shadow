@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://k8xoprkl0oir" path="res://Scripts/canvas_layer.gd" id="6_xddrd"]
 [ext_resource type="PackedScene" uid="uid://c6muxk8b2af4c" path="res://Scenes/inventory_gui.tscn" id="7_6vmsj"]
 [ext_resource type="PackedScene" uid="uid://c5y6rlv75ob57" path="res://inventory/hot_bar.tscn" id="8_7a4j2"]
+[ext_resource type="PackedScene" uid="uid://clf3mdnpu4rlt" path="res://UI/Scene/time_gui.tscn" id="9_6vmsj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_32lci"]
 texture = ExtResource("1_mvwna")
@@ -4615,6 +4616,19 @@ offset_bottom = -79.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(4, 4)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=598905333]
+
+[node name="TimeGui" parent="CanvasLayer2" unique_id=139165749 instance=ExtResource("9_6vmsj")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -389.0
+offset_top = 10.0
+offset_right = 181.0
+offset_bottom = 330.0
+grow_horizontal = 0
+scale = Vector2(0.7, 0.7)
 
 [connection signal="body_entered" from="RitaInterior" to="RitaInterior" method="_on_body_entered"]
 [connection signal="body_exited" from="RitaInterior" to="RitaInterior" method="_on_body_exited"]

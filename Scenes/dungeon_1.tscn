@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://k8xoprkl0oir" path="res://Scripts/canvas_layer.gd" id="4_docwg"]
 [ext_resource type="PackedScene" uid="uid://c5y6rlv75ob57" path="res://inventory/hot_bar.tscn" id="5_docwg"]
 [ext_resource type="Script" uid="uid://cf8ly2xp6vi4j" path="res://Scripts/dungeon_exit.gd" id="7_h78at"]
+[ext_resource type="PackedScene" uid="uid://clf3mdnpu4rlt" path="res://UI/Scene/time_gui.tscn" id="8_w0v3k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jvl28"]
 texture = ExtResource("1_rr4ga")
@@ -104,6 +105,19 @@ script = ExtResource("7_h78at")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DungeonExit" unique_id=1532511043]
 shape = SubResource("CircleShape2D_w0v3k")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=288820440]
+
+[node name="TimeGui" parent="CanvasLayer2" unique_id=139165749 instance=ExtResource("8_w0v3k")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -389.0
+offset_top = 10.0
+offset_right = 181.0
+offset_bottom = 330.0
+grow_horizontal = 0
+scale = Vector2(0.7, 0.7)
 
 [connection signal="closed" from="CanvasLayer/InventoryGui" to="CanvasLayer/InventoryGui" method="_on_closed"]
 [connection signal="opened" from="CanvasLayer/InventoryGui" to="CanvasLayer/InventoryGui" method="_on_opened"]

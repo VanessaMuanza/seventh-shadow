@@ -22,7 +22,7 @@
 "image": "\"res://Characters/Rita/portrait/RitaPixel_Portrait.png\""
 },
 "mirror": false,
-"offset": Vector2(0, -120),
+"offset": Vector2(0, -130),
 "scale": 0.4,
 "scene": ""
 }

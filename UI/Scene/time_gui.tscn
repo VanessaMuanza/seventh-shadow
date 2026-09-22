@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://clf3mdnpu4rlt"]
 
+[ext_resource type="Script" uid="uid://dagy2xnwwdex8" path="res://UI/Scene/time_gui.gd" id="1_0r8n0"]
 [ext_resource type="Texture2D" uid="uid://0f088g8puu6t" path="res://UI/time ui.png" id="1_ujhhr"]
 [ext_resource type="FontFile" uid="uid://c2l4pqf3sir0h" path="res://Asset/StardewValley.otf" id="2_whkia"]
 [ext_resource type="Texture2D" uid="uid://oxa0le5cim4x" path="res://Asset/Coin2.png" id="3_8emqs"]
@@ -9,6 +10,10 @@
 font = ExtResource("2_whkia")
 font_size = 50
 font_color = Color(0.2627451, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8emqs"]
+font = ExtResource("2_whkia")
+font_size = 25
 
 [sub_resource type="LabelSettings" id="LabelSettings_ie1y7"]
 font = ExtResource("2_whkia")
@@ -25,10 +30,6 @@ font = ExtResource("2_whkia")
 font_size = 50
 font_color = Color(0.2627451, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_exens"]
-font = ExtResource("2_whkia")
-font_size = 40
-
 [node name="TimeGui" type="Control" unique_id=139165749]
 layout_mode = 3
 anchors_preset = 0
@@ -36,6 +37,7 @@ offset_left = 23.0
 offset_top = 11.0
 offset_right = 339.0
 offset_bottom = 139.0
+script = ExtResource("1_0r8n0")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=145418376]
 layout_mode = 0
@@ -69,6 +71,21 @@ offset_bottom = 49.0
 text = "999"
 label_settings = SubResource("LabelSettings_17qln")
 
+[node name="Sprite2D" type="Sprite2D" parent="DayControl" unique_id=852107784]
+position = Vector2(38, 206)
+scale = Vector2(2, 2)
+texture = ExtResource("3_8emqs")
+
+[node name="CoinText" type="Label" parent="DayControl/Sprite2D" unique_id=1335035467]
+offset_left = 16.999992
+offset_top = -10.500001
+offset_right = 57.0
+offset_bottom = 19.5
+text = "0"
+label_settings = SubResource("LabelSettings_8emqs")
+script = ExtResource("4_exens")
+metadata/_edit_use_anchors_ = true
+
 [node name="ClockControl" type="Control" parent="." unique_id=403601949]
 anchors_preset = 0
 offset_right = 40.0
@@ -100,32 +117,3 @@ offset_right = 415.0
 offset_bottom = 187.0
 text = "59"
 label_settings = SubResource("LabelSettings_s37r8")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=526269938]
-
-[node name="Coins" type="Sprite2D" parent="CanvasLayer" unique_id=2092914143]
-texture_filter = 1
-position = Vector2(339.00003, 276)
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("3_8emqs")
-
-[node name="CoinText" type="Label" parent="CanvasLayer/Coins" unique_id=247517513]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = 2.0
-offset_top = -6.800016
-offset_right = 25.0
-offset_bottom = 43.199993
-grow_horizontal = 0
-scale = Vector2(0.4, 0.4)
-theme_override_fonts/font = ExtResource("2_whkia")
-theme_override_font_sizes/font_size = 50
-text = "0"
-label_settings = SubResource("LabelSettings_exens")
-script = ExtResource("4_exens")
-
-[node name="Control" type="Control" parent="." unique_id=1023326166]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0

@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c6muxk8b2af4c" path="res://Scenes/inventory_gui.tscn" id="8_b8xav"]
 [ext_resource type="PackedScene" uid="uid://c5y6rlv75ob57" path="res://inventory/hot_bar.tscn" id="9_hw3gl"]
 [ext_resource type="Script" uid="uid://g87a7yxvwhef" path="res://Scenes/locked_house_exit.gd" id="10_b8xav"]
+[ext_resource type="PackedScene" uid="uid://clf3mdnpu4rlt" path="res://UI/Scene/time_gui.tscn" id="11_hw3gl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ijo0g"]
 texture = ExtResource("1_ufmkf")
@@ -2719,6 +2720,19 @@ script = ExtResource("10_b8xav")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LockedHouseExit" unique_id=1860123122]
 position = Vector2(-2, -21)
 shape = SubResource("CircleShape2D_p2qmb")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=156713030]
+
+[node name="TimeGui" parent="CanvasLayer2" unique_id=139165749 instance=ExtResource("11_hw3gl")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -389.0
+offset_top = 10.0
+offset_right = 181.0
+offset_bottom = 330.0
+grow_horizontal = 0
+scale = Vector2(0.7, 0.7)
 
 [connection signal="body_entered" from="DungeonOutside" to="DungeonOutside" method="_on_body_entered"]
 [connection signal="body_exited" from="DungeonOutside" to="DungeonOutside" method="_on_body_exited"]

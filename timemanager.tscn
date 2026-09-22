@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bsdwio6xrgpgb"]
+
+[ext_resource type="Script" uid="uid://ikvg58q8txi8" path="res://Scripts/time/time_system.gd" id="1_6ads1"]
+[ext_resource type="Script" uid="uid://by4jql7d0h4dh" path="res://Scripts/time/date_time.gd" id="2_ysy8r"]
+
+[sub_resource type="Resource" id="Resource_1niol"]
+script = ExtResource("2_ysy8r")
+minutes = 30
+hours = 20
+metadata/_custom_type_script = "uid://by4jql7d0h4dh"
+
+[node name="TimeSystem" type="Node" unique_id=265654862]
+script = ExtResource("1_6ads1")
+start_hour = 20
+start_minute = 30
+date_time = SubResource("Resource_1niol")
+metadata/_custom_type_script = "uid://ikvg58q8txi8"

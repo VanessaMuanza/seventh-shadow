@@ -22,7 +22,7 @@
 "image": "\"res://Characters/Enemies/wizard idle 1.png\""
 },
 "mirror": false,
-"offset": Vector2(0, -120),
+"offset": Vector2(0, -130),
 "scale": 0.4,
 "scene": ""
 }
