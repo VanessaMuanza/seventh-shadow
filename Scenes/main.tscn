@@ -22,8 +22,10 @@
 [ext_resource type="Script" uid="uid://c2l438vdwubp4" path="res://Scripts/rita_house.gd" id="20_ee4r6"]
 [ext_resource type="Script" uid="uid://by4jql7d0h4dh" path="res://Scripts/time/date_time.gd" id="22_3pmx8"]
 [ext_resource type="PackedScene" uid="uid://b5al73d3mk60" path="res://Characters/Rita/Rita.tscn" id="23_gt3je"]
-[ext_resource type="Script" uid="uid://ci2yjpu4sfo0l" path="res://Scenes/directional_light_2d.gd" id="23_u50mg"]
+[ext_resource type="Script" uid="uid://ci2yjpu4sfo0l" path="res://Scripts/directional_light_2d.gd" id="23_u50mg"]
 [ext_resource type="PackedScene" uid="uid://clf3mdnpu4rlt" path="res://UI/Scene/time_gui.tscn" id="24_3pmx8"]
+[ext_resource type="Script" uid="uid://xvb4346rmb7o" path="res://Scripts/bus_entrance.gd" id="25_u50mg"]
+[ext_resource type="PackedScene" uid="uid://ch22rtc01odf2" path="res://Scenes/quest/diamant.tscn" id="26_cbgmd"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_h2yge"]
 tile_data = PackedInt32Array(0, 327680, 0, 65536, 327680, 0, 1, 327680, 0, 65537, 327680, 0)
@@ -3116,6 +3118,9 @@ metadata/_custom_type_script = "uid://by4jql7d0h4dh"
 [sub_resource type="CircleShape2D" id="CircleShape2D_pdsj5"]
 radius = 90.66973
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_3pmx8"]
+radius = 103.73042
+
 [node name="Node" type="Node" unique_id=869799803]
 
 [node name="world1" type="Node2D" parent="." unique_id=1234241271]
@@ -3301,14 +3306,13 @@ position = Vector2(-10, 71)
 [node name="PlayerHouse" type="Marker2D" parent="world1" unique_id=1235095108]
 position = Vector2(384, 462)
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="world1" unique_id=2126648274 node_paths=PackedStringArray("time_system")]
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="world1" unique_id=2126648274]
 blend_mode = 2
 script = ExtResource("23_u50mg")
 day_color = Color(1, 1, 1, 1)
 night_color = Color(0.17254902, 0.078431375, 0.43529412, 1)
 day_start = SubResource("Resource_cbgmd")
 night_start = SubResource("Resource_1w6v2")
-time_system = NodePath("")
 
 [node name="DungeonEnt" type="Area2D" parent="." unique_id=1311684044]
 position = Vector2(890, -271)
@@ -3334,6 +3338,19 @@ offset_bottom = 330.0
 grow_horizontal = 0
 scale = Vector2(0.7, 0.7)
 
+[node name="BusEntrance" type="Area2D" parent="." unique_id=1527795498]
+position = Vector2(1441, 2875)
+script = ExtResource("25_u50mg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BusEntrance" unique_id=988869328]
+shape = SubResource("CircleShape2D_3pmx8")
+
+[node name="BusEnt" type="Marker2D" parent="BusEntrance" unique_id=1215859951]
+position = Vector2(-13, -77)
+
+[node name="Diamant" parent="." unique_id=428669417 instance=ExtResource("26_cbgmd")]
+position = Vector2(375, 743)
+
 [connection signal="body_entered" from="world1/Area2D" to="world1/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="world1/Area2D" to="world1/Area2D" method="_on_body_exited"]
 [connection signal="closed" from="world1/Area2D/CanvasLayer/InventoryGui" to="world1/Area2D/CanvasLayer/InventoryGui" method="_on_closed"]
@@ -3342,3 +3359,5 @@ scale = Vector2(0.7, 0.7)
 [connection signal="body_exited" from="world1/RitaHouse" to="world1/RitaHouse" method="_on_body_exited"]
 [connection signal="body_entered" from="DungeonEnt" to="DungeonEnt" method="_on_body_entered"]
 [connection signal="body_exited" from="DungeonEnt" to="DungeonEnt" method="_on_body_exited"]
+[connection signal="body_entered" from="BusEntrance" to="BusEntrance" method="_on_body_entered"]
+[connection signal="body_exited" from="BusEntrance" to="BusEntrance" method="_on_body_exited"]

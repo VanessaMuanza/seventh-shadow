@@ -12,6 +12,8 @@ signal objective_updated(quest_id: String,objective_id: String)
 signal quest_list_updated()
 var quests = {} # dictionnaire qui conntient mes quêtes
 
+signal quest_added(quest: Quest)
+
 #add quest
 func add_quest(quest: Quest):
 	if quests.has(quest.quest_id):
@@ -22,9 +24,30 @@ func add_quest(quest: Quest):
 	
 	quest_updated.emit(quest.quest_id)
 	quest_list_updated.emit()
+	quest_added.emit(quest)
+
+const QUEST_PATHS := {
+	"rita_crystal": "res://Scripts/quest/rita_crystal.tres",
+	"rita_meeting": "res://Scripts/quest/rita_meeting.tres",
+	"meet_scientist": "res://Scripts/quest/meet_scientist.tres"
+}
+
+func _ready() -> void:
+	TimeManager.updated.connect(_on_time_updated)
+
+func _on_time_updated(date_time: Datetime):
+	var crystal_quest = get_quest("rita_crystal")
+	
+	if date_time.hours >= 19 and crystal_quest and crystal_quest.state == "completed" and not GameState.is_collected("rita_meeting_reminder"):
+		start_quest("rita_meeting")
+		GameState.mark_collected("rita_meeting_reminder")
+
 
 func start_quest(quest_id: String):
-	var quest = load("res://Scripts/quest/rita_crystal.tres")
+	if not QUEST_PATHS.has(quest_id):
+		print("quest not found", quest_id)
+	
+	var quest = load(QUEST_PATHS[quest_id])
 
 	if quest:
 		add_quest(quest)

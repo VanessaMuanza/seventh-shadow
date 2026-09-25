@@ -5,8 +5,7 @@
 
 [sub_resource type="Resource" id="Resource_1niol"]
 script = ExtResource("2_ysy8r")
-minutes = 30
-hours = 20
+hours = 18
 metadata/_custom_type_script = "uid://by4jql7d0h4dh"
 
 [node name="TimeSystem" type="Node" unique_id=265654862]

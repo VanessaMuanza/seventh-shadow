@@ -19,4 +19,5 @@ script = ExtResource("3_k1g0t")
 quest_id = "rita_crystal"
 quest_name = "The Crystal"
 objectives = Array[ExtResource("1_kykct")]([SubResource("Resource_kykct")])
+quest_description = "Help Rita find the rare crystal"
 metadata/_custom_type_script = "uid://cnw106eyrliqf"

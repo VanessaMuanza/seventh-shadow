@@ -64,28 +64,48 @@ func _on_dialog_ended() -> void:
 
 
 func _process(delta: float) -> void:
-	if player_in_area:
+	if player_in_area and not Dialogic.current_timeline:
 		if Input.is_action_just_pressed("ui_interact"):
 			run_dialog("RitaGiving")
 
-
 func run_dialog(RitaGiving: String) -> void:
-	GameState.player.can_move = false
-	do_behavior = false
-	
-	var quest  = QuestManager.get_quest("rita_crystal")
-	
-	if quest == null:
-		Dialogic.start(RitaGiving)
-	
-	elif quest.state == "in_progress":
-		Dialogic.start("Rita_QuestInProgress")
-	
-	elif quest.state == "completed":
-		Dialogic.start("Rita_QuestFinished")
-	
-	
+	var quest = QuestManager.get_quest("rita_crystal")
+	var meeting_quest = QuestManager.get_quest("rita_meeting")
 
+	if quest == null:
+		GameState.player.can_move = false
+		do_behavior = false
+		Dialogic.start(RitaGiving)
+
+	elif quest.state == "in_progress":
+		GameState.player.can_move = false
+		do_behavior = false
+		Dialogic.start("Rita_QuestInProgress")
+
+	elif quest.state == "completed":
+		if meeting_quest and meeting_quest.state == "in_progress":
+			var hour = TimeManager.date_time.hours
+			if hour >= 19 and hour < 22:
+				GameState.player.can_move = false
+				do_behavior = false
+				Dialogic.start("RitaMeeting")
+			else:
+				GameState.player.can_move = false
+				do_behavior = false
+				Dialogic.start("FailedMeeting")
+
+		elif meeting_quest and meeting_quest.state == "completed":
+			GameState.player.can_move = false
+			do_behavior = false
+			Dialogic.start("RitaDefault")
+
+		elif not GameState.is_collected("rita_finished_shown"):
+			GameState.player.can_move = false
+			do_behavior = false
+			Dialogic.start("Rita_QuestFinished")
+			GameState.mark_collected("rita_finished_shown")
+	
+	
 func check_crystal():
 	var quest = QuestManager.get_quest("rita_crystal")
 	if quest and quest.state == "completed":

@@ -56,7 +56,6 @@ func update(game_time: Datetime) -> void:
 	var time_change = time_map[next_state]
 	var time_diff = time_change.diff_time(game_time)
 
-	print("state=", current_state, " next=", next_state, " diff=", time_diff, " in_transition=", in_transition)
 
 	if in_transition:
 		update_transition(time_diff, next_state)

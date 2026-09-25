@@ -1,0 +1,33 @@
+join Rita left
+Rita: Hey Lucy..since you helped me i own you something too
+do QuestManager.complete_objective("rita_meeting","go_to_rita")
+do QuestManager.update_quest("rita_meeting", "completed")
+Rita: Alex used to spend a lot of time with the scientist, in her lab
+Rita: They were close, always working on something together
+- what were they working on?
+	Rita: I don't know exactly, she doesn't really talk to much people here
+	Rita: But if anyone knows where Alex went, it's probably her
+	- do you know where her lab is?
+		Rita: Yeah, it's on the edge of the town, past the old bridge
+		Rita: Just..be careful okay? People say weird things happen around there
+		- I will, thank you
+			do QuestManager.start_quest("meet_scientist")
+			Rita: Good luck
+			leave Rita 
+- is she..dangerous?
+	Rita: I don't know honestly
+	Rita: She keeps to herself, nobody really goes near the lab
+	- I need answers i'll go see her
+		Rita: Be careful then..
+		- Alright
+			do QuestManager.start_quest("meet_scientist")
+			Rita: Good luck
+			leave Rita 
+- I don't trsut her
+	Rita: Suit yourself, but she might be your only lead
+	- ...fine, I'll go
+		Rita: That's the spirit
+		- okay
+			do QuestManager.start_quest("meet_scientist")
+			Rita: Good luck
+			leave Rita

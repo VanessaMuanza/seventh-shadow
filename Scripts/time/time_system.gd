@@ -15,6 +15,7 @@ signal updated
 
 var is_paused: bool = false
 
+
 func _process(delta: float) -> void:
 	handle_input()
 	

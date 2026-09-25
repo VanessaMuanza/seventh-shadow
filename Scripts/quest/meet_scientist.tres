@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://bfqi5gqq87yot"]
+
+[ext_resource type="Script" uid="uid://d2k0m62b8ahs0" path="res://Resources/Quest/Objectives.gd" id="1_w5x5d"]
+[ext_resource type="Script" uid="uid://b0fmuiesttk2t" path="res://Resources/Quest/Rewards.gd" id="2_s2m8d"]
+[ext_resource type="Script" uid="uid://cnw106eyrliqf" path="res://Resources/Quest/Quests.gd" id="3_gy1n6"]
+
+[sub_resource type="Resource" id="Resource_w5x5d"]
+script = ExtResource("1_w5x5d")
+id = "search_scientist"
+description = "Go find the scientist in her lab"
+target_id = "Christine"
+target_type = "talk to"
+metadata/_custom_type_script = "uid://d2k0m62b8ahs0"
+
+[resource]
+script = ExtResource("3_gy1n6")
+quest_id = "meet_scientist"
+quest_name = "The Scientist"
+objectives = Array[ExtResource("1_w5x5d")]([SubResource("Resource_w5x5d")])
+quest_description = "Go meet the scientist"
+metadata/_custom_type_script = "uid://cnw106eyrliqf"

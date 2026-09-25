@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://drpvxojsodl4t"]
+
+[ext_resource type="Texture2D" uid="uid://w0n4w3w281yh" path="res://UI/jounal tele-export.png" id="1_5mo38"]
+[ext_resource type="Script" uid="uid://b72rcarxcmgie" path="res://UI/Scene/the_news.gd" id="1_wns5g"]
+
+[node name="TheNews" type="CanvasLayer" unique_id=1825042724]
+script = ExtResource("1_wns5g")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=286031787]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5mo38")

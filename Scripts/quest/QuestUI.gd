@@ -129,7 +129,6 @@ func _on_quest_updated(quest_id: String):
 # AFFICHER LES DETAILS D'UNE QUETE
 func _on_quest_selected(quest):
 	quest_title.text = quest.quest_name
-	quest_decription.text = quest.quest_description
 
 # Supprimer les anciens objectifs
 	for child in quest_objectives.get_children():

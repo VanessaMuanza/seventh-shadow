@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bntau3jdviaub"]
+
+[ext_resource type="Script" uid="uid://d16ipxypb587l" path="res://UI/Scene/quest_pop_up.gd" id="1_dngmc"]
+[ext_resource type="Texture2D" uid="uid://b0mk3r7xt120g" path="res://UI/Quest_Popup-export-removebg-preview.png" id="1_rtk31"]
+[ext_resource type="FontFile" uid="uid://c2l4pqf3sir0h" path="res://Asset/StardewValley.otf" id="2_dngmc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1dk0f"]
+font = ExtResource("2_dngmc")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_dngmc"]
+font = ExtResource("2_dngmc")
+font_size = 40
+
+[node name="QuestPopUp" type="CanvasLayer" unique_id=1471140326]
+script = ExtResource("1_dngmc")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1972077526]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -144.0
+offset_right = 866.0
+offset_bottom = 144.0
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_rtk31")
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=394464192]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 0
+offset_left = 140.0
+offset_top = 56.0
+offset_right = 198.0
+offset_bottom = 86.0
+text = "Quest"
+label_settings = SubResource("LabelSettings_1dk0f")
+autowrap_mode = 2
+
+[node name="DescriptionLabel" type="Label" parent="TextureRect" unique_id=539429693]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 0
+offset_left = 212.0
+offset_top = 98.0
+offset_right = 532.0
+offset_bottom = 138.0
+text = "Description"
+label_settings = SubResource("LabelSettings_dngmc")
+autowrap_mode = 3

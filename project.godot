@@ -25,19 +25,26 @@ QuitButton="*uid://c84wkg6f7mwuh"
 FadeTransition="*uid://bdw4g4j1o2gt0"
 GameManager="*uid://c8bt6u1vnltba"
 TimeManager="*uid://bsdwio6xrgpgb"
+QuestPopUp="*uid://bntau3jdviaub"
 
 [dialogic]
 
 directories/dch_directory={
 "Crystal": "res://dialogue/Timelines/Crystal.dch",
+"Lucy": "res://dialogue/Timelines/Lucy.dch",
 "Rita": "res://Characters/Rita/Rita.dch",
 "Wizard": "res://Characters/Rita/Wizard.dch",
 "map": "res://Characters/Rita/map.dch"
 }
 directories/dtl_directory={
+"FailedMeeting": "res://dialogue/Timelines/FailedMeeting.dtl",
+"RitaDefault": "res://dialogue/Timelines/RitaDefault.dtl",
 "RitaGiving": "res://dialogue/Timelines/RitaGiving.dtl",
+"RitaHint": "res://dialogue/Timelines/RitaHint.dtl",
+"RitaMeeting": "res://dialogue/Timelines/RitaMeeting.dtl",
 "Rita_QuestFinished": "res://dialogue/Timelines/Rita_QuestFinished.dtl",
 "Rita_QuestInProgress": "res://dialogue/Timelines/Rita_QuestInProgress.dtl",
+"TheNewsStart": "res://dialogue/Timelines/TheNewsStart.dtl",
 "WizardGiving": "res://dialogue/Timelines/WizardGiving.dtl",
 "Wizard_AlreadyGiven": "res://dialogue/Timelines/Wizard_AlreadyGiven.dtl"
 }
@@ -87,7 +94,6 @@ runtime/balloon_path="res://addons/dialogue_manager/example_balloon/balloon.tscn
 
 [display]
 
-window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [editor_plugins]

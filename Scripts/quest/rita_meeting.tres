@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://ctfr71a6iw4up"]
+
+[ext_resource type="Script" uid="uid://d2k0m62b8ahs0" path="res://Resources/Quest/Objectives.gd" id="1_1b8x8"]
+[ext_resource type="Script" uid="uid://b0fmuiesttk2t" path="res://Resources/Quest/Rewards.gd" id="2_rj43k"]
+[ext_resource type="Script" uid="uid://cnw106eyrliqf" path="res://Resources/Quest/Quests.gd" id="3_t7yvb"]
+
+[sub_resource type="Resource" id="Resource_1b8x8"]
+script = ExtResource("1_1b8x8")
+id = "go_to_rita"
+description = "Go to Rita's House at 7pm"
+target_id = "Rita"
+target_type = "Talk to"
+metadata/_custom_type_script = "uid://d2k0m62b8ahs0"
+
+[resource]
+script = ExtResource("3_t7yvb")
+quest_id = "rita_meeting"
+quest_name = "Meet Rita"
+objectives = Array[ExtResource("1_1b8x8")]([SubResource("Resource_1b8x8")])
+quest_description = "Meet Rita at her house."
+metadata/_custom_type_script = "uid://cnw106eyrliqf"
