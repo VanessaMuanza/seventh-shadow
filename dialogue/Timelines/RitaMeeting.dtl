@@ -4,11 +4,13 @@ do QuestManager.complete_objective("rita_meeting","go_to_rita")
 do QuestManager.update_quest("rita_meeting", "completed")
 Rita: Alex used to spend a lot of time with the scientist, in her lab
 Rita: They were close, always working on something together
-- what were they working on?
+Rita: But her office exploded a while ago..she was keeping some dangerous chemicals there.
+Rita: She's been missing ever since, hiding from everyone
+- What happened to her?
 	Rita: I don't know exactly, she doesn't really talk to much people here
 	Rita: But if anyone knows where Alex went, it's probably her
-	- do you know where her lab is?
-		Rita: Yeah, it's on the edge of the town, past the old bridge
+	- do you know where she's hiding?
+		Rita: Yeah, i know a place...she trusts me enough to tell me
 		Rita: Just..be careful okay? People say weird things happen around there
 		- I will, thank you
 			do QuestManager.start_quest("meet_scientist")
@@ -16,7 +18,7 @@ Rita: They were close, always working on something together
 			leave Rita 
 - is she..dangerous?
 	Rita: I don't know honestly
-	Rita: She keeps to herself, nobody really goes near the lab
+	Rita: She's been keeping to herself ever since the explosion
 	- I need answers i'll go see her
 		Rita: Be careful then..
 		- Alright

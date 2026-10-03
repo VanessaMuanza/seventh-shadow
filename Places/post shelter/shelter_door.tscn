@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://b46exmiqo84sm"]
+
+[ext_resource type="Script" uid="uid://cag7a01aoawj" path="res://shelter_door.gd" id="1_2lkum"]
+[ext_resource type="Texture2D" uid="uid://cn44v556sx3s4" path="res://Places/post shelter/bunker animation.png" id="2_85kmt"]
+[ext_resource type="PackedScene" uid="uid://brqr7m4epel0j" path="res://Interactions/interactable.tscn" id="3_l8k1w"]
+
+[sub_resource type="Animation" id="Animation_cgate"]
+resource_name = "Opening"
+length = 1.9900001
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.029999852, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.015092373, 1.67),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_l3qub"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_2cari"]
+resource_name = "door"
+length = 2.8666666
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kcxn1"]
+_data = {
+&"Opening": SubResource("Animation_cgate"),
+&"RESET": SubResource("Animation_l3qub"),
+&"door": SubResource("Animation_2cari")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oolv5"]
+size = Vector2(28, 39)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2lkum"]
+radius = 28.460499
+
+[node name="ShelterDoor" type="StaticBody2D" unique_id=608629801]
+script = ExtResource("1_2lkum")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1696316679]
+texture = ExtResource("2_85kmt")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1389304070]
+libraries/ = SubResource("AnimationLibrary_kcxn1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1472232814]
+position = Vector2(-1, 9.5)
+shape = SubResource("RectangleShape2D_oolv5")
+
+[node name="Interactable" parent="." unique_id=1059535167 instance=ExtResource("3_l8k1w")]
+interact_name = "Open Door"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=1116660546]
+position = Vector2(-5, 0)
+shape = SubResource("CircleShape2D_2lkum")

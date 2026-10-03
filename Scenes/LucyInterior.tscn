@@ -1720,11 +1720,11 @@ texture = ExtResource("2_vwjho")
 25:11/0 = 0
 25:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:12/0 = 0
-0:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 5.3511677, -8, 4.6574974)
 1:12/0 = 0
-1:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 5.3511677, -8, 4.6574974)
 2:12/0 = 0
-2:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 7.035795, 3.666542, -8, 2.2792015)
 3:12/0 = 0
 3:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:12/0 = 0
@@ -1772,11 +1772,11 @@ texture = ExtResource("2_vwjho")
 25:12/0 = 0
 25:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:13/0 = 0
-0:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.441221, -8, -2.2792015, -8, -2.378296, 5.6484547, -5.9457417, 6.738508)
 1:13/0 = 0
-1:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(1.7837219, -8, 8, -8, 8, 5.3511677, 1.9819145, 5.5493603)
 2:13/0 = 0
-2:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 6.5403156, -1.7837219, -8.819517, -2.3782969)
 3:13/0 = 0
 3:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:13/0 = 0
@@ -2806,7 +2806,7 @@ grow_horizontal = 0
 scale = Vector2(0.7, 0.7)
 
 [node name="HintPaper" parent="." unique_id=412803666 instance=ExtResource("6_4x7wl")]
-position = Vector2(73, -346)
+position = Vector2(176, -540)
 scale = Vector2(2, 2)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
