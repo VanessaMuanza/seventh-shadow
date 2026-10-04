@@ -2905,6 +2905,7 @@ position = Vector2(9, 30)
 shape = SubResource("CircleShape2D_2e3u7")
 
 [node name="HauntedRoomEnt" type="Marker2D" parent="HauntedRoom" unique_id=1999689795]
+position = Vector2(12, 130)
 
 [connection signal="body_entered" from="Office2ndExit" to="Office2ndExit" method="_on_body_entered"]
 [connection signal="body_exited" from="Office2ndExit" to="Office2ndExit" method="_on_body_exited"]

@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://cl1emphw52ga6"]
+
+[ext_resource type="Script" uid="uid://b2mqnogalh3uh" path="res://Places/Graveyard/tomb.gd" id="1_anvuc"]
+[ext_resource type="Texture2D" uid="uid://b3pw0ru0a6ixt" path="res://Places/Graveyard/tomb.png" id="1_furo1"]
+[ext_resource type="PackedScene" uid="uid://brqr7m4epel0j" path="res://Interactions/interactable.tscn" id="2_ng0s8"]
+
+[sub_resource type="Animation" id="Animation_ng0s8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_anvuc"]
+resource_name = "TombOpening"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.01, 0.96),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0tnwk"]
+_data = {
+&"RESET": SubResource("Animation_ng0s8"),
+&"TombOpening": SubResource("Animation_anvuc")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_15y6y"]
+size = Vector2(25, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ng0s8"]
+size = Vector2(35, 62)
+
+[node name="Tomb" type="StaticBody2D" unique_id=139693658]
+script = ExtResource("1_anvuc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1502043225]
+texture = ExtResource("1_furo1")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=571362551]
+libraries/ = SubResource("AnimationLibrary_0tnwk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1729419949]
+position = Vector2(-2.5, -2)
+shape = SubResource("RectangleShape2D_15y6y")
+
+[node name="Interactable" parent="." unique_id=1059535167 instance=ExtResource("2_ng0s8")]
+interact_name = "Open tomb"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=910466151]
+position = Vector2(-1.5, -1)
+shape = SubResource("RectangleShape2D_ng0s8")

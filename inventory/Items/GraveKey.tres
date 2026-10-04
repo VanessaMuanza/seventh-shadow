@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://chfyiv04oiuy5"]
+
+[ext_resource type="Script" uid="uid://1i3pkhovt8e0" path="res://inventory/InventoryItem.gd" id="1_olmtg"]
+[ext_resource type="Texture2D" uid="uid://b4sp7a7xtybpq" path="res://Places/Graveyard/tomb key.png" id="2_y1co0"]
+
+[resource]
+script = ExtResource("1_olmtg")
+name = "GraveKey"
+texture = ExtResource("2_y1co0")
+metadata/_custom_type_script = "uid://1i3pkhovt8e0"

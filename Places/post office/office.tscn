@@ -3354,6 +3354,14 @@ grow_horizontal = 0
 scale = Vector2(0.7, 0.7)
 metadata/_edit_use_anchors_ = true
 
+[node name="Area2D" type="Area2D" parent="." unique_id=946467037]
+position = Vector2(6, 8)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=554828450]
+build_mode = 1
+polygon = PackedVector2Array(7, -3, -2, 640, 1147, 651, 1147, 0)
+disabled = true
+
 [connection signal="body_entered" from="OfficeEntrance" to="OfficeEntrance" method="_on_body_entered"]
 [connection signal="body_exited" from="OfficeEntrance" to="OfficeEntrance" method="_on_body_exited"]
 [connection signal="closed" from="CanvasLayer/InventoryGui" to="CanvasLayer/InventoryGui" method="_on_closed"]

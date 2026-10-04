@@ -20,5 +20,5 @@ func _on_body_exited(body: Node2D) -> void:
 func _physics_process (_delta):
 	if entered == true:
 		if Input.is_action_just_pressed("ui_accept"):
-			GameState.next_spawn_point = "HauntedExit"
+			GameState.next_spawn_point = "HauntedRoomEnt"
 			get_tree().change_scene_to_file("res://Places/post office/office_second_floor.tscn")

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://d2g7lf4xcucgj"]
+
+[ext_resource type="Script" uid="uid://bfoskjs8igoyo" path="res://Places/Graveyard/grave_key.gd" id="1_0yqhi"]
+[ext_resource type="Texture2D" uid="uid://b4sp7a7xtybpq" path="res://Places/Graveyard/tomb key.png" id="1_dclcm"]
+[ext_resource type="Resource" uid="uid://chfyiv04oiuy5" path="res://inventory/Items/GraveKey.tres" id="2_mbv60"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0yqhi"]
+size = Vector2(15, 12)
+
+[node name="GraveKey" type="CharacterBody2D" unique_id=1526087230]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_0yqhi")
+itemRes = ExtResource("2_mbv60")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1382947365]
+texture_filter = 1
+texture = ExtResource("1_dclcm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1535480360]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_0yqhi")

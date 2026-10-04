@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="The seventh shadow"
-run/main_scene="uid://5rkwnqyh2v6r"
+run/main_scene="uid://db75uclhq3d8n"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
@@ -38,6 +38,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "FailedMeeting": "res://dialogue/Timelines/FailedMeeting.dtl",
+"Lock_NeedKey": "res://dialogue/Timelines/Lock_NeedKey.dtl",
 "RitaDefault": "res://dialogue/Timelines/RitaDefault.dtl",
 "RitaGiving": "res://dialogue/Timelines/RitaGiving.dtl",
 "RitaHint": "res://dialogue/Timelines/RitaHint.dtl",

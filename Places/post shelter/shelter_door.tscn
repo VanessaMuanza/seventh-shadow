@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b46exmiqo84sm"]
 
-[ext_resource type="Script" uid="uid://cag7a01aoawj" path="res://shelter_door.gd" id="1_2lkum"]
+[ext_resource type="Script" uid="uid://cag7a01aoawj" path="res://Places/post shelter/shelter_door.gd" id="1_2lkum"]
 [ext_resource type="Texture2D" uid="uid://cn44v556sx3s4" path="res://Places/post shelter/bunker animation.png" id="2_85kmt"]
 [ext_resource type="PackedScene" uid="uid://brqr7m4epel0j" path="res://Interactions/interactable.tscn" id="3_l8k1w"]
 
