@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://de5p3fklmjdce"]
+
+[ext_resource type="FontFile" uid="uid://c2l4pqf3sir0h" path="res://Asset/StardewValley.otf" id="1_5jr6x"]
+
+[resource]
+font = ExtResource("1_5jr6x")
+font_size = 30

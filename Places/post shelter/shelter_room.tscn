@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://llt1v11p8gbt"]
 
 [ext_resource type="Texture2D" uid="uid://bxn381bdtr5ad" path="res://Places/post shelter/Shelter_Walls_16x16.png" id="1_gd2rn"]
+[ext_resource type="Script" uid="uid://dcefpx501yq1c" path="res://Places/post shelter/shelter.gd" id="1_phhcy"]
 [ext_resource type="Texture2D" uid="uid://fpapiqgxa7i4" path="res://Places/post shelter/Shelter_Furniture_16x16_Shadow.png" id="2_7l5gs"]
 [ext_resource type="Script" uid="uid://bgiyx10rwknai" path="res://Places/post shelter/shelter_room.gd" id="3_7l5gs"]
 [ext_resource type="PackedScene" uid="uid://dahwancxf87tb" path="res://Characters/Lucy/Lucy.tscn" id="4_b8elh"]
@@ -2354,6 +2355,7 @@ pattern_1 = SubResource("TileMapPattern_phhcy")
 radius = 58.5235
 
 [node name="ShelterRoom" type="Node2D" unique_id=1368458845]
+script = ExtResource("1_phhcy")
 
 [node name="WallsAndFloor" type="TileMapLayer" parent="." unique_id=532411993]
 position = Vector2(-1, 0)
@@ -2441,9 +2443,11 @@ scale = Vector2(1.5, 1.5)
 
 [node name="Lucy" parent="." unique_id=636343155 instance=ExtResource("4_b8elh")]
 position = Vector2(414.99997, 158.99998)
-scale = Vector2(0.8, 0.8)
 collision_layer = 11
 collision_mask = 17
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1647199788]
+color = Color(0.36659476, 0.36659455, 0.36659458, 1)
 
 [connection signal="body_entered" from="ShelterRoom" to="ShelterRoom" method="_on_body_entered"]
 [connection signal="body_exited" from="ShelterRoom" to="ShelterRoom" method="_on_body_exited"]

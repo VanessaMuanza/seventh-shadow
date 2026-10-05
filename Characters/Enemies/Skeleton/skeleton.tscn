@@ -351,3 +351,4 @@ collision_mask = 3
 [node name="JumpscareAudio" parent="." unique_id=1730614214 instance=ExtResource("4_xribo")]
 
 [node name="GameOverLayer" parent="." unique_id=663787475 instance=ExtResource("5_ya05k")]
+visible = false

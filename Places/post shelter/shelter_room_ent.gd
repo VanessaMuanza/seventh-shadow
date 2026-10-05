@@ -3,8 +3,6 @@ extends Area2D
 var entered = false
 var can_interact = true
 
-
-
 func _on_body_entered(body: Node2D) -> void:
 	if body is NPC:
 		return

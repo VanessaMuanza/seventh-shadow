@@ -58,7 +58,7 @@ func _physics_process(delta: float) -> void:
 		State.CHASE:
 			direction = (last_known_position - global_position).normalized()
 			velocity = direction * RUN_SPEED
-			sprite_2d.speed_scale = 1.6
+			sprite_2d.speed_scale = 1.4
 
 			if global_position.distance_to(player.global_position) <= attack_distance:
 				trigger_jumpscare()
@@ -126,4 +126,6 @@ func trigger_jumpscare() -> void:
 	await FadeTransition.fade_out()
 	GameState.next_scene_path = "res://Places/post shelter/shelter_room.tscn"
 	GameState.next_spawn_point = "ShelterEnt"
+	GameState.next_dialog = "CaughtByMonster"
 	get_tree().change_scene_to_file("res://Scenes/loading_scene.tscn")
+	

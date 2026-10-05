@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cq684fuj0x4hd" path="res://UI/TSS main menu 320x180.png" id="2_5dr0w"]
 [ext_resource type="FontFile" uid="uid://c2l4pqf3sir0h" path="res://Asset/StardewValley.otf" id="3_ia55v"]
 [ext_resource type="Script" uid="uid://pyocgtbvxlce" path="res://UI/Script/animated_button.gd" id="4_ait10"]
+[ext_resource type="Script" uid="uid://bek6tkm2uth4r" path="res://UI/Scene/video.gd" id="5_5dr0w"]
 
 [node name="MainMenu" type="Control" unique_id=2128132347]
 layout_mode = 3
@@ -17,6 +18,7 @@ grow_vertical = 2
 script = ExtResource("1_bwfkh")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=181616464]
+visible = false
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=663699848]
 anchors_preset = 15
@@ -87,5 +89,186 @@ text = "Exit
 "
 flat = true
 script = ExtResource("4_ait10")
+
+[node name="Settings" type="VBoxContainer" parent="." unique_id=483301344]
+visible = false
+custom_minimum_size = Vector2(100, 130)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -65.0
+offset_right = 50.0
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Settings" unique_id=363786999]
+layout_mode = 2
+size_flags_vertical = 7
+
+[node name="Video" type="Button" parent="Settings/Control" unique_id=1365488993]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Video"
+
+[node name="Control2" type="Control" parent="Settings" unique_id=969304160]
+layout_mode = 2
+size_flags_vertical = 7
+
+[node name="Audio" type="Button" parent="Settings/Control2" unique_id=1526979960]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Audio"
+
+[node name="Video" type="VBoxContainer" parent="." unique_id=1555306848 node_paths=PackedStringArray("resolution_options", "fullscreen_check", "borderless_check", "vsync_check")]
+custom_minimum_size = Vector2(165, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.5
+offset_top = -75.0
+offset_right = 82.5
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_5dr0w")
+resolution_options = NodePath("HBoxContainer/Resolution")
+fullscreen_check = NodePath("HBoxContainer2/Fullscreen")
+borderless_check = NodePath("HBoxContainer3/CheckBox")
+vsync_check = NodePath("HBoxContainer4/VSync")
+
+[node name="Label" type="Label" parent="Video" unique_id=770043608]
+layout_mode = 2
+text = "Video"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Video" unique_id=105194810]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="Video/HBoxContainer" unique_id=163934356]
+layout_mode = 2
+text = "Resolution"
+
+[node name="Resolution" type="OptionButton" parent="Video/HBoxContainer" unique_id=1361433953]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Video" unique_id=233108857]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="Video/HBoxContainer2" unique_id=1050469323]
+layout_mode = 2
+text = "Fullscreen"
+
+[node name="Fullscreen" type="CheckBox" parent="Video/HBoxContainer2" unique_id=973299661]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Video" unique_id=1222090945]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="Video/HBoxContainer3" unique_id=1861586040]
+layout_mode = 2
+text = "Borderless"
+
+[node name="CheckBox" type="CheckBox" parent="Video/HBoxContainer3" unique_id=830218929]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Video" unique_id=1884663433]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="Video/HBoxContainer4" unique_id=365957607]
+layout_mode = 2
+text = "VSync"
+
+[node name="VSync" type="CheckBox" parent="Video/HBoxContainer4" unique_id=238968158]
+layout_mode = 2
+
+[node name="Audio" type="VBoxContainer" parent="." unique_id=126628650]
+visible = false
+custom_minimum_size = Vector2(195, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Audio" unique_id=1451399823]
+layout_mode = 2
+text = "Audio"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Audio" unique_id=629829243]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 25
+
+[node name="Label" type="Label" parent="Audio/HBoxContainer" unique_id=293532430]
+layout_mode = 2
+text = "Master"
+
+[node name="HSlider" type="HSlider" parent="Audio/HBoxContainer" unique_id=613405066]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Audio" unique_id=19053785]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 25
+
+[node name="Label" type="Label" parent="Audio/HBoxContainer2" unique_id=421866458]
+layout_mode = 2
+text = "Music"
+
+[node name="HSlider" type="HSlider" parent="Audio/HBoxContainer2" unique_id=1701752200]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Audio" unique_id=2056880196]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 25
+
+[node name="Label" type="Label" parent="Audio/HBoxContainer3" unique_id=412541654]
+layout_mode = 2
+text = "SFX"
+
+[node name="HSlider" type="HSlider" parent="Audio/HBoxContainer3" unique_id=41621196]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Play" to="." method="_on_play_pressed"]

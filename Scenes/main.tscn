@@ -25,7 +25,6 @@
 [ext_resource type="Script" uid="uid://ci2yjpu4sfo0l" path="res://Scripts/directional_light_2d.gd" id="23_u50mg"]
 [ext_resource type="PackedScene" uid="uid://clf3mdnpu4rlt" path="res://UI/Scene/time_gui.tscn" id="24_3pmx8"]
 [ext_resource type="Script" uid="uid://xvb4346rmb7o" path="res://Scripts/bus_entrance.gd" id="25_u50mg"]
-[ext_resource type="PackedScene" uid="uid://ch22rtc01odf2" path="res://Scenes/quest/diamant.tscn" id="26_cbgmd"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_h2yge"]
 tile_data = PackedInt32Array(0, 327680, 0, 65536, 327680, 0, 1, 327680, 0, 65537, 327680, 0)
@@ -3239,7 +3238,6 @@ layer_0/tile_data = PackedInt32Array(786451, 0, 12, 458780, 0, 12, 3473468, 0, 1
 
 [node name="CharacterBody2D" parent="world1/Characters" unique_id=636343155 instance=ExtResource("13_fdnlq")]
 position = Vector2(370.00003, 520.99994)
-scale = Vector2(0.8, 0.8)
 collision_layer = 11
 collision_mask = 17
 
@@ -3307,6 +3305,7 @@ position = Vector2(-10, 71)
 position = Vector2(384, 462)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="world1" unique_id=2126648274]
+energy = 0.3
 blend_mode = 2
 script = ExtResource("23_u50mg")
 day_color = Color(1, 1, 1, 1)
@@ -3348,8 +3347,8 @@ shape = SubResource("CircleShape2D_3pmx8")
 [node name="BusEnt" type="Marker2D" parent="BusEntrance" unique_id=1215859951]
 position = Vector2(-13, -77)
 
-[node name="Diamant" parent="." unique_id=428669417 instance=ExtResource("26_cbgmd")]
-position = Vector2(375, 743)
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1588015221]
+color = Color(0.09872829, 0.09872841, 0.09872831, 1)
 
 [connection signal="body_entered" from="world1/Area2D" to="world1/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="world1/Area2D" to="world1/Area2D" method="_on_body_exited"]

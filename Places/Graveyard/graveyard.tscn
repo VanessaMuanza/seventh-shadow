@@ -6117,6 +6117,9 @@ scale = Vector2(4, 4)
 position = Vector2(-237, 151)
 scale = Vector2(3, 3)
 
+[node name="CanvasModulate" type="CanvasModulate" parent="TileMap" unique_id=243492107]
+color = Color(0.09872829, 0.09872841, 0.09872831, 1)
+
 [node name="GraveKey" parent="." unique_id=1526087230 instance=ExtResource("5_24jae")]
 position = Vector2(-594, 1501)
 scale = Vector2(3, 3)
@@ -6156,6 +6159,8 @@ scale = Vector2(4, 4)
 metadata/_edit_use_anchors_ = true
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1808942459]
+visible = false
+energy = 0.25
 blend_mode = 2
 script = ExtResource("13_goja3")
 day_color = Color(1, 1, 1, 1)

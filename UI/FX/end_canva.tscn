@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://bq5fwa1y5r60v"]
+
+[ext_resource type="Script" uid="uid://bw1x2d7d6vyvd" path="res://UI/FX/end_canva.gd" id="1_5iabs"]
+[ext_resource type="FontFile" uid="uid://dj6fnh1peftq6" path="res://Asset/LowresPixel-Regular.otf" id="1_p3ehv"]
+[ext_resource type="FontFile" uid="uid://c2l4pqf3sir0h" path="res://Asset/StardewValley.otf" id="2_y3krw"]
+[ext_resource type="Script" uid="uid://pyocgtbvxlce" path="res://UI/Script/animated_button.gd" id="3_5iabs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6iv0l"]
+font = ExtResource("1_p3ehv")
+font_size = 80
+font_color = Color(0.5882353, 0.13333334, 0.14117648, 1)
+
+[node name="EndCanva" type="CanvasLayer" unique_id=316193416]
+script = ExtResource("1_5iabs")
+
+[node name="BlackRect" type="ColorRect" parent="." unique_id=1152660853]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="EndLabel" type="Label" parent="." unique_id=958868100]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "End of part 1..."
+label_settings = SubResource("LabelSettings_6iv0l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="." unique_id=443617648]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -77.0
+offset_top = -55.0
+offset_right = 263.0
+offset_bottom = 666.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control" unique_id=109111056]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 491.0
+offset_right = 701.0
+offset_bottom = 550.0
+
+[node name="Play" type="Button" parent="Control/VBoxContainer2" unique_id=1526541201]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0.5019608)
+theme_override_fonts/font = ExtResource("2_y3krw")
+theme_override_font_sizes/font_size = 40
+flat = true
+script = ExtResource("3_5iabs")
+
+[node name="GoTo" type="Button" parent="Control/VBoxContainer2" unique_id=190838590]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5882353, 0.13333334, 0.14117648, 1)
+theme_override_fonts/font = ExtResource("1_p3ehv")
+theme_override_font_sizes/font_size = 40
+text = "Go to main menu
+"
+flat = true
+script = ExtResource("3_5iabs")
+
+[node name="Exit" type="Button" parent="Control/VBoxContainer2" unique_id=1517132606]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_y3krw")
+theme_override_font_sizes/font_size = 40
+text = "
+
+"
+flat = true
+script = ExtResource("3_5iabs")
+
+[connection signal="pressed" from="Control/VBoxContainer2/GoTo" to="." method="_on_go_to_pressed"]

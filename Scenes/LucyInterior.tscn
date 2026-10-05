@@ -2809,6 +2809,9 @@ scale = Vector2(0.7, 0.7)
 position = Vector2(176, -540)
 scale = Vector2(2, 2)
 
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1518784115]
+color = Color(0.28974164, 0.28974143, 0.28974146, 1)
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
 [connection signal="closed" from="CanvasLayer/InventoryGui" to="CanvasLayer/InventoryGui" method="_on_closed"]

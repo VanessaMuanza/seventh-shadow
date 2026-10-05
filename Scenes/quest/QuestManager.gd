@@ -29,8 +29,10 @@ func add_quest(quest: Quest):
 const QUEST_PATHS := {
 	"rita_crystal": "res://Scripts/quest/rita_crystal.tres",
 	"rita_meeting": "res://Scripts/quest/rita_meeting.tres",
-	"meet_scientist": "res://Scripts/quest/meet_scientist.tres"
-}
+	"meet_scientist": "res://Scripts/quest/meet_scientist.tres",
+	"blue_book": "res://Scripts/quest/blue_book.tres",
+	"find_card": "res://Scripts/quest/find_card.tres"
+	}
 
 func _ready() -> void:
 	TimeManager.updated.connect(_on_time_updated)
@@ -46,7 +48,7 @@ func _on_time_updated(date_time: Datetime):
 func start_quest(quest_id: String):
 	if not QUEST_PATHS.has(quest_id):
 		print("quest not found", quest_id)
-	
+		return
 	var quest = load(QUEST_PATHS[quest_id])
 
 	if quest:
@@ -65,8 +67,10 @@ func get_quest(quest_id: String)-> Quest:
 	return quests.get(quest_id, null)
 	
 #update quest
+
 func update_quest(quest_id: String, state: String):
 	var quest = get_quest(quest_id)
+	print("quête trouvée : ", QuestManager.get_quest("find_card"))
 	if quest:
 		quest.state = state
 		quest_updated.emit(quest_id)
@@ -115,8 +119,16 @@ func give_crystal() -> bool:
 			return true 
 	return false
 
-	print("The player doesn't have the crystal")
-	
+# scientist quest
+func take_book() -> bool:
+	var inventory = load("res://inventory/playerInventory.tres")
+	for i in range(inventory.slots.size()):
+		var slot: InventorySlot = inventory.slots[i]
+		if slot.item and slot.item.name == "Book":
+			inventory.removeItemAtIndex(i)
+			inventory.updated.emit()
+			return true
+	return false
 
 func receive_crystal()-> bool:
 	var inventory = load("res://inventory/playerInventory.tres")

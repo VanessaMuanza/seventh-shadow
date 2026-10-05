@@ -3344,7 +3344,6 @@ position = Vector2(-20, 107)
 
 [node name="Lucy" parent="ShelterRoomEnt" unique_id=636343155 instance=ExtResource("4_f1bce")]
 position = Vector2(-844, 837)
-scale = Vector2(0.8, 0.8)
 collision_layer = 11
 collision_mask = 17
 
@@ -3409,12 +3408,16 @@ shape = SubResource("CircleShape2D_62apx")
 [node name="BusShelter" type="Marker2D" parent="ShelterLocOpen" unique_id=1915306220]
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1113752210]
+energy = 0.2
 blend_mode = 2
 script = ExtResource("14_62apx")
 day_color = Color(1, 1, 1, 1)
 night_color = Color(0.17254902, 0.078431375, 0.43529412, 1)
 day_start = SubResource("Resource_673jl")
 night_start = SubResource("Resource_es37i")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1778438658]
+color = Color(0.09872829, 0.09872841, 0.09872831, 1)
 
 [connection signal="body_entered" from="ShelterRoomEnt" to="ShelterRoomEnt" method="_on_body_entered"]
 [connection signal="body_exited" from="ShelterRoomEnt" to="ShelterRoomEnt" method="_on_body_exited"]

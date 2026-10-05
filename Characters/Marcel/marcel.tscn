@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cdwfj8lgu3afg"]
 
 [ext_resource type="Texture2D" uid="uid://caulw3thpxewg" path="res://Characters/Marcel/Scientist.png" id="1_48f1y"]
+[ext_resource type="Script" uid="uid://4lanpdwg12" path="res://Characters/Marcel/marcel.gd" id="1_awtso"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_48f1y"]
 size = Vector2(29, 84)
@@ -8,7 +9,8 @@ size = Vector2(29, 84)
 [sub_resource type="CircleShape2D" id="CircleShape2D_48f1y"]
 radius = 76.591484
 
-[node name="Marcel" type="CharacterBody2D" unique_id=143120639]
+[node name="Marcel" type="CharacterBody2D" unique_id=143120639 groups=["NPC"]]
+script = ExtResource("1_awtso")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1074409734]
 position = Vector2(-0.5, 1)
@@ -23,3 +25,6 @@ position = Vector2(22.5, 17.500004)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChatDetectio" unique_id=898478276]
 position = Vector2(-23.5, -21.500004)
 shape = SubResource("CircleShape2D_48f1y")
+
+[connection signal="body_entered" from="ChatDetectio" to="." method="_on_chat_detectio_body_entered"]
+[connection signal="body_exited" from="ChatDetectio" to="." method="_on_chat_detectio_body_exited"]

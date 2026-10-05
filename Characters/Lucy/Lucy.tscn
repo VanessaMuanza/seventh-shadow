@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://snuiv28o3j00" path="res://Interactions/interacting_comp.tscn" id="8_mxnyl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pbq55"]
-size = Vector2(78, 164)
+size = Vector2(62.999996, 112.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pbq55"]
 atlas = ExtResource("1_88kja")
@@ -195,12 +195,25 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_mxnyl"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ty7tt"]
+gradient = SubResource("Gradient_mxnyl")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
 [node name="Lucy" type="CharacterBody2D" unique_id=636343155 groups=["player"]]
+scale = Vector2(0.8, 0.8)
 script = ExtResource("1_gbyq6")
 inventory = ExtResource("2_t38ji")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1313626427]
-position = Vector2(11, 8)
+position = Vector2(3.4999979, 33.749996)
+scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_pbq55")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1417972601]
@@ -223,3 +236,7 @@ collide_with_areas = true
 [node name="QuestUi" parent="." unique_id=1473339626 instance=ExtResource("7_pbj7x")]
 
 [node name="InteractingComp" parent="." unique_id=328928346 instance=ExtResource("8_mxnyl")]
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1466605674]
+texture = SubResource("GradientTexture2D_ty7tt")
+texture_scale = 1.5

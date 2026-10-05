@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ge7umcxka4ed" path="res://Places/Haunted Room/safe.png" id="1_herku"]
 [ext_resource type="Script" uid="uid://huusrxmgatd2" path="res://Places/Haunted Room/safe.gd" id="1_rt8hu"]
 [ext_resource type="PackedScene" uid="uid://brqr7m4epel0j" path="res://Interactions/interactable.tscn" id="2_ahy14"]
+[ext_resource type="PackedScene" uid="uid://bq5fwa1y5r60v" path="res://UI/FX/end_canva.tscn" id="4_t8q5j"]
 
 [sub_resource type="Animation" id="Animation_ahy14"]
 length = 0.001
@@ -116,3 +117,5 @@ interact_name = "Open Safe"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=1135174431]
 shape = SubResource("CircleShape2D_rt8hu")
+
+[node name="EndCanva" parent="." unique_id=316193416 instance=ExtResource("4_t8q5j")]

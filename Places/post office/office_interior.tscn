@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://c6muxk8b2af4c" path="res://Scenes/inventory_gui.tscn" id="7_66xaq"]
 [ext_resource type="PackedScene" uid="uid://c5y6rlv75ob57" path="res://inventory/hot_bar.tscn" id="8_vq07e"]
 [ext_resource type="PackedScene" uid="uid://clf3mdnpu4rlt" path="res://UI/Scene/time_gui.tscn" id="9_66xaq"]
+[ext_resource type="PackedScene" uid="uid://da8obquu4rsb7" path="res://Characters/Enemies/Skeleton/skeleton.tscn" id="10_mwi6x"]
+[ext_resource type="PackedScene" uid="uid://da7hxok23pq5s" path="res://Characters/Enemies/DoctorWitch/doctor_witch.tscn" id="11_rq32p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_swr2i"]
 texture = ExtResource("1_jb4b3")
@@ -2302,7 +2304,6 @@ position = Vector2(9, 79)
 
 [node name="Lucy" parent="." unique_id=636343155 instance=ExtResource("5_oou8w")]
 position = Vector2(527.99994, 765.99994)
-scale = Vector2(0.8, 0.8)
 collision_layer = 11
 collision_mask = 17
 
@@ -2353,6 +2354,21 @@ offset_bottom = 330.0
 grow_horizontal = 0
 scale = Vector2(0.7, 0.7)
 metadata/_edit_use_anchors_ = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=339442603]
+color = Color(0.09872829, 0.09872841, 0.09872831, 1)
+
+[node name="Skeleton" parent="." unique_id=576781446 instance=ExtResource("10_mwi6x")]
+position = Vector2(-225, 94)
+scale = Vector2(4, 4)
+
+[node name="Skeleton2" parent="." unique_id=1589500365 instance=ExtResource("10_mwi6x")]
+position = Vector2(206, 234)
+scale = Vector2(4, 4)
+
+[node name="DoctorWitch" parent="." unique_id=1277434572 instance=ExtResource("11_rq32p")]
+position = Vector2(1154, 689)
+scale = Vector2(4, 4)
 
 [connection signal="body_entered" from="OfficeInterior1" to="OfficeInterior1" method="_on_body_entered"]
 [connection signal="body_exited" from="OfficeInterior1" to="OfficeInterior1" method="_on_body_exited"]

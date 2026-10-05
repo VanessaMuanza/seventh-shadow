@@ -1,32 +1,27 @@
-extends CharacterBody2D
+extends StaticBody2D
 
-@export var itemRes: InventoryItem
+@onready var interactable: Area2D = $Interactable
+@onready var sprite_2d: Sprite2D = $Sprite2D
 
-@onready var player = get_tree().get_first_node_in_group("player")
+func _ready() -> void:
+	interactable.interact = _on_interact
 
-const MAX_SPEED = 50.0
-const ACCELERATION = 0.5
-
-var speed = 0.0
-var is_being_picked_up = false
-
-
-func _physics_process(delta: float) -> void:
-	if is_being_picked_up:
-		speed = lerp(speed, MAX_SPEED, ACCELERATION * delta)
-		velocity = global_position.direction_to(player.global_position) * speed
-		
-	var collision = move_and_collide(velocity)
-
-	if collision:
-		_handle_picked_up()
-
-func _ready():
-	if GameState.is_collected(name):
+	if GameState.is_collected("card_taken"):
 		queue_free()
-		return
 
-func _handle_picked_up():
-	player.inventory.insert(itemRes)
-	GameState.mark_collected(name)
-	queue_free()
+func _on_interact():
+	if give_card():
+		queue_free()
+
+func give_card() -> bool:
+	var inventory = load("res://inventory/playerInventory.tres")
+	var card = load("res://Places/post office/card.tres") 
+	if card:
+		inventory.insert(card)
+		GameState.mark_collected("card_taken")
+
+		QuestManager.complete_objective("find_card", "find_card")
+		QuestManager.update_quest("find_card", "completed")
+		QuestManager.start_quest("open_safe")
+		return true
+	return false

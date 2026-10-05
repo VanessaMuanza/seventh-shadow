@@ -11,6 +11,8 @@ func mark_collected(id: String) -> void:
 		collected_items.append(id)
 
 var next_spawn_point: String = ""
+#pour que le dialogue survit au changement de scène
+var next_dialog := ""
 
 var npc_locations: Dictionary = {}
 var next_scene_path: String = ""

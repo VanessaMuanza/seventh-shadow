@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ddqhq6l1rtvjp"]
+
+[ext_resource type="AudioStream" uid="uid://d4li6i6yhnhnj" path="res://UI/FX/10- Time Whistle.mp3" id="1_d5ft8"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" unique_id=532551676]
+stream = ExtResource("1_d5ft8")
+autoplay = true

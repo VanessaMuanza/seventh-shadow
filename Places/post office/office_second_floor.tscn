@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://clf3mdnpu4rlt" path="res://UI/Scene/time_gui.tscn" id="9_sjlru"]
 [ext_resource type="Script" uid="uid://c577twddgm8u6" path="res://Places/post office/haunted_room.gd" id="10_dccd2"]
 [ext_resource type="PackedScene" uid="uid://cg16yn3yugic3" path="res://Places/post office/book.tscn" id="11_2e3u7"]
+[ext_resource type="PackedScene" uid="uid://da7hxok23pq5s" path="res://Characters/Enemies/DoctorWitch/doctor_witch.tscn" id="12_12yag"]
+[ext_resource type="PackedScene" uid="uid://da8obquu4rsb7" path="res://Characters/Enemies/Skeleton/skeleton.tscn" id="13_0sfty"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8rkhl"]
 texture = ExtResource("1_mcc7a")
@@ -2845,7 +2847,6 @@ position = Vector2(2, -85)
 
 [node name="Lucy" parent="." unique_id=636343155 instance=ExtResource("5_iq0o6")]
 position = Vector2(518.99994, 618.99994)
-scale = Vector2(0.8, 0.8)
 collision_layer = 11
 collision_mask = 17
 
@@ -2911,6 +2912,17 @@ position = Vector2(12, 130)
 [node name="Book" parent="." unique_id=1462281830 instance=ExtResource("11_2e3u7")]
 position = Vector2(196, -40)
 scale = Vector2(3, 3)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=978603948]
+color = Color(0.09872829, 0.09872841, 0.09872831, 1)
+
+[node name="DoctorWitch" parent="." unique_id=1277434572 instance=ExtResource("12_12yag")]
+position = Vector2(1094, 468)
+scale = Vector2(4, 4)
+
+[node name="Skeleton" parent="." unique_id=576781446 instance=ExtResource("13_0sfty")]
+position = Vector2(711, -3)
+scale = Vector2(4, 4)
 
 [connection signal="body_entered" from="Office2ndExit" to="Office2ndExit" method="_on_body_entered"]
 [connection signal="body_exited" from="Office2ndExit" to="Office2ndExit" method="_on_body_exited"]
