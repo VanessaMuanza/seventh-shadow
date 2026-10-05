@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://bqxgy3x13y8xb"]
+
+[ext_resource type="Script" uid="uid://b13245x58h7ua" path="res://UI/Scene/locations.gd" id="1_r7ofd"]
+[ext_resource type="FontFile" uid="uid://c2l4pqf3sir0h" path="res://Asset/StardewValley.otf" id="2_31osf"]
+[ext_resource type="Script" uid="uid://pyocgtbvxlce" path="res://UI/Script/animated_button.gd" id="3_yqeet"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_shcqh"]
+font = ExtResource("2_31osf")
+font_size = 45
+
+[node name="LocationsBox" type="Control" unique_id=2048973623]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r7ofd")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=493064688]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=260189660]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -167.0
+offset_top = -323.0
+offset_right = 167.0
+offset_bottom = 323.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Village" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1925444883]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_31osf")
+theme_override_font_sizes/font_size = 30
+text = "Village"
+icon_alignment = 1
+script = ExtResource("3_yqeet")
+
+[node name="Office" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=323971744]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_31osf")
+theme_override_font_sizes/font_size = 30
+text = "Office"
+script = ExtResource("3_yqeet")
+
+[node name="Graveyard" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=2126689112]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_31osf")
+theme_override_font_sizes/font_size = 30
+text = "Graveyard"
+script = ExtResource("3_yqeet")
+
+[node name="Shelter" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1085993820]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_31osf")
+theme_override_font_sizes/font_size = 30
+text = "Shelter"
+script = ExtResource("3_yqeet")
+
+[node name="LocationText" type="Label" parent="CanvasLayer" unique_id=1903132606]
+anchors_preset = -1
+anchor_left = 0.49800003
+anchor_top = 0.266
+anchor_right = 0.49800003
+anchor_bottom = 0.266
+offset_left = -67.696045
+offset_top = 9.632004
+offset_right = 67.303955
+offset_bottom = 54.632004
+grow_horizontal = 2
+text = "Location"
+label_settings = SubResource("LabelSettings_shcqh")
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Village" to="." method="_on_village_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Office" to="." method="_on_office_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Graveyard" to="." method="_on_graveyard_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Shelter" to="." method="_on_shelter_pressed"]

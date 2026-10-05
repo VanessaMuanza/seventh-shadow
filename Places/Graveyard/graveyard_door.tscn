@@ -95,8 +95,8 @@ size = Vector2(16, 65)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a2uar"]
 size = Vector2(78, 60.5)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_y7ej3"]
-radius = 44.27189
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bxjge"]
+size = Vector2(133, 97)
 
 [node name="GraveyardDoor" type="StaticBody2D" unique_id=611237596]
 script = ExtResource("1_y7ej3")
@@ -125,4 +125,5 @@ shape = SubResource("RectangleShape2D_a2uar")
 interact_name = "Open Door"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=1305795683]
-shape = SubResource("CircleShape2D_y7ej3")
+position = Vector2(4.5, 10.5)
+shape = SubResource("RectangleShape2D_bxjge")

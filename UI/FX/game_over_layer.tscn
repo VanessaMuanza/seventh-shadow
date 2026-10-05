@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://ejjucabx4dad"]
+
+[ext_resource type="PackedScene" uid="uid://ddqgduglft5nw" path="res://UI/FX/blood_fx.tscn" id="1_1h81t"]
+[ext_resource type="FontFile" uid="uid://dj6fnh1peftq6" path="res://Asset/LowresPixel-Regular.otf" id="1_lespv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1h81t"]
+font = ExtResource("1_lespv")
+font_size = 50
+font_color = Color(0.5882353, 0.13333334, 0.14117648, 1)
+
+[node name="GameOverLayer" type="CanvasLayer" unique_id=663787475]
+
+[node name="BlackRect" type="ColorRect" parent="." unique_id=1004987853]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="BloodFx" parent="." unique_id=162382101 instance=ExtResource("1_1h81t")]
+position = Vector2(-2.999998, 1.9999981)
+scale = Vector2(10, 10)
+autoplay = "default"
+frame_progress = 0.7328816
+
+[node name="GameOverLabel" type="Label" parent="." unique_id=1235749039]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "You lost, be careful next time..."
+label_settings = SubResource("LabelSettings_1h81t")
+horizontal_alignment = 1
+vertical_alignment = 1

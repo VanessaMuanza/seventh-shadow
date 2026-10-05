@@ -1,0 +1,18 @@
+join Marcel left
+Marcel: You found it !
+Marcel: Thank you lucy.
+do QuestManager.complete_objective("blue_book", "find_book")
+do QuestManager.update_quest("blue_book", "completed")
+- Are you going to tell me what's inside?
+	Marcel: No..but i can tell you something else
+	Marcel: There's a safe in my house, alex used to stock his writings in it.
+	- What was he writing about?
+		Marcel: I don't know but it definitely matters
+		marcel: The safe needs a card, and I lost mine at the graveyard.
+		Marcel: Don't ask what I was doing there at night.
+		Marcel: Please, find it for me.
+		- I'll find it 
+			do QuestManager.start_quest("find_card")
+			Marcel: Thank you.
+			Marcel: Be careful. I don't think you're the only one who walks there.
+			leave Marcel

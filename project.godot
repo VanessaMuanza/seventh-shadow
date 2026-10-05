@@ -32,13 +32,17 @@ QuestPopUp="*uid://bntau3jdviaub"
 directories/dch_directory={
 "Crystal": "res://dialogue/Timelines/Crystal.dch",
 "Lucy": "res://dialogue/Timelines/Lucy.dch",
+"Marcel": "res://dialogue/Timelines/Marcel.dch",
 "Rita": "res://Characters/Rita/Rita.dch",
 "Wizard": "res://Characters/Rita/Wizard.dch",
 "map": "res://Characters/Rita/map.dch"
 }
 directories/dtl_directory={
+"BlueBookFound": "res://dialogue/Timelines/BlueBookFound.dtl",
+"BlueBookInProgress": "res://dialogue/Timelines/BlueBookInProgress.dtl",
 "FailedMeeting": "res://dialogue/Timelines/FailedMeeting.dtl",
 "Lock_NeedKey": "res://dialogue/Timelines/Lock_NeedKey.dtl",
+"MeetScientist": "res://dialogue/Timelines/MeetScientist.dtl",
 "RitaDefault": "res://dialogue/Timelines/RitaDefault.dtl",
 "RitaGiving": "res://dialogue/Timelines/RitaGiving.dtl",
 "RitaHint": "res://dialogue/Timelines/RitaHint.dtl",
@@ -189,4 +193,4 @@ locale/translations_pot_files=PackedStringArray("res://dialogue/dialogue_manager
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
-environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+environment/defaults/default_clear_color=Color(1.2032688e-08, 0.13253471, 0.25009143, 1)

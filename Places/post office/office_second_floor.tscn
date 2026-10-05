@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c5y6rlv75ob57" path="res://inventory/hot_bar.tscn" id="8_dccd2"]
 [ext_resource type="PackedScene" uid="uid://clf3mdnpu4rlt" path="res://UI/Scene/time_gui.tscn" id="9_sjlru"]
 [ext_resource type="Script" uid="uid://c577twddgm8u6" path="res://Places/post office/haunted_room.gd" id="10_dccd2"]
+[ext_resource type="PackedScene" uid="uid://cg16yn3yugic3" path="res://Places/post office/book.tscn" id="11_2e3u7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8rkhl"]
 texture = ExtResource("1_mcc7a")
@@ -2906,6 +2907,10 @@ shape = SubResource("CircleShape2D_2e3u7")
 
 [node name="HauntedRoomEnt" type="Marker2D" parent="HauntedRoom" unique_id=1999689795]
 position = Vector2(12, 130)
+
+[node name="Book" parent="." unique_id=1462281830 instance=ExtResource("11_2e3u7")]
+position = Vector2(196, -40)
+scale = Vector2(3, 3)
 
 [connection signal="body_entered" from="Office2ndExit" to="Office2ndExit" method="_on_body_entered"]
 [connection signal="body_exited" from="Office2ndExit" to="Office2ndExit" method="_on_body_exited"]

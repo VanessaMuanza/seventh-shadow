@@ -1,0 +1,29 @@
+join Marcel left
+Marcel: Who are you?
+- I'm Lucy. Rita told me where to find you. I'm looking for my brother, Alex.
+Marcel: Alex's sister...
+Marcel: Yes. Yes, of course. You have the same eyes.
+Marcel: He talked about you. Often. He is... he was...
+Marcel: Never mind..
+do QuestManager.complete_objective("meet_scientist", "go_to_scientist"
+do QuestManager.update_quest("meet_scientist", "completed")
+- He disappeared. Do you know where he is?
+	Marcel: Disappeared. Left. Gone. In this village, those are all the same words.
+	Marcel: I don't know where he is. Not for certain.
+	Marcel: But he was close to something. And so am I. That's why I live in a hole in the ground.
+	- What did he tell you about me?
+		Marcel: That you were the only one who would come looking if he went missing one day.
+		Marcel: He said it like a joke. I don't think it was.
+		Marcel: I need you to do me a favor. A small one
+		Marcel: My office exploded a while ago. I haven't dared to go back, people are looking for me..
+		Marcel: Anyway, somewhere in there is a blue book. I need it back.
+		- What's in it?
+			Marcel: Nothing. Old notes
+			- You're a terible liar
+				Marcel: ...Yes, i've been told
+				Marcel: I can't tell you what's inside. Not yet. If I do, you stop being safe.
+				- I'll find it
+					do QuestManager.start_quest("blue_book")
+					marcel: Thank you..be careful, it's a bit crowded..
+					- Okay..sure
+						leave Marcel

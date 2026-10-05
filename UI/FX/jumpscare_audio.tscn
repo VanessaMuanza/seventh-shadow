@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c3f4dpmsfdxky"]
+
+[ext_resource type="AudioStream" uid="uid://4xxtqxegtxni" path="res://UI/FX/366168__unaxete__intense-jumpscare.ogg" id="1_4u05g"]
+
+[node name="JumpscareAudio" type="AudioStreamPlayer2D" unique_id=1730614214]
+stream = ExtResource("1_4u05g")
+volume_db = 9.259

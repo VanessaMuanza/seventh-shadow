@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cg16yn3yugic3"]
+
+[ext_resource type="Texture2D" uid="uid://wgmcg6bx0a" path="res://Places/post office/book.png" id="1_8jg7q"]
+[ext_resource type="Script" uid="uid://uyig8apaguin" path="res://Places/post office/book.gd" id="1_mdy0h"]
+[ext_resource type="PackedScene" uid="uid://brqr7m4epel0j" path="res://Interactions/interactable.tscn" id="2_3v1wp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3v1wp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mdy0h"]
+radius = 19.0
+
+[node name="Book" type="CharacterBody2D" unique_id=1462281830]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_mdy0h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=741061912]
+shape = SubResource("CircleShape2D_3v1wp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1251662871]
+texture = ExtResource("1_8jg7q")
+
+[node name="Interactable" parent="." unique_id=1059535167 instance=ExtResource("2_3v1wp")]
+interact_name = "Pick up Book"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=1215109175]
+shape = SubResource("CircleShape2D_mdy0h")

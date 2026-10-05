@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bbhb3v1eb0clv"]
+
+[ext_resource type="Texture2D" uid="uid://cxpda7klrweqg" path="res://Places/post office/card.png" id="1_5l4v5"]
+[ext_resource type="Script" uid="uid://72mh7s3ionwf" path="res://Places/post office/card.gd" id="1_m1crl"]
+[ext_resource type="Resource" uid="uid://blmn0pr073uwv" path="res://Places/post office/card.tres" id="2_oo27w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sh2aq"]
+
+[node name="Card" type="CharacterBody2D" unique_id=1096309834]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_m1crl")
+itemRes = ExtResource("2_oo27w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=635552525]
+position = Vector2(0.5, 0)
+shape = SubResource("CircleShape2D_sh2aq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1905615761]
+texture = ExtResource("1_5l4v5")

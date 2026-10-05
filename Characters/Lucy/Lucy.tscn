@@ -9,6 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://d0tw65w3yuw6t" path="res://Scenes/quest/QuestUI.tscn" id="7_pbj7x"]
 [ext_resource type="PackedScene" uid="uid://snuiv28o3j00" path="res://Interactions/interacting_comp.tscn" id="8_mxnyl"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbq55"]
+size = Vector2(78, 164)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_pbq55"]
 atlas = ExtResource("1_88kja")
 region = Rect2(0, 0, 1024, 1024)
@@ -192,28 +195,25 @@ animations = [{
 "speed": 6.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbq55"]
-size = Vector2(62, 94)
-
 [node name="Lucy" type="CharacterBody2D" unique_id=636343155 groups=["player"]]
 script = ExtResource("1_gbyq6")
 inventory = ExtResource("2_t38ji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1313626427]
+position = Vector2(11, 8)
+shape = SubResource("RectangleShape2D_pbq55")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1417972601]
 texture_filter = 1
 position = Vector2(160, 44)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_fxof2")
-animation = &"run_left"
+animation = &"idle_down"
 autoplay = "idle_down"
 offset = Vector2(19, 17)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1387987516]
 position_smoothing_enabled = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1313626427]
-position = Vector2(8, 43)
-shape = SubResource("RectangleShape2D_pbq55")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=27762685]
 scale = Vector2(2, 2)

@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://clf3mdnpu4rlt" path="res://UI/Scene/time_gui.tscn" id="4_liofa"]
 [ext_resource type="Script" uid="uid://ci2yjpu4sfo0l" path="res://Scripts/directional_light_2d.gd" id="5_r7fjh"]
 [ext_resource type="Script" uid="uid://by4jql7d0h4dh" path="res://Scripts/time/date_time.gd" id="6_1mcw4"]
+[ext_resource type="PackedScene" uid="uid://bqxgy3x13y8xb" path="res://UI/Scene/locations_box.tscn" id="7_1mcw4"]
+[ext_resource type="Script" uid="uid://8pthmm57p26h" path="res://Places/post shelter/location_box.gd" id="7_vale6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ebe2"]
 texture = ExtResource("1_pchpy")
@@ -4283,6 +4285,9 @@ script = ExtResource("6_1mcw4")
 hours = 21
 metadata/_custom_type_script = "uid://by4jql7d0h4dh"
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_vale6"]
+radius = 51.613953
+
 [node name="BusStation" type="Node2D" unique_id=1195427500]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1415283451]
@@ -4344,5 +4349,17 @@ night_color = Color(0.17254902, 0.078431375, 0.43529412, 1)
 day_start = SubResource("Resource_vale6")
 night_start = SubResource("Resource_juvv7")
 
+[node name="Bus2" type="Area2D" parent="." unique_id=1655106905]
+position = Vector2(1187, 37)
+script = ExtResource("7_vale6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bus2" unique_id=77785367]
+position = Vector2(7, 5)
+shape = SubResource("CircleShape2D_vale6")
+
+[node name="LocationsBox" parent="Bus2" unique_id=2048973623 instance=ExtResource("7_1mcw4")]
+
 [connection signal="body_entered" from="BusStationExit" to="BusStationExit" method="_on_body_entered"]
 [connection signal="body_exited" from="BusStationExit" to="BusStationExit" method="_on_body_exited"]
+[connection signal="body_entered" from="Bus2" to="Bus2" method="_on_body_entered"]
+[connection signal="body_exited" from="Bus2" to="Bus2" method="_on_body_exited"]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://blmn0pr073uwv"]
+
+[ext_resource type="Script" uid="uid://1i3pkhovt8e0" path="res://inventory/InventoryItem.gd" id="1_5737i"]
+[ext_resource type="Texture2D" uid="uid://cxpda7klrweqg" path="res://Places/post office/card.png" id="2_j10a3"]
+
+[resource]
+script = ExtResource("1_5737i")
+name = "Card"
+texture = ExtResource("2_j10a3")
+metadata/_custom_type_script = "uid://1i3pkhovt8e0"

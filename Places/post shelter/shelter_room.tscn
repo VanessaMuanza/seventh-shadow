@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://k8xoprkl0oir" path="res://Scripts/canvas_layer.gd" id="5_friqd"]
 [ext_resource type="PackedScene" uid="uid://c6muxk8b2af4c" path="res://Scenes/inventory_gui.tscn" id="6_pqdle"]
 [ext_resource type="PackedScene" uid="uid://c5y6rlv75ob57" path="res://inventory/hot_bar.tscn" id="7_pber7"]
+[ext_resource type="PackedScene" uid="uid://cdwfj8lgu3afg" path="res://Characters/Marcel/marcel.tscn" id="8_pber7"]
 [ext_resource type="PackedScene" uid="uid://clf3mdnpu4rlt" path="res://UI/Scene/time_gui.tscn" id="8_pqdle"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_b8elh"]
@@ -2385,17 +2386,12 @@ shape = SubResource("CircleShape2D_gd2rn")
 [node name="ShelterEnt" type="Marker2D" parent="ShelterRoom" unique_id=188616674]
 position = Vector2(-1, 49)
 
-[node name="Lucy" parent="." unique_id=636343155 instance=ExtResource("4_b8elh")]
-position = Vector2(411.99997, 158.99998)
-scale = Vector2(0.8, 0.8)
-collision_layer = 11
-collision_mask = 17
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1176977061]
 process_mode = 3
 script = ExtResource("5_friqd")
 
 [node name="InventoryGui" parent="CanvasLayer" unique_id=1302783099 instance=ExtResource("6_pqdle")]
+visible = false
 z_index = 1
 texture_filter = 1
 anchors_preset = -1
@@ -2438,6 +2434,16 @@ offset_bottom = 330.0
 grow_horizontal = 0
 scale = Vector2(0.7, 0.7)
 metadata/_edit_use_anchors_ = true
+
+[node name="Marcel" parent="." unique_id=143120639 instance=ExtResource("8_pber7")]
+position = Vector2(577, 222.00002)
+scale = Vector2(1.5, 1.5)
+
+[node name="Lucy" parent="." unique_id=636343155 instance=ExtResource("4_b8elh")]
+position = Vector2(414.99997, 158.99998)
+scale = Vector2(0.8, 0.8)
+collision_layer = 11
+collision_mask = 17
 
 [connection signal="body_entered" from="ShelterRoom" to="ShelterRoom" method="_on_body_entered"]
 [connection signal="body_exited" from="ShelterRoom" to="ShelterRoom" method="_on_body_exited"]

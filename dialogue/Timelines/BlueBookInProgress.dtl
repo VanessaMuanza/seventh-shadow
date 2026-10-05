@@ -1,0 +1,9 @@
+join Marcel left
+Marcel: Did you find the book?
+	- Give him the book
+		do QuestManager.give_book()
+	- Keep the book for now
+		Marcel: I need it, please.
+
+- No i didn't find it yet
+	Rita: Okay..be careful.

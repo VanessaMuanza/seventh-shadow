@@ -2,31 +2,31 @@ join Rita left
 Rita: Hey Lucy..since you helped me i own you something too
 do QuestManager.complete_objective("rita_meeting","go_to_rita")
 do QuestManager.update_quest("rita_meeting", "completed")
-Rita: Alex used to spend a lot of time with the scientist, in her lab
+Rita: Alex used to spend a lot of time with the scientist, in his lab
 Rita: They were close, always working on something together
-Rita: But her office exploded a while ago..she was keeping some dangerous chemicals there.
-Rita: She's been missing ever since, hiding from everyone
+Rita: But his office exploded a while ago..she was keeping some dangerous chemicals there.
+Rita: He's been missing ever since, hiding from everyone
 - What happened to her?
-	Rita: I don't know exactly, she doesn't really talk to much people here
-	Rita: But if anyone knows where Alex went, it's probably her
-	- do you know where she's hiding?
-		Rita: Yeah, i know a place...she trusts me enough to tell me
+	Rita: I don't know exactly, he doesn't really talk to much people here
+	Rita: But if anyone knows where Alex went, it's probably him
+	- do you know where he's hiding?
+		Rita: Yeah, i know a place...he trusts me enough to tell me, it's the old shelter.
 		Rita: Just..be careful okay? People say weird things happen around there
 		- I will, thank you
 			do QuestManager.start_quest("meet_scientist")
 			Rita: Good luck
 			leave Rita 
-- is she..dangerous?
+- is he..dangerous?
 	Rita: I don't know honestly
-	Rita: She's been keeping to herself ever since the explosion
-	- I need answers i'll go see her
+	Rita: She's been keeping to himself ever since the explosion
+	- I need answers i'll go see him
 		Rita: Be careful then..
 		- Alright
 			do QuestManager.start_quest("meet_scientist")
 			Rita: Good luck
 			leave Rita 
-- I don't trsut her
-	Rita: Suit yourself, but she might be your only lead
+- I don't trust him
+	Rita: Suit yourself, but he might be your only lead
 	- ...fine, I'll go
 		Rita: That's the spirit
 		- okay
