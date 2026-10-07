@@ -30,13 +30,7 @@ func _ready() -> void:
 	
 	trust_level.focus_mode = Control.FOCUS_ALL
 	
-	# Les éléments visuels ne doivent pas bloquer les boutons
-	$CanvasLayer/NinePatchRect.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$CanvasLayer/NinePatchRect2.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$CanvasLayer/Contents.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$CanvasLayer/BookCover.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$CanvasLayer/QuestIcon.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$CanvasLayer/TLIcon.mouse_filter = Control.MOUSE_FILTER_IGNORE
+
 	
 	# Créer le PauseMenu une seule fois au démarrage
 	pause_menu_instance = PauseMenuScene.instantiate()
@@ -108,7 +102,6 @@ func _on_pause_menu_pressed() -> void:
 	
 # MISE A JOUR DE LA LISTE DES QUETES
 func _on_quest_list_updated():
-	print("quest list updated")
 	# Supprimer les anciens boutons
 	for child in quest_list.get_children():
 		child.queue_free()

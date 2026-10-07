@@ -20,9 +20,6 @@ func _on_trust_updated(trust_level: int) -> void:
 	# On met à jour la barre avec la nouvelle valeur
 	$CanvasLayer/TextureProgressBar.value = trust_level
 	#teste pour voir que tout fonctionne 
-	print("BAR VALUE :", $CanvasLayer/TextureProgressBar.value)
-	print("BAR MAX :", $CanvasLayer/TextureProgressBar.max_value)
-	print("BAR VISIBLE :", $CanvasLayer/TextureProgressBar.visible)
 
 # Affiche le menu de confiance à l'écran
 func show_menu() -> void:

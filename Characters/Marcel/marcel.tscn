@@ -2,6 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://caulw3thpxewg" path="res://Characters/Marcel/Scientist.png" id="1_48f1y"]
 [ext_resource type="Script" uid="uid://4lanpdwg12" path="res://Characters/Marcel/marcel.gd" id="1_awtso"]
+[ext_resource type="Script" uid="uid://d2k0m62b8ahs0" path="res://Resources/Quest/Objectives.gd" id="2_iscgx"]
+[ext_resource type="Script" uid="uid://b0fmuiesttk2t" path="res://Resources/Quest/Rewards.gd" id="3_4dq71"]
+[ext_resource type="Script" uid="uid://cnw106eyrliqf" path="res://Resources/Quest/Quests.gd" id="4_eo11u"]
+
+[sub_resource type="Resource" id="Resource_0ngwp"]
+script = ExtResource("4_eo11u")
+metadata/_custom_type_script = "uid://cnw106eyrliqf"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_48f1y"]
 size = Vector2(29, 84)
@@ -11,6 +18,7 @@ radius = 76.591484
 
 [node name="Marcel" type="CharacterBody2D" unique_id=143120639 groups=["NPC"]]
 script = ExtResource("1_awtso")
+quest_to_give = SubResource("Resource_0ngwp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1074409734]
 position = Vector2(-0.5, 1)

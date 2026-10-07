@@ -99,7 +99,7 @@ _data = {
 size = Vector2(28, 39)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2lkum"]
-radius = 28.460499
+radius = 39.319206
 
 [node name="ShelterDoor" type="StaticBody2D" unique_id=608629801]
 script = ExtResource("1_2lkum")
@@ -119,5 +119,5 @@ shape = SubResource("RectangleShape2D_oolv5")
 interact_name = "Open Door"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=1116660546]
-position = Vector2(-5, 0)
+position = Vector2(-1, 7)
 shape = SubResource("CircleShape2D_2lkum")

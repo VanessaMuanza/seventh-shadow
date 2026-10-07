@@ -39,7 +39,7 @@ func _physics_process(delta: float) -> void:
 			trigger_jumpscare()
 			return
 
-	# 1. L'ennemi voit-il le joueur ?
+	# si l'ennemi voit le joueur
 	if can_see(player):
 		state = State.CHASE
 		time_since_seen = 0.0
@@ -49,7 +49,7 @@ func _physics_process(delta: float) -> void:
 		if time_since_seen >= lose_sight_time:
 			state = State.WANDER
 
-	# 2. Comportement selon l'état
+	#son comportement selon son état
 	match state:
 		State.WANDER:
 			process_wander(delta)
@@ -64,7 +64,7 @@ func _physics_process(delta: float) -> void:
 				trigger_jumpscare()
 				return
 
-			# Arrivé au dernier endroit connu : il s'arrête au lieu de trembler
+			# Arrivé au dernier endroit connu et il s'arrête
 			if global_position.distance_to(last_known_position) < 5.0:
 				velocity = Vector2.ZERO
 

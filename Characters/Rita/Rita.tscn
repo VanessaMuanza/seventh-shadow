@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://deu4kt4kx158w" path="res://Characters/Rita/RitaBackAnimation-Sheet.png" id="4_t503k"]
 [ext_resource type="Script" uid="uid://cnw106eyrliqf" path="res://Resources/Quest/Quests.gd" id="5_stjtj"]
 [ext_resource type="Texture2D" uid="uid://ba11otuva373o" path="res://dialogue/quest/QuestAsset/questUI.png" id="7_t503k"]
-[ext_resource type="PackedScene" uid="uid://svr5y6hbim1l" path="res://Scenes/npc_behavior_patrol.tscn" id="11_6muld"]
 
 [sub_resource type="Resource" id="Resource_7mrqn"]
 script = ExtResource("2_crfs5")
@@ -267,8 +266,6 @@ shape = SubResource("CircleShape2D_crfs5")
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=404807885]
 
 [node name="IdleTimer" type="Timer" parent="." unique_id=1048097656]
-
-[node name="NpcBehaviorPatrol" parent="." unique_id=1057265896 instance=ExtResource("11_6muld")]
 
 [connection signal="body_entered" from="ChatDetectio" to="." method="_on_chat_detectio_body_entered"]
 [connection signal="body_exited" from="ChatDetectio" to="." method="_on_chat_detectio_body_exited"]

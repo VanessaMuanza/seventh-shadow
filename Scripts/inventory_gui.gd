@@ -61,7 +61,7 @@ func onSlotClicked(slot):
 		takeItemFromSlot(slot)
 		return
 	
-		swapItems(slot)
+	swapItems(slot)
 
 
 
@@ -85,11 +85,13 @@ func swapItems(slot):
 	itemInHand = tempItem
 	add_child(itemInHand)
 	updateitemInHand()
+	
 func updateitemInHand():
 	if !itemInHand: return
 	itemInHand.global_position = get_global_mouse_position() - itemInHand.size / 2
 	
 	
+
 func _input(event):
 	updateitemInHand()
 

@@ -1,9 +1,6 @@
 extends Node2D
 
-@export_group("Quest Setting")
-@export var quest_name: String #nom de la quête
-@export var quest_description: String
-@export var reached_goal_text : String #texte donner au joueur a la fin 
+
 var trust_level: int = 0
 signal trust_updated(trust_level: int)
 
@@ -142,7 +139,7 @@ func receive_crystal()-> bool:
 
 
 #trust level augumente
-func add_trust(amount: int = 2) -> void:
+func add_trust(amount: int = 4) -> void:
 	trust_level += amount
 	print("TRUST LEVEL AUGMENTÉ:", trust_level)
 	trust_updated.emit(trust_level)

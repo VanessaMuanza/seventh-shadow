@@ -7,15 +7,8 @@ class_name Quest
 @export var state: String = "not_started"
 @export var unlock_id: String
 @export var objectives: Array[Objectives] = []
-@export var rewards: Array[Rewards] = []
 @export var quest_description: String
 
-#pas utile, efface stp
-func ready():
-	NinePatchRect. visible = false
-#show hide quest log
-func show_hide_log():
-	NinePatchRect.visible = !NinePatchRect.visible
 
 #check objective state
 func is_completed() -> bool:

@@ -2675,7 +2675,6 @@ linear_damp = 10.0
 
 [node name="Lucy" parent="." unique_id=636343155 instance=ExtResource("5_ijo0g")]
 position = Vector2(277, 676.99994)
-scale = Vector2(0.8, 0.8)
 collision_layer = 11
 collision_mask = 15
 
@@ -2733,6 +2732,9 @@ offset_right = 181.0
 offset_bottom = 330.0
 grow_horizontal = 0
 scale = Vector2(0.7, 0.7)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1338969011]
+color = Color(0.16445974, 0.16445976, 0.16445974, 1)
 
 [connection signal="body_entered" from="DungeonOutside" to="DungeonOutside" method="_on_body_entered"]
 [connection signal="body_exited" from="DungeonOutside" to="DungeonOutside" method="_on_body_exited"]
