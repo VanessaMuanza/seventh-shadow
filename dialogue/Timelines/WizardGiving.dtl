@@ -1,14 +1,20 @@
 join Wizard left
-Wizard: What do you want
-- give me the crystal
+Wizard: What do you want?
+- I need the crystal.
+	Wizard: The crystal...?
 	join Crystal right
-	Wizard: you want this crystal?
-	- yes
-		do QuestManager.receive_crystal()
-		do print("TEST WIZARD")
-		leave Crystal
-		Wizard: Fine take it
-	
-	- no
-		leave Crystal
-		Wizard: Then why are you here
+	Wizard: And who told you about it?
+	leave Crystal 
+	- Rita.
+		Wizard: Rita... I see.
+		Wizard: You have no idea what you're asking for.
+		- I just need it. She said it was important.
+			Wizard: Important... yes. But not for the reason you think.
+			- What does that mean?
+				Wizard: You'll understand soon enough.
+				- So... will you give it to me?
+					Wizard: If you insist.
+					do QuestManager.receive_crystal()
+					- Thank you.
+						Wizard: But remember... some things are better left buried.
+						leave Wizard

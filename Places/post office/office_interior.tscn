@@ -722,8 +722,11 @@ texture = ExtResource("2_eb2a3")
 29:3/0 = 0
 29:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 30:3/0 = 0
+30:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 31:3/0 = 0
+31:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 32:3/0 = 0
+32:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 33:3/0 = 0
 34:3/0 = 0
 0:4/0 = 0
@@ -763,8 +766,11 @@ texture = ExtResource("2_eb2a3")
 29:4/0 = 0
 29:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 30:4/0 = 0
+30:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 31:4/0 = 0
+31:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 32:4/0 = 0
+32:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 33:4/0 = 0
 34:4/0 = 0
 0:5/0 = 0
@@ -801,8 +807,11 @@ texture = ExtResource("2_eb2a3")
 29:5/0 = 0
 29:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 30:5/0 = 0
+30:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 31:5/0 = 0
+31:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 32:5/0 = 0
+32:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 33:5/0 = 0
 34:5/0 = 0
 0:6/0 = 0
@@ -1875,7 +1884,9 @@ texture = ExtResource("2_eb2a3")
 17:12/0 = 0
 18:12/0 = 0
 19:12/0 = 0
+19:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.49547958, -8, 8, -8, 8, 8, -1.2882442, 8)
 20:12/0 = 0
+20:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0.594574, -6.936699, 0.49547958, 8, -8, 6.639412)
 21:12/0 = 0
 22:12/0 = 0
 23:12/0 = 0
@@ -1910,7 +1921,9 @@ texture = ExtResource("2_eb2a3")
 17:13/0 = 0
 18:13/0 = 0
 19:13/0 = 0
+19:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.49547958, -8, 8, -8, 8, 5.3511677, 0.3963833, 6.044838)
 20:13/0 = 0
+20:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 1.8828182, -8.819517, -0.49547768, 6.044838, -7.035795, 5.0538807)
 21:13/0 = 0
 22:13/0 = 0
 23:13/0 = 0
@@ -2252,6 +2265,7 @@ texture = ExtResource("2_eb2a3")
 34:23/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_mwi6x"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_vq07e")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jb4b3"]
@@ -2356,17 +2370,21 @@ scale = Vector2(0.7, 0.7)
 metadata/_edit_use_anchors_ = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=339442603]
+visible = false
 color = Color(0.09872829, 0.09872841, 0.09872831, 1)
 
 [node name="Skeleton" parent="." unique_id=576781446 instance=ExtResource("10_mwi6x")]
+visible = false
 position = Vector2(-225, 94)
 scale = Vector2(4, 4)
 
 [node name="Skeleton2" parent="." unique_id=1589500365 instance=ExtResource("10_mwi6x")]
+visible = false
 position = Vector2(206, 234)
 scale = Vector2(4, 4)
 
 [node name="DoctorWitch" parent="." unique_id=1277434572 instance=ExtResource("11_rq32p")]
+visible = false
 position = Vector2(1154, 689)
 scale = Vector2(4, 4)
 

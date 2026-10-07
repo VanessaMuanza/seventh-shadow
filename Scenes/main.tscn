@@ -25,6 +25,7 @@
 [ext_resource type="Script" uid="uid://ci2yjpu4sfo0l" path="res://Scripts/directional_light_2d.gd" id="23_u50mg"]
 [ext_resource type="PackedScene" uid="uid://clf3mdnpu4rlt" path="res://UI/Scene/time_gui.tscn" id="24_3pmx8"]
 [ext_resource type="Script" uid="uid://xvb4346rmb7o" path="res://Scripts/bus_entrance.gd" id="25_u50mg"]
+[ext_resource type="PackedScene" uid="uid://brqr7m4epel0j" path="res://Interactions/interactable.tscn" id="26_cbgmd"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_h2yge"]
 tile_data = PackedInt32Array(0, 327680, 0, 65536, 327680, 0, 1, 327680, 0, 65537, 327680, 0)
@@ -3097,6 +3098,9 @@ radius = 90.66973
 [sub_resource type="CircleShape2D" id="CircleShape2D_3pmx8"]
 radius = 103.73042
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_1w6v2"]
+radius = 445.82507
+
 [node name="Node" type="Node" unique_id=869799803]
 
 [node name="world1" type="Node2D" parent="." unique_id=1234241271]
@@ -3326,6 +3330,21 @@ position = Vector2(-13, -77)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1588015221]
 color = Color(0.09872829, 0.09872841, 0.09872831, 1)
+
+[node name="Interactable" parent="." unique_id=1059535167 instance=ExtResource("26_cbgmd")]
+position = Vector2(477, 333)
+interact_name = "Alex's House"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=200699778]
+shape = SubResource("CircleShape2D_1w6v2")
+
+[node name="Interactable2" parent="." unique_id=976455998 instance=ExtResource("26_cbgmd")]
+position = Vector2(477, 333)
+interact_name = "Rita's House"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable2" unique_id=1686354099]
+position = Vector2(1260, -13)
+shape = SubResource("CircleShape2D_1w6v2")
 
 [connection signal="body_entered" from="world1/Area2D" to="world1/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="world1/Area2D" to="world1/Area2D" method="_on_body_exited"]

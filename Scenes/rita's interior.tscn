@@ -4630,6 +4630,9 @@ offset_bottom = 330.0
 grow_horizontal = 0
 scale = Vector2(0.7, 0.7)
 
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=204107676]
+color = Color(0.28974164, 0.28974143, 0.28974146, 1)
+
 [connection signal="body_entered" from="RitaInterior" to="RitaInterior" method="_on_body_entered"]
 [connection signal="body_exited" from="RitaInterior" to="RitaInterior" method="_on_body_exited"]
 [connection signal="closed" from="CanvasLayer/InventoryGui" to="CanvasLayer/InventoryGui" method="_on_closed"]

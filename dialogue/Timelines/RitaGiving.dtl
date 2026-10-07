@@ -1,38 +1,46 @@
 join Rita left
-Rita: Hello...what do you want
-- hello, my name is lucy, i'm new here
-Rita: Oh...you're new that's weird
-- why?
+Rita: Hello... What do you want?
+- Hello, my name is Lucy. I'm new here.
+Rita: Oh...you're new? That's unusual.
+- Why?
 	Rita: Because this place is cursed
 	- cursed..?
-		Rita: oh..nevermind, i'm talking nonsense
-		- (Cursed..maybe thats why my brother isn't here )
-			- do you know my brother? Alex
-				Rita: oh yeah, he was nice i guess, we didn't talk much
-				- He went missing for a couples of weeks, do you know where he is?
-					Rita: Well, maybe i can help you, but you have to help me first
-					- sure what is is?
+		Rita: Never mind. I'm probably just talking nonsense.
+		- (Cursed... Maybe that's why my brother disappeared)
+			- Do you know my brother? Alex?
+				Rita: Alex...? Yeah, I know him. He was nice, I guess. We didn't talk much.
+				- He went missing a couple of weeks ago. Do you know where he is?
+					Rita: I might be able to help you... but you'll have to help me first.
+					- Sure. What do you need?
 						do QuestManager.start_quest("rita_crystal")
 						Rita: There's a dungeon nearby,i need a rare cystal from there
 						
-						- okay, how do i get it?
-							Rita: I can't tell you that, just go and talk to the wizard.
-							join map right
-							Rita: Here is a map, it can help you
-							leave map
-							- Thank you!
+						- Okay. How do I get there?
+							Rita: I don't know exactly where the dungeon is. You'll have to look for it yourself.
+							- Okay. I'll find the dungeon and get the crystal.
+								Rita: Good. Come back when you have it.
 								leave Rita 
+							
 								join Lucy left 
 								Lucy: We need to Find this dungeon.
 								Lucy: Let's search Alex's house for clues
 				
-					- No, i'm good
+					- Not right now.
 						Rita: Ugh stop wasting my time
 				- My parent are worried
-
-
-
-- oh..
-	Rita: this place is cursed.. leave
-- bye
-	Rita: Ugh, stop wasting my time
+					Rita: Then you should probably start looking for clues.
+					- Do you know something?
+						Rita: Maybe. But I need something from you first.
+						- What?
+							do QuestManager.start_quest("rita_crystal")
+							Rita: There's a dungeon nearby. I need a rare crystal from there.
+							- If I bring you the crystal, will you tell me what you know about Alex?
+								Rita: Yes. If you find it, I'll tell you what I know.
+								- Okay. How do I get to the dungeon?
+									Rita: I don't know exactly where the dungeon is. You'll have to look for it yourself.
+									- Alright. I'll find the dungeon and get the crystal.
+										Rita: Good. Come back when you have it.
+										leave Rita 
+										join Lucy left 
+										Lucy: We need to Find this dungeon.
+										Lucy: Let's search Alex's house for clues
