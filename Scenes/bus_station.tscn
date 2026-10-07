@@ -4316,7 +4316,6 @@ tile_set = SubResource("TileSet_2wt7m")
 
 [node name="Lucy" parent="." unique_id=636343155 instance=ExtResource("2_3ebe2")]
 position = Vector2(1153.9999, 96.99999)
-scale = Vector2(0.8, 0.8)
 
 [node name="BusStationExit" type="Area2D" parent="." unique_id=1766362717]
 position = Vector2(460, -130)
@@ -4342,6 +4341,7 @@ grow_horizontal = 0
 scale = Vector2(0.7, 0.7)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=75924756]
+energy = 0.5
 blend_mode = 2
 script = ExtResource("5_r7fjh")
 day_color = Color(1, 1, 1, 1)
@@ -4358,6 +4358,9 @@ position = Vector2(7, 5)
 shape = SubResource("CircleShape2D_vale6")
 
 [node name="LocationsBox" parent="Bus2" unique_id=2048973623 instance=ExtResource("7_1mcw4")]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=525699449]
+color = Color(0.09366939, 0.09366938, 0.09366938, 1)
 
 [connection signal="body_entered" from="BusStationExit" to="BusStationExit" method="_on_body_entered"]
 [connection signal="body_exited" from="BusStationExit" to="BusStationExit" method="_on_body_exited"]
