@@ -4534,7 +4534,6 @@ day_start = SubResource("Resource_y1ihl")
 night_start = SubResource("Resource_qx4tq")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1369606516]
-visible = false
 color = Color(0.09872829, 0.09872841, 0.09872831, 1)
 
 [node name="DoctorWitch" parent="." unique_id=1277434572 instance=ExtResource("14_jq7wa")]

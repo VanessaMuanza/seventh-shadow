@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://da7hxok23pq5s" path="res://Characters/Enemies/DoctorWitch/doctor_witch.tscn" id="11_nxvtu"]
 [ext_resource type="PackedScene" uid="uid://ct15dptyy725o" path="res://Places/Haunted Room/safe.tscn" id="12_77frm"]
 [ext_resource type="PackedScene" uid="uid://dahwancxf87tb" path="res://Characters/Lucy/Lucy.tscn" id="13_ksm4s"]
-[ext_resource type="PackedScene" uid="uid://bbhb3v1eb0clv" path="res://Places/post office/card.tscn" id="14_qeoq7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_he4h4"]
 texture = ExtResource("1_v2u1l")
@@ -3343,16 +3342,12 @@ position = Vector2(2014, -237)
 scale = Vector2(4, 4)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1077290527]
-visible = false
 color = Color(0.09872829, 0.09872841, 0.09872831, 1)
 
 [node name="Lucy" parent="." unique_id=636343155 instance=ExtResource("13_ksm4s")]
 position = Vector2(204, 629)
 collision_layer = 11
 collision_mask = 17
-
-[node name="Card" parent="." unique_id=1980200282 instance=ExtResource("14_qeoq7")]
-position = Vector2(133, 458)
 
 [connection signal="body_entered" from="HauntedRoomExit" to="HauntedRoomExit" method="_on_body_entered"]
 [connection signal="body_exited" from="HauntedRoomExit" to="HauntedRoomExit" method="_on_body_exited"]

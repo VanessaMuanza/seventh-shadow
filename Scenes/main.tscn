@@ -3329,7 +3329,7 @@ shape = SubResource("CircleShape2D_3pmx8")
 position = Vector2(-13, -77)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1588015221]
-color = Color(0.09872829, 0.09872841, 0.09872831, 1)
+color = Color(0.09366939, 0.09366938, 0.09366938, 1)
 
 [node name="Interactable" parent="." unique_id=1059535167 instance=ExtResource("26_cbgmd")]
 position = Vector2(477, 333)
