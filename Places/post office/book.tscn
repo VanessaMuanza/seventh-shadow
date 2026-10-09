@@ -5,9 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://brqr7m4epel0j" path="res://Interactions/interactable.tscn" id="2_3v1wp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3v1wp"]
+radius = 13.038404
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mdy0h"]
-radius = 19.0
+radius = 34.132095
 
 [node name="Book" type="CharacterBody2D" unique_id=1462281830]
 collision_layer = 8

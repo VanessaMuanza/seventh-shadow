@@ -63,14 +63,3 @@ func check_crystal():
 
 func accept_quest() -> void:
 	QuestManager.add_quest(quest_to_give)
-
-
-func _on_chat_detectio_body_entered(body):
-	if body.has_method("player"):
-		player_in_area = true
-
-
-func _on_chat_detectio_body_exited(body):
-		if body.has_method("player"):
-			player_in_area = false 
-			

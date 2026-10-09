@@ -124,6 +124,9 @@ func take_book() -> bool:
 		if slot.item and slot.item.name == "Book":
 			inventory.removeItemAtIndex(i)
 			inventory.updated.emit()
+
+			QuestManager.complete_objective("blue_book", "Book")
+			QuestManager.add_trust()
 			return true
 	return false
 

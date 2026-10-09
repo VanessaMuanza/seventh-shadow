@@ -20,7 +20,6 @@ func _on_body_exited(body):
 func _physics_process (_delta):
 	if entered == true:
 		if Input.is_action_just_pressed("ui_accept"):
-			print("PLAYER HOUSE SCRIPT TRIGGERED")
 			get_tree().change_scene_to_file("res://Scenes/LucyInterior.tscn")
 
 func _ready():

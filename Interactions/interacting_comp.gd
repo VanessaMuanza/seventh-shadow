@@ -24,8 +24,8 @@ func _process(_delta: float) -> void:
 		interact_label.hide()
 
 func _sort_by_nearest(area1, area2):
-	var area1_distance = global_position.direction_to(area1.global_position)
-	var area2_distance = global_position.direction_to(area2.global_position)
+	var area1_distance = global_position.distance_to(area1.global_position)
+	var area2_distance = global_position.distance_to(area2.global_position)
 	return area1_distance < area2_distance
 	
 func _on_interact_range_area_entered(area: Area2D) -> void:

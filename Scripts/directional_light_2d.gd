@@ -72,8 +72,6 @@ func update_transition(time_diff: int, next_state: DayState) -> void:
 	var ratio = 1.0 - (time_diff as float / (time_transition * 60.0))
 	ratio = clamp(ratio, 0.0, 1.0)
 
-	print("ratio=", ratio)
-
 	if ratio >= 1.0:
 		current_state = next_state
 		in_transition = false

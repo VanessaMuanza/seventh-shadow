@@ -19,4 +19,8 @@ func give_key() -> void:
 	var inventory = load("res://inventory/playerInventory.tres")
 	var key = load("res://inventory/Items/GraveKey.tres")
 	if key:
+		for i in range(inventory.slots.size()):
+			var slot: InventorySlot = inventory.slots[i]
+			if slot.item and slot.item.name == "GraveKey":
+				return
 		inventory.insert(key)

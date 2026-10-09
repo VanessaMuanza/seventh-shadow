@@ -23,20 +23,22 @@ func run_dialog(_timeline: String = "") -> void:
 	var quest = QuestManager.get_quest("rita_crystal")
 	var book_quest = QuestManager.get_quest("blue_book")
 
+	if quest == null or quest.state != "completed":
+		Dialogic.start("NotYet")
+		return
+
 	if book_quest == null:
-		if quest != null and quest.state == "rita_crystal_completed":
-			start_dialog("MeetScientist")
+		Dialogic.start("MeetScientist")
 	elif book_quest.state == "in_progress":
 		if QuestManager.take_book():
-			start_dialog("BlueBookFound")
+			Dialogic.start("BlueBookFound")
 		else:
-			start_dialog("BlueBookInProgress")
+			Dialogic.start("BlueBookInProgress")
 
 
 
 
 func start_dialog(timeline: String) -> void:
-	print("Timeline lancée : ", timeline)
 	GameState.player.can_move = false
 	Dialogic.start(timeline)
 

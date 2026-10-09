@@ -2370,22 +2370,18 @@ scale = Vector2(0.7, 0.7)
 metadata/_edit_use_anchors_ = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=339442603]
-visible = false
 color = Color(0.09872829, 0.09872841, 0.09872831, 1)
 
 [node name="Skeleton" parent="." unique_id=576781446 instance=ExtResource("10_mwi6x")]
-visible = false
 position = Vector2(-225, 94)
 scale = Vector2(4, 4)
 
 [node name="Skeleton2" parent="." unique_id=1589500365 instance=ExtResource("10_mwi6x")]
-visible = false
 position = Vector2(206, 234)
 scale = Vector2(4, 4)
 
 [node name="DoctorWitch" parent="." unique_id=1277434572 instance=ExtResource("11_rq32p")]
-visible = false
-position = Vector2(1154, 689)
+position = Vector2(1736, 560)
 scale = Vector2(4, 4)
 
 [connection signal="body_entered" from="OfficeInterior1" to="OfficeInterior1" method="_on_body_entered"]

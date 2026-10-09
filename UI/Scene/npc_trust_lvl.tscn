@@ -16,6 +16,12 @@
 [ext_resource type="Texture2D" uid="uid://bmd46e2x0cphg" path="res://UI/trust level icon.png" id="14_ugcqf"]
 [ext_resource type="Texture2D" uid="uid://bfc7sjco0jgh4" path="res://Characters/Rita/portrait/RitaPixel_Portrait.png" id="15_ls6cd"]
 [ext_resource type="Texture2D" uid="uid://dvf3vyc81gqqb" path="res://UI/UI_TravelBook_FrameSelect01b.png" id="16_8u60a"]
+[ext_resource type="Texture2D" uid="uid://cloi34huek7me" path="res://Characters/Marcel/Scientist portrait.png" id="17_86nbv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_36f3r"]
+font = ExtResource("3_36f3r")
+font_size = 30
+font_color = Color(0.2627451, 0, 0, 1)
 
 [node name="NpcTrustLvl" type="Control" unique_id=1796935553]
 layout_mode = 3
@@ -86,11 +92,27 @@ max_value = 10.0
 texture_under = ExtResource("6_s35c6")
 texture_progress = ExtResource("7_fvi0w")
 
+[node name="TextureProgressBar2" type="TextureProgressBar" parent="CanvasLayer" unique_id=1858105397]
+offset_left = 659.99994
+offset_top = 319.99997
+offset_right = 783.99994
+offset_bottom = 483.99997
+max_value = 10.0
+texture_under = ExtResource("6_s35c6")
+texture_progress = ExtResource("7_fvi0w")
+
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=516536040]
 offset_left = 650.0
 offset_top = 206.66666
 offset_right = 774.0
 offset_bottom = 370.66666
+texture = ExtResource("8_vxm1y")
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer" unique_id=867137038]
+offset_left = 648.33325
+offset_top = 301.66666
+offset_right = 772.33325
+offset_bottom = 465.66666
 texture = ExtResource("8_vxm1y")
 
 [node name="selected2" type="TextureRect" parent="CanvasLayer" unique_id=586826470]
@@ -285,5 +307,18 @@ offset_right = 788.0
 offset_bottom = 451.99997
 texture = ExtResource("16_8u60a")
 metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=335517511]
+position = Vector2(581.6667, 393.3333)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("17_86nbv")
+
+[node name="Label" type="Label" parent="CanvasLayer/Sprite2D" unique_id=837360023]
+offset_left = 57.142815
+offset_top = -34.523808
+offset_right = 127.142815
+offset_bottom = -4.5238075
+text = "Marcel"
+label_settings = SubResource("LabelSettings_36f3r")
 
 [connection signal="pressed" from="CanvasLayer/TrustLevel" to="." method="_on_trust_level_pressed"]

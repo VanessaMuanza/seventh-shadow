@@ -1,5 +1,6 @@
 #PLAYER SCRIPT
 extends CharacterBody2D
+@onready var point_light_2d: PointLight2D = $PointLight2D
 
 
 @export var inventory: Inventory
@@ -66,6 +67,7 @@ func play_animation(prefix: String, dir: Vector2) -> void:
 		
 
 func _ready():
+	light_not_visible()
 	GameState.player = self
 	if GameState.next_spawn_point != "":
 		var spawn_node = get_tree().current_scene.find_child(GameState.next_spawn_point, true, false)
@@ -82,15 +84,15 @@ func _input(event: InputEvent) -> void:
 			var target = ray_cast_2d.get_collider()
 			if target != null:
 				if target.is_in_group("NPC"):
-					print("i'm talking to an npc")
-					#can't move if textbox open
 					target.run_dialog("RitaGiving")
-
-				elif target.is_in_group("Item"):
-					print("Hello item")
-				#if item needed for a quest, remove item 
-				#or put in inventory regardless
-					target.start_interact()
 
 func player():
 	pass
+
+
+func light_not_visible():
+	var scene = get_tree().current_scene
+	if scene and scene.scene_file_path == "res://Scenes/main.tscn":
+		$PointLight2D.hide()
+	else:
+		$PointLight2D.show()
